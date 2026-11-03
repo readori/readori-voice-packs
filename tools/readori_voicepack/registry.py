@@ -18,6 +18,7 @@ from .common import (
     is_todo,
     safe_relative_path,
 )
+from .lexicon_fill import LEXICON_FILL_VALUES
 
 # Licenses that may be published. CC-BY-* additionally require an attribution text.
 ALLOWED_SPDX = (
@@ -60,6 +61,7 @@ PRESET_KEYS = frozenset(
         "exclude",
         "sampleText",
         "sampleRate",  # informational only, never copied into the manifest
+        "lexiconFill",  # optional lexicon post-processing, see lexicon_fill.py
     )
 )
 
@@ -370,6 +372,12 @@ def _validate_preset(preset: Any, where: str, errors: list[str]) -> None:
         _err(errors, where, "preset.exclude must be a list of glob strings")
     if "officialBilingualLexicons" in preset and not isinstance(preset["officialBilingualLexicons"], bool):
         _err(errors, where, "preset.officialBilingualLexicons must be boolean")
+    if "lexiconFill" in preset and preset["lexiconFill"] not in LEXICON_FILL_VALUES:
+        _err(
+            errors,
+            where,
+            f"preset.lexiconFill must be one of: {', '.join(LEXICON_FILL_VALUES)}",
+        )
 
 
 def validate_registry_doc(doc: Any) -> list[str]:

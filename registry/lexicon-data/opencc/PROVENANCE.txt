@@ -1,0 +1,17 @@
+OpenCC TSCharacters.txt (traditional -> simplified, single characters) and LICENSE
+
+Project:        Open Chinese Convert (OpenCC), https://github.com/BYVoid/OpenCC
+Tag:            ver.1.4.2
+Commit:         025f371dc76b598d77384fbdab90c937471844d8 (2026-08-22)
+Data URL:       https://raw.githubusercontent.com/BYVoid/OpenCC/025f371dc76b598d77384fbdab90c937471844d8/data/dictionary/TSCharacters.txt
+License URL:    https://raw.githubusercontent.com/BYVoid/OpenCC/025f371dc76b598d77384fbdab90c937471844d8/LICENSE
+Fetch date:     2026-11-03
+Licence:        Apache-2.0 (copyright holders: OpenCC authors; see LICENSE next to this file)
+
+SHA-256 (as fetched, unmodified):
+  TSCharacters.txt  737c21c66f55a419dd6956cb3089476cdefc5a36877452631617696df1e5d925
+  LICENSE           b534e465949558eec2597b04f5092b5e161236a68dfbfd04d547592ac3964308
+
+Format: key<TAB>simp1 simp2 ... ; lines starting with # are comments. Readori uses the
+first simplified candidate (registry preset key lexiconFill: opencc-t2s).
+No modifications were made to the vendored files.

@@ -154,11 +154,11 @@ models:
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-cantonese-hf-xiaomaiiwn.tar.bz2
     assetName: vits-cantonese-hf-xiaomaiiwn.tar.bz2
-    sha256: TODO
+    sha256: bf3013cd4be34f531b7e514e708d835584dd60c9ad6eaf467ac1402005c04e46
+    pinnedFrom: checksum-txt
     checksumTxtSha256: bf3013cd4be34f531b7e514e708d835584dd60c9ad6eaf467ac1402005c04e46
     bytes: 107995442
-    sha256Source: checksum.txt (published by upstream; asset has no GitHub digest; unverified, CI must
-      recompute and a human must confirm)
+    sha256Source: CI fetch (readori/test-env-setup run 41609472411) equals upstream checksum.txt; bytes match
     assetCreatedAt: '2024-02-20T02:56:34Z'
     assetUpdatedAt: '2024-02-20T02:56:36Z'
   license:
@@ -192,6 +192,7 @@ models:
     defaultSpeaker: 0
     profile: vits-cantonese-hf-xiaomaiiwn
     language: yue
+    lexiconFill: opencc-t2s
   voiceCatalog: registry/voice-catalogs/yue-cantonese-v1.json
   minAppVersion: "1.1.2"
   notes: 'research draft id: yue-xiaomaiiwn-v1'
@@ -3756,11 +3757,11 @@ models:
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-piper-zh_CN-huayan-medium.tar.bz2
     assetName: vits-piper-zh_CN-huayan-medium.tar.bz2
-    sha256: TODO
+    sha256: dbdfec42b91d9cee31cce9ff4b3e9c305eb6fbf60546d071f7e46273554cce6b
+    pinnedFrom: checksum-txt
     checksumTxtSha256: dbdfec42b91d9cee31cce9ff4b3e9c305eb6fbf60546d071f7e46273554cce6b
     bytes: 67255926
-    sha256Source: checksum.txt (published by upstream; asset has no GitHub digest; unverified, CI must
-      recompute and a human must confirm)
+    sha256Source: CI fetch (readori/test-env-setup run 41609472411) equals upstream checksum.txt; bytes match
     assetCreatedAt: '2024-12-24T06:41:39Z'
     assetUpdatedAt: '2024-12-24T06:41:41Z'
   license:
@@ -3778,17 +3779,23 @@ models:
       spdx: undisclosed
       commercialUse: unknown
       note: ''
+    components:
+    - name: espeak-ng-data
+      spdx: GPL-3.0-or-later
+      url: https://www.gnu.org/licenses/gpl-3.0.txt
+      sourceURL: https://github.com/espeak-ng/espeak-ng
+      role: data
   preset:
     model: zh_CN-huayan-medium.onnx
     tokens: tokens.txt
-    lexicon: lexicon.txt
+    dataDir: espeak-ng-data
     ruleFsts: []
     ruleFars: []
     speakerCount: 1
     defaultSpeaker: 0
     sampleRate: 22050
   minAppVersion: "1.1.2"
-  notes: 'Risks: Piper zh needs g2pW on the Python side (xiao_ya card note) - sherpa uses lexicon'
+  notes: 'Upstream sherpa-onnx archive ships espeak-ng-data (GPL-3.0-or-later) and no lexicon; Mandarin G2P comes from espeak-ng (cmn), weaker than a lexicon on polyphones.'
 - id: zh-piper-xiao-ya-medium-v1
   packVersion: 1
   displayName:
@@ -3949,11 +3956,11 @@ models:
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/sherpa-onnx-vits-zh-ll.tar.bz2
     assetName: sherpa-onnx-vits-zh-ll.tar.bz2
-    sha256: TODO
+    sha256: f7393d1bbc59709d5f52ea76cd5bceeec62f6a29f9c1f79ff64b4c15ec841f3a
+    pinnedFrom: checksum-txt
     checksumTxtSha256: f7393d1bbc59709d5f52ea76cd5bceeec62f6a29f9c1f79ff64b4c15ec841f3a
     bytes: 118810709
-    sha256Source: checksum.txt (published by upstream; asset has no GitHub digest; unverified, CI must
-      recompute and a human must confirm)
+    sha256Source: CI fetch (readori/test-env-setup run 41609472411) equals upstream checksum.txt; bytes match
     assetCreatedAt: '2024-04-25T09:58:51Z'
     assetUpdatedAt: '2024-04-25T09:58:53Z'
   license:
@@ -4427,11 +4434,11 @@ models:
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-zh-hf-fanchen-C.tar.bz2
     assetName: vits-zh-hf-fanchen-C.tar.bz2
-    sha256: TODO
+    sha256: 523aae3e6cf1bef3c05e2b0105d1ee15d53987a3bb559f78ba84fb7c4f990bd6
+    pinnedFrom: checksum-txt
     checksumTxtSha256: 523aae3e6cf1bef3c05e2b0105d1ee15d53987a3bb559f78ba84fb7c4f990bd6
     bytes: 119326431
-    sha256Source: checksum.txt (published by upstream; asset has no GitHub digest; unverified, CI must
-      recompute and a human must confirm)
+    sha256Source: CI fetch (readori/test-env-setup run 41609472411) equals upstream checksum.txt; bytes match
     assetCreatedAt: '2024-04-22T05:49:49Z'
     assetUpdatedAt: '2024-04-22T05:49:51Z'
   license:
@@ -4460,8 +4467,7 @@ models:
     - date.fst
     - number.fst
     - new_heteronym.fst
-    ruleFars:
-    - rule.far
+    ruleFars: []
     speakerCount: 187
     sampleRate: 16000
   minAppVersion: "1.1.2"
@@ -4480,11 +4486,11 @@ models:
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-zh-hf-fanchen-ZhiHuiLaoZhe.tar.bz2
     assetName: vits-zh-hf-fanchen-ZhiHuiLaoZhe.tar.bz2
-    sha256: TODO
+    sha256: 433a6b3dd70f0b6298b154cde0962a6e16038e148cf869650ff8776c56335767
+    pinnedFrom: checksum-txt
     checksumTxtSha256: 433a6b3dd70f0b6298b154cde0962a6e16038e148cf869650ff8776c56335767
     bytes: 119467924
-    sha256Source: checksum.txt (published by upstream; asset has no GitHub digest; unverified, CI must
-      recompute and a human must confirm)
+    sha256Source: CI fetch (readori/test-env-setup run 41609472411) equals upstream checksum.txt; bytes match
     assetCreatedAt: '2024-04-22T05:49:49Z'
     assetUpdatedAt: '2024-04-22T05:49:51Z'
   license:
@@ -4513,8 +4519,7 @@ models:
     - date.fst
     - number.fst
     - new_heteronym.fst
-    ruleFars:
-    - rule.far
+    ruleFars: []
     speakerCount: 1
     defaultSpeaker: 0
     sampleRate: 16000
@@ -4534,11 +4539,11 @@ models:
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-zh-hf-fanchen-ZhiHuiLaoZhe_new.tar.bz2
     assetName: vits-zh-hf-fanchen-ZhiHuiLaoZhe_new.tar.bz2
-    sha256: TODO
+    sha256: fa6b767c979846f1af3141666158ce91fdad116a15a29654d7e4a071d819af4c
+    pinnedFrom: checksum-txt
     checksumTxtSha256: fa6b767c979846f1af3141666158ce91fdad116a15a29654d7e4a071d819af4c
     bytes: 119402911
-    sha256Source: checksum.txt (published by upstream; asset has no GitHub digest; unverified, CI must
-      recompute and a human must confirm)
+    sha256Source: CI fetch (readori/test-env-setup run 41609472411) equals upstream checksum.txt; bytes match
     assetCreatedAt: '2024-04-22T05:49:44Z'
     assetUpdatedAt: '2024-04-22T05:49:47Z'
   license:
@@ -4567,8 +4572,7 @@ models:
     - date.fst
     - number.fst
     - new_heteronym.fst
-    ruleFars:
-    - rule.far
+    ruleFars: []
     speakerCount: 1
     defaultSpeaker: 0
     sampleRate: 16000
@@ -4588,11 +4592,11 @@ models:
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-zh-hf-fanchen-unity.tar.bz2
     assetName: vits-zh-hf-fanchen-unity.tar.bz2
-    sha256: TODO
+    sha256: b4b3965681a215dc5cf6e4c091e749be68a5c1d022fda0b90b199ed837e50105
+    pinnedFrom: checksum-txt
     checksumTxtSha256: b4b3965681a215dc5cf6e4c091e749be68a5c1d022fda0b90b199ed837e50105
     bytes: 119143475
-    sha256Source: checksum.txt (published by upstream; asset has no GitHub digest; unverified, CI must
-      recompute and a human must confirm)
+    sha256Source: CI fetch (readori/test-env-setup run 41609472411) equals upstream checksum.txt; bytes match
     assetCreatedAt: '2024-04-22T05:49:46Z'
     assetUpdatedAt: '2024-04-22T05:49:49Z'
   license:
@@ -4621,8 +4625,7 @@ models:
     - date.fst
     - number.fst
     - new_heteronym.fst
-    ruleFars:
-    - rule.far
+    ruleFars: []
     speakerCount: 1
     defaultSpeaker: 0
     sampleRate: 16000
@@ -4642,11 +4645,11 @@ models:
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-zh-hf-fanchen-wnj.tar.bz2
     assetName: vits-zh-hf-fanchen-wnj.tar.bz2
-    sha256: TODO
+    sha256: 4035c68899e951ccc6e863e6088ba0898fba0ccd5a88df7f2b784a9b0da88503
+    pinnedFrom: checksum-txt
     checksumTxtSha256: 4035c68899e951ccc6e863e6088ba0898fba0ccd5a88df7f2b784a9b0da88503
     bytes: 119159130
-    sha256Source: checksum.txt (published by upstream; asset has no GitHub digest; unverified, CI must
-      recompute and a human must confirm)
+    sha256Source: CI fetch (readori/test-env-setup run 41609472411) equals upstream checksum.txt; bytes match
     assetCreatedAt: '2024-04-22T05:49:50Z'
     assetUpdatedAt: '2024-04-22T05:49:52Z'
   license:
@@ -4675,8 +4678,7 @@ models:
     - date.fst
     - number.fst
     - new_heteronym.fst
-    ruleFars:
-    - rule.far
+    ruleFars: []
     speakerCount: 1
     sampleRate: 16000
   minAppVersion: "1.1.2"

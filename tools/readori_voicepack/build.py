@@ -29,6 +29,11 @@ from .common import (
     sha256_file,
     write_json,
 )
+from .lexicon_fill import (
+    LEXICON_FILL_OPENCC_T2S,
+    apply_lexicon_fill,
+    opencc_attribution_lines,
+)
 from .registry import COPYLEFT_DATA_SPDX, evidence_items
 
 KNOWN_RULE_ORDER = [
@@ -285,6 +290,7 @@ def render_attribution(
     archive_sha256: str | None,
     license_file: str,
     has_espeak: bool = False,
+    lexicon_fill: tuple[int, int] | None = None,
 ) -> str:
     lic = entry["license"]
     upstream = entry["upstream"]
@@ -347,6 +353,10 @@ def render_attribution(
         "  - Repackaged for the Readori app (ZIP layout, file selection).",
         "  - Added readori-tts-model.json and readori-voices.json (metadata only) and this file.",
         "  - Removed test audio and helper scripts.",
+    ]
+    if lexicon_fill is not None:
+        lines += opencc_attribution_lines(*lexicon_fill)
+    lines += [
         "  - Model weights and token files are unchanged from the upstream archive.",
         "",
     ]
@@ -639,6 +649,21 @@ def build_pack(
     pack_dir, paths, notes = asm.pack_dir, asm.paths, asm.notes
     pack_version = asm.pack_version
 
+    # --- optional lexicon post-processing (before manifest / hashes) -----------------
+    lexicon_fill: tuple[int, int] | None = None
+    fill_mode = entry["preset"].get("lexiconFill") if _preset_has(entry["preset"], "lexiconFill") else None
+    if fill_mode is not None:
+        if fill_mode != LEXICON_FILL_OPENCC_T2S:
+            raise VoicePackError(f"unknown preset.lexiconFill value: {fill_mode!r}")
+        lexicon_rels = list(asm.lexicons) + ([asm.lexicon] if asm.lexicon else [])
+        if lexicon_rels:
+            filled, dropped, fill_note = apply_lexicon_fill(
+                pack_dir, lexicon_rels, asm.tokens, repo_root=repo_root
+            )
+            notes.append(fill_note)
+            if filled or dropped:
+                lexicon_fill = (filled, dropped)
+
     # --- license ------------------------------------------------------------------
     license_file = detect_license(paths)
     lic = entry["license"]
@@ -669,6 +694,7 @@ def build_pack(
             archive_sha256=archive_sha256,
             license_file=license_file,
             has_espeak=has_espeak,
+            lexicon_fill=lexicon_fill,
         ),
         encoding="utf-8",
         newline="\n",
