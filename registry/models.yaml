@@ -24,11 +24,11 @@ models:
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-melo-tts-zh_en.tar.bz2
     assetName: vits-melo-tts-zh_en.tar.bz2
-    sha256: TODO
+    sha256: e58351ed7149f290a54534538badd4077cdbe6fddc964b24d0bee870415d1514
+    pinnedFrom: checksum-txt
     checksumTxtSha256: e58351ed7149f290a54534538badd4077cdbe6fddc964b24d0bee870415d1514
     bytes: 167006755
-    sha256Source: checksum.txt (published by upstream; asset has no GitHub digest; unverified, CI must
-      recompute and a human must confirm)
+    sha256Source: CI fetch (build-pack run 41591750501) equals upstream checksum.txt; bytes match; asset predates GitHub digests
     assetCreatedAt: '2024-11-03T12:31:00Z'
     assetUpdatedAt: '2024-11-03T12:31:05Z'
   license:
@@ -89,11 +89,11 @@ models:
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-icefall-zh-aishell3.tar.bz2
     assetName: vits-icefall-zh-aishell3.tar.bz2
-    sha256: TODO
+    sha256: ab468db3a3308cdd861495e0db2f25d79418a0c00639f74944c7cdf5dd8c6ec1
+    pinnedFrom: checksum-txt
     checksumTxtSha256: ab468db3a3308cdd861495e0db2f25d79418a0c00639f74944c7cdf5dd8c6ec1
     bytes: 31559701
-    sha256Source: checksum.txt (published by upstream; asset has no GitHub digest; unverified, CI must
-      recompute and a human must confirm)
+    sha256Source: CI fetch (build-pack run 41591750501) equals upstream checksum.txt; bytes match; asset predates GitHub digests
     assetCreatedAt: '2024-04-08T01:43:44Z'
     assetUpdatedAt: '2024-04-08T01:43:46Z'
   license:
@@ -675,11 +675,11 @@ models:
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-coqui-en-vctk.tar.bz2
     assetName: vits-coqui-en-vctk.tar.bz2
-    sha256: TODO
+    sha256: 32da47c0def9cedaa6275df058e3b57d1863ae0a0f3646a5ec8adb7562d59ded
+    pinnedFrom: checksum-txt
     checksumTxtSha256: 32da47c0def9cedaa6275df058e3b57d1863ae0a0f3646a5ec8adb7562d59ded
     bytes: 122412029
-    sha256Source: checksum.txt (published by upstream; asset has no GitHub digest; unverified, CI must
-      recompute and a human must confirm)
+    sha256Source: CI fetch (build-pack run 41591750501) equals upstream checksum.txt; bytes match; asset predates GitHub digests
     assetCreatedAt: '2023-12-05T11:41:43Z'
     assetUpdatedAt: '2023-12-05T11:41:46Z'
   license:
@@ -735,11 +735,11 @@ models:
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-coqui-en-ljspeech.tar.bz2
     assetName: vits-coqui-en-ljspeech.tar.bz2
-    sha256: TODO
+    sha256: c545bc8f7c74b888de053f602d0bb8d9868a204aa352f0ff333553092ba19eac
+    pinnedFrom: checksum-txt
     checksumTxtSha256: c545bc8f7c74b888de053f602d0bb8d9868a204aa352f0ff333553092ba19eac
     bytes: 115418583
-    sha256Source: checksum.txt (published by upstream; asset has no GitHub digest; unverified, CI must
-      recompute and a human must confirm)
+    sha256Source: CI fetch (build-pack run 41591750501) equals upstream checksum.txt; bytes match; asset predates GitHub digests
     assetCreatedAt: '2023-12-05T11:41:20Z'
     assetUpdatedAt: '2023-12-05T11:41:22Z'
   license:
@@ -899,11 +899,11 @@ models:
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-melo-tts-en.tar.bz2
     assetName: vits-melo-tts-en.tar.bz2
-    sha256: TODO
+    sha256: f87bc5752ea3ec34273a2cc0c5086854c18b6b89dfd0534b5248e86a14cedb5d
+    pinnedFrom: checksum-txt
     checksumTxtSha256: f87bc5752ea3ec34273a2cc0c5086854c18b6b89dfd0534b5248e86a14cedb5d
     bytes: 162758237
-    sha256Source: checksum.txt (published by upstream; asset has no GitHub digest; unverified, CI must
-      recompute and a human must confirm)
+    sha256Source: CI fetch (build-pack run 41591750501) equals upstream checksum.txt; bytes match; asset predates GitHub digests
     assetCreatedAt: '2024-11-03T12:31:06Z'
     assetUpdatedAt: '2024-11-03T12:31:11Z'
   license:
@@ -3887,11 +3887,11 @@ models:
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-zh-aishell3.tar.bz2
     assetName: vits-zh-aishell3.tar.bz2
-    sha256: TODO
+    sha256: c476bd76d7a25171014bdc1e3a38422f5af2045f43852d90dc4df67660482e20
+    pinnedFrom: checksum-txt
     checksumTxtSha256: c476bd76d7a25171014bdc1e3a38422f5af2045f43852d90dc4df67660482e20
     bytes: 146922607
-    sha256Source: checksum.txt (published by upstream; asset has no GitHub digest; unverified, CI must
-      recompute and a human must confirm)
+    sha256Source: CI fetch (build-pack run 41591750501) equals upstream checksum.txt; bytes match; asset predates GitHub digests
     assetCreatedAt: '2024-04-08T01:42:50Z'
     assetUpdatedAt: '2024-04-08T01:42:55Z'
   license:

@@ -118,3 +118,47 @@ def test_corrupt_archives(tmp_path):
     bad_zip.write_bytes(b"not a zip")
     with pytest.raises(VoicePackError, match="cannot open zip"):
         arc.extract_archive(bad_zip, tmp_path / "y")
+
+
+def _dir_member(name: str) -> tarfile.TarInfo:
+    info = tarfile.TarInfo(name)
+    info.type = tarfile.DIRTYPE
+    return info
+
+
+def test_upstream_tar_dot_prefix_accepted(tmp_path):
+    # vits-zh-aishell3.tar.bz2 upstream is created with `tar -C dir .`: members start with "./".
+    tar = _tar_with(
+        tmp_path / "dot.tar.bz2",
+        [_dir_member("./"), _dir_member("./vits-zh-aishell3"), _file_member("./vits-zh-aishell3/model.onnx")],
+    )
+    root = arc.extract_archive(tar, tmp_path / "x")
+    assert root == tmp_path / "x" / "vits-zh-aishell3"
+    assert (root / "model.onnx").is_file()
+
+
+def test_upstream_zip_dot_prefix_accepted(tmp_path):
+    path = tmp_path / "dot.zip"
+    with zipfile.ZipFile(path, "w") as zf:
+        zf.writestr("./pack/model.onnx", b"x")
+    root = arc.extract_archive(path, tmp_path / "x")
+    assert (root / "model.onnx").is_file()
+
+
+@pytest.mark.parametrize("name", ["./../evil", "././../evil", "./a/../../evil", "./a/./b"])
+def test_upstream_dot_prefix_still_checks_rest(tmp_path, name):
+    tar = _tar_with(tmp_path / "bad.tar.bz2", [_file_member(name)])
+    with pytest.raises(VoicePackError, match="unsafe tar member"):
+        arc.extract_archive(tar, tmp_path / "x")
+
+
+def test_finished_pack_extraction_still_rejects_dot_prefix(tmp_path):
+    tar = _tar_with(tmp_path / "dot.tar.bz2", [_file_member("./model.onnx")])
+    with pytest.raises(VoicePackError, match="unsafe tar member"):
+        arc.extract_raw(tar, tmp_path / "x")
+
+
+def test_bare_dot_file_member_rejected(tmp_path):
+    tar = _tar_with(tmp_path / "dotfile.tar.bz2", [_file_member("./")])
+    with pytest.raises(VoicePackError, match="unsafe tar member"):
+        arc.extract_archive(tar, tmp_path / "x")

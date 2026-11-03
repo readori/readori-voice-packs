@@ -78,7 +78,11 @@ def test_shipped_approved_entries_meet_license_policy():
             assert any("espeak" in c["name"] for c in lic.get("components") or []), model["id"]
         up = model["upstream"]
         if up["sha256"] != "TODO":
-            assert up.get("pinnedFrom") == "github-digest", model["id"]
+            # Assets uploaded before GitHub digests existed are pinned from a CI fetch that must
+            # equal upstream checksum.txt; newer assets pin the GitHub digest.
+            assert up.get("pinnedFrom") in ("github-digest", "checksum-txt"), model["id"]
+            if up["pinnedFrom"] == "checksum-txt":
+                assert up.get("checksumTxtSha256") == up["sha256"], model["id"]
 
 
 def test_shipped_kokoro_attribution_and_caps():

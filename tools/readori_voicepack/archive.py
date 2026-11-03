@@ -37,6 +37,23 @@ def _remember(seen: set[str], rel: str) -> None:
     seen.add(key)
 
 
+def _member_rel(name: str, allow_dot_prefix: bool) -> str | None:
+    """Return the safe relative path for an archive member, ``""`` for a bare ``./`` root entry.
+
+    Upstream tarballs created with ``tar -C dir .`` name members ``./vits-foo/...``. Only that
+    leading ``./`` is dropped (and only for upstream archives); the rest of the path still has
+    to pass the app importer rule, so ``./../x`` is rejected as before.
+    """
+    if allow_dot_prefix:
+        normalized = name.replace("\\", "/")
+        while normalized.startswith("./"):
+            normalized = normalized[2:]
+        if normalized in ("", "."):
+            return ""
+        name = normalized
+    return safe_relative_path(name)
+
+
 def _copy_bounded(src, dst_path: Path, budget: int) -> int:
     """Copy at most ``budget`` bytes; raise if the stream is larger (lying size headers)."""
     written = 0
@@ -60,7 +77,13 @@ def extract_archive(
     max_entries: int = DEFAULT_MAX_UPSTREAM_ENTRIES,
 ) -> Path:
     """Extract ``archive`` into ``destination`` and return the payload root."""
-    extract_raw(archive, destination, max_total_bytes=max_total_bytes, max_entries=max_entries)
+    extract_raw(
+        archive,
+        destination,
+        max_total_bytes=max_total_bytes,
+        max_entries=max_entries,
+        allow_dot_prefix=True,
+    )
     return choose_payload_root(destination)
 
 
@@ -70,19 +93,25 @@ def extract_raw(
     *,
     max_total_bytes: int = DEFAULT_MAX_UPSTREAM_BYTES,
     max_entries: int = DEFAULT_MAX_UPSTREAM_ENTRIES,
+    allow_dot_prefix: bool = False,
 ) -> None:
-    """Extract without stripping a wrapper directory (used to validate finished packs)."""
+    """Extract without stripping a wrapper directory (used to validate finished packs).
+
+    ``allow_dot_prefix`` accepts a leading ``./`` on member names; only upstream archives set it.
+    """
     destination.mkdir(parents=True, exist_ok=True)
     name = archive.name.lower()
     if name.endswith(".zip"):
-        _extract_zip(archive, destination, max_total_bytes, max_entries)
+        _extract_zip(archive, destination, max_total_bytes, max_entries, allow_dot_prefix)
     elif name.endswith((".tar.bz2", ".tbz2", ".tar.gz", ".tgz", ".tar")):
-        _extract_tar(archive, destination, max_total_bytes, max_entries)
+        _extract_tar(archive, destination, max_total_bytes, max_entries, allow_dot_prefix)
     else:
         raise VoicePackError(f"unsupported archive type: {archive.name}")
 
 
-def _extract_tar(archive: Path, destination: Path, max_total: int, max_entries: int) -> None:
+def _extract_tar(
+    archive: Path, destination: Path, max_total: int, max_entries: int, allow_dot_prefix: bool
+) -> None:
     total = 0
     count = 0
     seen: set[str] = set()
@@ -95,8 +124,12 @@ def _extract_tar(archive: Path, destination: Path, max_total: int, max_entries: 
             count += 1
             if count > max_entries:
                 raise VoicePackError(f"archive has more than {max_entries} entries")
-            rel = safe_relative_path(member.name)
+            rel = _member_rel(member.name, allow_dot_prefix)
             if rel is None:
+                raise VoicePackError(f"unsafe tar member: {member.name!r}")
+            if rel == "":
+                if member.isdir():
+                    continue
                 raise VoicePackError(f"unsafe tar member: {member.name!r}")
             if member.issym() or member.islnk():
                 raise VoicePackError(f"links are not allowed in model archives: {member.name!r}")
@@ -120,7 +153,9 @@ def _extract_tar(archive: Path, destination: Path, max_total: int, max_entries: 
                 _copy_bounded(src, target, member.size)
 
 
-def _extract_zip(archive: Path, destination: Path, max_total: int, max_entries: int) -> None:
+def _extract_zip(
+    archive: Path, destination: Path, max_total: int, max_entries: int, allow_dot_prefix: bool
+) -> None:
     total = 0
     seen: set[str] = set()
     try:
@@ -132,8 +167,12 @@ def _extract_zip(archive: Path, destination: Path, max_total: int, max_entries: 
         if len(infos) > max_entries:
             raise VoicePackError(f"archive has more than {max_entries} entries")
         for info in infos:
-            rel = safe_relative_path(info.filename)
+            rel = _member_rel(info.filename, allow_dot_prefix)
             if rel is None:
+                raise VoicePackError(f"unsafe ZIP member: {info.filename!r}")
+            if rel == "":
+                if info.is_dir():
+                    continue
                 raise VoicePackError(f"unsafe ZIP member: {info.filename!r}")
             mode = info.external_attr >> 16
             if mode and stat.S_ISLNK(mode):
