@@ -149,9 +149,8 @@ models:
   - yue
   type: vits
   appSupported: true
-  status: excluded
-  excludedReason: No license or provenance upstream (HF space conversion 'xiaomaiiwn'); excluded by decision
-    (2026-11-02). The catalog file stays in the repository but no approved entry may use it.
+  status: community
+  communityNote: "Community tier (product decision 2026-11-03): the licence and training-data provenance are UNKNOWN (not known to be prohibited) and have not been verified by Readori. Published as a GitHub Releases pack only, never as an Apple-hosted asset pack, and labelled as collected from the community and not recommended. Upstream finding: no license or provenance upstream (HF space conversion 'xiaomaiiwn'); previously excluded (2026-11-02), moved to the community tier by decision (2026-11-03). The repository catalog file is used by this entry only for the voice listing."
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-cantonese-hf-xiaomaiiwn.tar.bz2
     assetName: vits-cantonese-hf-xiaomaiiwn.tar.bz2
@@ -164,6 +163,7 @@ models:
     assetUpdatedAt: '2024-02-20T02:56:36Z'
   license:
     spdx: UNKNOWN
+    textFile: registry/license-texts/COMMUNITY-NOTICE.txt
     url: TODO
     evidence:
     - url: https://huggingface.co/csukuangfj/vits-cantonese-hf-xiaomaiiwn
@@ -3751,8 +3751,8 @@ models:
   - zh-CN
   type: vits
   appSupported: true
-  status: excluded
-  excludedReason: Dataset licence explicitly 'Unknown'.
+  status: community
+  communityNote: "Community tier (product decision 2026-11-03): the licence and training-data provenance are UNKNOWN (not known to be prohibited) and have not been verified by Readori. Published as a GitHub Releases pack only, never as an Apple-hosted asset pack, and labelled as collected from the community and not recommended. Upstream finding: Dataset licence explicitly 'Unknown'."
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-piper-zh_CN-huayan-medium.tar.bz2
     assetName: vits-piper-zh_CN-huayan-medium.tar.bz2
@@ -3765,6 +3765,7 @@ models:
     assetUpdatedAt: '2024-12-24T06:41:41Z'
   license:
     spdx: UNKNOWN
+    textFile: registry/license-texts/COMMUNITY-NOTICE.txt
     url: https://huggingface.co/rhasspy/piper-voices
     evidence:
     - url: https://huggingface.co/rhasspy/piper-voices/blob/main/zh/zh_CN/huayan/medium/MODEL_CARD
@@ -3943,9 +3944,8 @@ models:
   - zh-CN
   type: vits
   appSupported: true
-  status: excluded
-  excludedReason: No licence or data provenance; produced with a fast-fine-tuning framework whose base
-    weights/data are undocumented.
+  status: community
+  communityNote: "Community tier (product decision 2026-11-03): the licence and training-data provenance are UNKNOWN (not known to be prohibited) and have not been verified by Readori. Published as a GitHub Releases pack only, never as an Apple-hosted asset pack, and labelled as collected from the community and not recommended. Upstream finding: No licence or data provenance; produced with a fast-fine-tuning framework whose base weights/data are undocumented."
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/sherpa-onnx-vits-zh-ll.tar.bz2
     assetName: sherpa-onnx-vits-zh-ll.tar.bz2
@@ -3958,6 +3958,7 @@ models:
     assetUpdatedAt: '2024-04-25T09:58:53Z'
   license:
     spdx: UNKNOWN
+    textFile: registry/license-texts/COMMUNITY-NOTICE.txt
     url: TODO
     evidence:
     - url: https://huggingface.co/csukuangfj/sherpa-onnx-vits-zh-ll
@@ -3993,6 +3994,7 @@ models:
   - zh-CN
   type: vits
   appSupported: true
+  gameCharacterVoice: true
   status: excluded
   excludedReason: 'Voices of commercial game characters (Genshin Impact / Honkai Impact 3rd): training
     audio is third-party copyrighted game content; the Space-level Apache label cannot license it.'
@@ -4050,6 +4052,7 @@ models:
   - zh-CN
   type: vits
   appSupported: true
+  gameCharacterVoice: true
   status: excluded
   excludedReason: 'Voices of commercial game characters (Genshin Impact / Honkai Impact 3rd): training
     audio is third-party copyrighted game content; the Space-level Apache label cannot license it.'
@@ -4107,6 +4110,7 @@ models:
   - zh-CN
   type: vits
   appSupported: true
+  gameCharacterVoice: true
   status: excluded
   excludedReason: Provenance undocumented; model name indicates a game-character voice (copyrighted source
     audio); no licence.
@@ -4158,6 +4162,7 @@ models:
   - zh-CN
   type: vits
   appSupported: true
+  gameCharacterVoice: true
   status: excluded
   excludedReason: Provenance undocumented; model name indicates a game-character voice (copyrighted source
     audio); no licence.
@@ -4209,6 +4214,7 @@ models:
   - zh-CN
   type: vits
   appSupported: true
+  gameCharacterVoice: true
   status: excluded
   excludedReason: Provenance undocumented; model name indicates a game-character voice (copyrighted source
     audio); no licence.
@@ -4260,6 +4266,7 @@ models:
   - zh-CN
   type: vits
   appSupported: true
+  gameCharacterVoice: true
   status: excluded
   excludedReason: Provenance undocumented; model name indicates a game-character voice (copyrighted source
     audio); no licence.
@@ -4311,6 +4318,7 @@ models:
   - zh-CN
   type: vits
   appSupported: true
+  gameCharacterVoice: true
   status: excluded
   excludedReason: Provenance undocumented; model name indicates a game-character voice (copyrighted source
     audio); no licence.
@@ -4362,6 +4370,7 @@ models:
   - zh-CN
   type: vits
   appSupported: true
+  gameCharacterVoice: true
   status: excluded
   excludedReason: Provenance undocumented; model name indicates a game-character voice (copyrighted source
     audio); no licence.
@@ -4413,8 +4422,8 @@ models:
   - zh-CN
   type: vits
   appSupported: true
-  status: excluded
-  excludedReason: Hugging Face Space re-host with no licence and no data provenance.
+  status: community
+  communityNote: "Community tier (product decision 2026-11-03): the licence and training-data provenance are UNKNOWN (not known to be prohibited) and have not been verified by Readori. Published as a GitHub Releases pack only, never as an Apple-hosted asset pack, and labelled as collected from the community and not recommended. Upstream finding: Hugging Face Space re-host with no licence and no data provenance."
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-zh-hf-fanchen-C.tar.bz2
     assetName: vits-zh-hf-fanchen-C.tar.bz2
@@ -4427,6 +4436,7 @@ models:
     assetUpdatedAt: '2024-04-22T05:49:51Z'
   license:
     spdx: UNKNOWN
+    textFile: registry/license-texts/COMMUNITY-NOTICE.txt
     url: TODO
     evidence:
     - url: https://k2-fsa.github.io/sherpa/onnx/tts/pretrained_models/vits.html
@@ -4465,8 +4475,8 @@ models:
   - zh-CN
   type: vits
   appSupported: true
-  status: excluded
-  excludedReason: Hugging Face Space re-host with no licence and no data provenance.
+  status: community
+  communityNote: "Community tier (product decision 2026-11-03): the licence and training-data provenance are UNKNOWN (not known to be prohibited) and have not been verified by Readori. Published as a GitHub Releases pack only, never as an Apple-hosted asset pack, and labelled as collected from the community and not recommended. Upstream finding: Hugging Face Space re-host with no licence and no data provenance."
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-zh-hf-fanchen-ZhiHuiLaoZhe.tar.bz2
     assetName: vits-zh-hf-fanchen-ZhiHuiLaoZhe.tar.bz2
@@ -4479,6 +4489,7 @@ models:
     assetUpdatedAt: '2024-04-22T05:49:51Z'
   license:
     spdx: UNKNOWN
+    textFile: registry/license-texts/COMMUNITY-NOTICE.txt
     url: TODO
     evidence:
     - url: https://k2-fsa.github.io/sherpa/onnx/tts/pretrained_models/vits.html
@@ -4504,6 +4515,8 @@ models:
     - new_heteronym.fst
     ruleFars:
     - rule.far
+    speakerCount: 1
+    defaultSpeaker: 0
     sampleRate: 16000
   minAppVersion: "1.1.2"
 - id: zh-vits-zh-hf-fanchen-zhihuilaozhe-new-v1
@@ -4516,8 +4529,8 @@ models:
   - zh-CN
   type: vits
   appSupported: true
-  status: excluded
-  excludedReason: Hugging Face Space re-host with no licence and no data provenance.
+  status: community
+  communityNote: "Community tier (product decision 2026-11-03): the licence and training-data provenance are UNKNOWN (not known to be prohibited) and have not been verified by Readori. Published as a GitHub Releases pack only, never as an Apple-hosted asset pack, and labelled as collected from the community and not recommended. Upstream finding: Hugging Face Space re-host with no licence and no data provenance."
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-zh-hf-fanchen-ZhiHuiLaoZhe_new.tar.bz2
     assetName: vits-zh-hf-fanchen-ZhiHuiLaoZhe_new.tar.bz2
@@ -4530,6 +4543,7 @@ models:
     assetUpdatedAt: '2024-04-22T05:49:47Z'
   license:
     spdx: UNKNOWN
+    textFile: registry/license-texts/COMMUNITY-NOTICE.txt
     url: TODO
     evidence:
     - url: https://k2-fsa.github.io/sherpa/onnx/tts/pretrained_models/vits.html
@@ -4555,6 +4569,8 @@ models:
     - new_heteronym.fst
     ruleFars:
     - rule.far
+    speakerCount: 1
+    defaultSpeaker: 0
     sampleRate: 16000
   minAppVersion: "1.1.2"
 - id: zh-vits-zh-hf-fanchen-unity-v1
@@ -4567,8 +4583,8 @@ models:
   - zh-CN
   type: vits
   appSupported: true
-  status: excluded
-  excludedReason: Hugging Face Space re-host with no licence and no data provenance.
+  status: community
+  communityNote: "Community tier (product decision 2026-11-03): the licence and training-data provenance are UNKNOWN (not known to be prohibited) and have not been verified by Readori. Published as a GitHub Releases pack only, never as an Apple-hosted asset pack, and labelled as collected from the community and not recommended. Upstream finding: Hugging Face Space re-host with no licence and no data provenance."
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-zh-hf-fanchen-unity.tar.bz2
     assetName: vits-zh-hf-fanchen-unity.tar.bz2
@@ -4581,6 +4597,7 @@ models:
     assetUpdatedAt: '2024-04-22T05:49:49Z'
   license:
     spdx: UNKNOWN
+    textFile: registry/license-texts/COMMUNITY-NOTICE.txt
     url: TODO
     evidence:
     - url: https://k2-fsa.github.io/sherpa/onnx/tts/pretrained_models/vits.html
@@ -4606,6 +4623,8 @@ models:
     - new_heteronym.fst
     ruleFars:
     - rule.far
+    speakerCount: 1
+    defaultSpeaker: 0
     sampleRate: 16000
   minAppVersion: "1.1.2"
 - id: zh-vits-zh-hf-fanchen-wnj-v1
@@ -4618,8 +4637,8 @@ models:
   - zh-CN
   type: vits
   appSupported: true
-  status: excluded
-  excludedReason: Hugging Face Space re-host with no licence and no data provenance.
+  status: community
+  communityNote: "Community tier (product decision 2026-11-03): the licence and training-data provenance are UNKNOWN (not known to be prohibited) and have not been verified by Readori. Published as a GitHub Releases pack only, never as an Apple-hosted asset pack, and labelled as collected from the community and not recommended. Upstream finding: Hugging Face Space re-host with no licence and no data provenance."
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-zh-hf-fanchen-wnj.tar.bz2
     assetName: vits-zh-hf-fanchen-wnj.tar.bz2
@@ -4632,6 +4651,7 @@ models:
     assetUpdatedAt: '2024-04-22T05:49:52Z'
   license:
     spdx: UNKNOWN
+    textFile: registry/license-texts/COMMUNITY-NOTICE.txt
     url: TODO
     evidence:
     - url: https://k2-fsa.github.io/sherpa/onnx/tts/pretrained_models/vits.html

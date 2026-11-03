@@ -8,9 +8,12 @@ from pathlib import Path
 from typing import Any
 
 from .common import (
+    COMMUNITY_NOTICE,
     MANIFEST_NAME,
     MAX_ARCHIVE_ENTRIES,
     MAX_ZIP_BYTES,
+    TIER_COMMUNITY,
+    TIER_OFFICIAL,
     ZIP_FIXED_DATE_TIME,
     VoicePackError,
     loads_strict,
@@ -108,10 +111,17 @@ def build_sidecar(
         "speakerCount": manifest.get("speakerCount", 1),
         "defaultSpeaker": manifest.get("defaultSpeaker", 0),
         "modelBytes": manifest.get("modelBytes"),
-        "appleAssetPackId": apple_asset_pack_id(pack_id),
     }
+    community = entry is not None and entry.get("status") == "community"
+    if not community:
+        # Community packs are never offered as Apple-hosted asset packs.
+        sidecar["appleAssetPackId"] = apple_asset_pack_id(pack_id)
     if entry is not None:
         lic = entry["license"]
+        sidecar["tier"] = TIER_COMMUNITY if community else TIER_OFFICIAL
+        sidecar["recommended"] = not community
+        if community:
+            sidecar["notice"] = dict(COMMUNITY_NOTICE)
         sidecar["displayName"] = dict(entry["displayName"])
         sidecar["languages"] = list(entry["languages"])
         sidecar["minAppVersion"] = entry["minAppVersion"]
@@ -119,6 +129,7 @@ def build_sidecar(
             "spdx": lic["spdx"],
             "url": lic["url"],
             "attributionRequired": lic["spdx"] in ATTRIBUTION_REQUIRED_SPDX,
+            "verified": not community,
         }
     return {k: v for k, v in sidecar.items() if v is not None}
 

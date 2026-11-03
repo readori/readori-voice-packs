@@ -15,6 +15,24 @@ MANIFEST_NAME = "readori-tts-model.json"
 CATALOG_NAME = "readori-voices.json"
 ATTRIBUTION_NAME = "readori-attribution.txt"
 
+# Distribution tiers. "official" packs pass the full license gate (status approved) and may also
+# be offered as Apple-hosted asset packs. "community" packs (status community) have an UNVERIFIED
+# licence, are published as GitHub Release assets only and are only collected, never recommended.
+TIER_OFFICIAL = "official"
+TIER_COMMUNITY = "community"
+
+# Label shown by the app for community packs (sidecar / index ``notice``), keyed by display
+# language. The same en and zh-Hans sentences open COMMUNITY-NOTICE.txt and the community
+# readori-attribution.txt.
+COMMUNITY_NOTICE = {
+    "en": (
+        "Collected from the community, not recommended by Readori. "
+        "Add at your own discretion; the licence is not verified."
+    ),
+    "zh-Hans": "社区收集，Readori 不推荐。由用户自行添加使用，许可证未经核实。",
+    "zh-Hant": "社群收集，Readori 不推薦。由使用者自行加入使用，授權未經核實。",
+}
+
 # TTSEnginePackageImporter.swift:131-137
 MAX_ZIP_BYTES = 1_500 * 1024 * 1024
 MAX_ARCHIVE_ENTRIES = 10_000

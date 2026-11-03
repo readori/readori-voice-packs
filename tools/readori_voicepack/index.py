@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 from typing import Any
 
-from .common import SHA256_RE, VoicePackError, loads_strict, write_json
+from .common import SHA256_RE, TIER_OFFICIAL, VoicePackError, loads_strict, write_json
 
 REPO_RE = re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
 DEFAULT_INDEX = Path("catalog/v1/index.json")
@@ -40,6 +40,10 @@ def entry_from_sidecar(sidecar: dict[str, Any], repo: str) -> dict[str, Any]:
         "license": sidecar.get("license"),
         "minAppVersion": sidecar.get("minAppVersion"),
         "appleAssetPackId": sidecar.get("appleAssetPackId"),
+        # Additive fields (schemaVersion stays 1); older sidecars are official packs.
+        "tier": sidecar.get("tier", TIER_OFFICIAL),
+        "recommended": sidecar.get("recommended", True),
+        "notice": sidecar.get("notice"),
     }
     return {k: v for k, v in entry.items() if v is not None}
 

@@ -42,7 +42,11 @@ def cmd_registry_check(args: argparse.Namespace) -> int:
     human_to_err = bool(args.matrix)
 
     if args.matrix:
-        chosen = selected if selected is not None else [r for r in results if r.buildable]
+        chosen = (
+            selected
+            if selected is not None
+            else [r for r in results if r.buildable and r.entry["status"] == "approved"]
+        )
         print(json.dumps(reg.matrix_for(chosen), separators=(",", ":")))
 
     if args.json and not args.matrix:
@@ -70,6 +74,7 @@ def cmd_registry_check(args: argparse.Namespace) -> int:
     _out(
         f"summary: {buildable} buildable, {len(results) - buildable} blocked "
         f"(approved={sum(1 for r in results if r.entry['status'] == 'approved')}, "
+        f"community={sum(1 for r in results if r.entry['status'] == 'community')}, "
         f"candidate={sum(1 for r in results if r.entry['status'] == 'candidate')}, "
         f"excluded={sum(1 for r in results if r.entry['status'] == 'excluded')})",
         err=human_to_err,
@@ -253,7 +258,13 @@ def cmd_index(args: argparse.Namespace) -> int:
 
 
 def cmd_ba_manifest(args: argparse.Namespace) -> int:
-    manifest = build_ba_manifest(args.dir)
+    sidecar = None
+    if args.sidecar:
+        if not args.sidecar.is_file():
+            raise VoicePackError(f"sidecar not found: {args.sidecar}")
+        sidecar = loads_strict(args.sidecar.read_text(encoding="utf-8"))
+    entry = _maybe_entry(args.registry, _pack_id_of(args.dir))
+    manifest = build_ba_manifest(args.dir, entry=entry, sidecar=sidecar)
     args.out.mkdir(parents=True, exist_ok=True)
     target = args.out / f"{manifest['assetPackID']}.manifest.json"
     write_json(target, manifest)
@@ -284,7 +295,10 @@ def build_parser() -> argparse.ArgumentParser:
 
     p = add("registry-check", cmd_registry_check, "validate registry/models.yaml and the license gate")
     registry_arg(p)
-    p.add_argument("--select", help="comma-separated ids or 'all-approved'; fails if one is blocked")
+    p.add_argument(
+        "--select",
+        help="comma-separated ids, 'all-approved' or 'all-community'; fails if one is blocked",
+    )
     p.add_argument("--matrix", action="store_true", help="print a GitHub Actions matrix as JSON")
     p.add_argument("--json", action="store_true", help="print the gate report as JSON")
     p.add_argument("--require-pinned", action="store_true", help="block entries without sha256/bytes")
@@ -358,6 +372,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     p = add("ba-manifest", cmd_ba_manifest, "draft an Apple Background Assets manifest (unverified)")
     p.add_argument("dir", type=Path)
+    registry_arg(p)
+    p.add_argument("--sidecar", type=Path, help="release sidecar (*.zip.json); a community tier is refused")
     p.add_argument("--out", type=Path, default=Path("build/ba"))
     return parser
 

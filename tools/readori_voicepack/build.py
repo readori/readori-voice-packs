@@ -21,6 +21,7 @@ from .common import (
     APP_SUPPORTED_TYPES,
     ATTRIBUTION_NAME,
     CATALOG_NAME,
+    COMMUNITY_NOTICE,
     MANIFEST_NAME,
     VoicePackError,
     is_todo,
@@ -267,7 +268,11 @@ def render_attribution(
     lic = entry["license"]
     upstream = entry["upstream"]
     names = entry["displayName"]
-    lines = [
+    community = entry.get("status") == "community"
+    lines: list[str] = []
+    if community:
+        lines += [COMMUNITY_NOTICE["en"], COMMUNITY_NOTICE["zh-Hans"], ""]
+    lines += [
         f"Readori offline voice pack: {names['en']}",
         f"Pack id: {entry['id']}   Pack version: {pack_version}",
         "",
@@ -278,14 +283,23 @@ def render_attribution(
     ]
     if lic.get("author"):
         lines.append(f"  Author / rights holder: {lic['author']}")
-    lines += [
-        "",
-        "License",
-        f"  Model license: {lic['spdx']}  ({lic['url']})",
-    ]
-    for item in evidence_items(lic):
-        text = item.get("url") if isinstance(item, dict) else item
-        lines.append(f"  Evidence: {text}")
+    if community:
+        # Community tier: never state or imply a licence; only say it is not verified.
+        lines += [
+            "",
+            "License",
+            "  Licence: not verified (community tier)",
+            f"  Source: {upstream.get('homepage') or upstream['url']}",
+        ]
+    else:
+        lines += [
+            "",
+            "License",
+            f"  Model license: {lic['spdx']}  ({lic['url']})",
+        ]
+        for item in evidence_items(lic):
+            text = item.get("url") if isinstance(item, dict) else item
+            lines.append(f"  Evidence: {text}")
     dataset = lic.get("dataset")
     if isinstance(dataset, dict):
         spdx = dataset.get("spdx")
@@ -323,11 +337,21 @@ def render_attribution(
         "  - Removed test audio and helper scripts.",
         "  - Model weights and token files are unchanged from the upstream archive.",
         "",
-        f"The upstream license text is included in this pack as {license_file}.",
-        "The model is distributed under the terms of that license, not under the license of the",
-        "Readori packaging tools.",
-        "",
     ]
+    if community:
+        lines += [
+            f"{license_file} in this pack is the community notice (or the file shipped by the",
+            "upstream archive). Readori has not verified the licence of the model or its training",
+            "data. The model is provided as is, without warranty.",
+            "",
+        ]
+    else:
+        lines += [
+            f"The upstream license text is included in this pack as {license_file}.",
+            "The model is distributed under the terms of that license, not under the license of the",
+            "Readori packaging tools.",
+            "",
+        ]
     return "\n".join(lines)
 
 

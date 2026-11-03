@@ -25,7 +25,7 @@ ZIP 文件，里面是 [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) 文�
 | 证据 | 每条已批准的登记都要引用上游模型卡 / README，至少一个 https 链接（`license.evidence`，`{url, quote}` 列表）；完整调研见 [docs/LICENSE_EVIDENCE.md](docs/LICENSE_EVIDENCE.md) |
 | 训练数据 | `license.dataset.spdx` 为允许的许可证（另含 CC-BY-3.0、Unlicense）、`mixed`（带 `parts`，每项为允许许可证或 `undisclosed`）或 `undisclosed`（必须写 note，且模型本身的许可证仍须明确） |
 | GPL 数据组件 | `license.components` 记录随包组件（`name`、`spdx`、`url`、`sourceURL`、`role: data\|code`）。GPL-3.0-or-later / GPL-3.0-only **只**接受 `role: data`（espeak-ng-data）；不能作为模型许可证，也不能是代码 |
-| 未知 / 非商用 / 仅研究用途 | 一律不制作；`unknown` 按「不允许」处理 |
+| 未知 / 非商用 / 仅研究用途 | 不作为官方包制作；`unknown` 按「不允许」处理（未知而非已知禁止的模型可进入[社区分级](#社区分级)） |
 | 每个语音包内 | 上游许可证原文，以及 `readori-attribution.txt`（模型名、作者、许可证、来源链接、改动说明） |
 | 含 `espeak-ng-data` 的包 | 另含 `COPYING.espeak-ng`（GPL-3.0 全文），且 `readori-attribution.txt` 写明 https://github.com/espeak-ng/espeak-ng 与 GPL 声明 |
 
@@ -34,9 +34,25 @@ ZIP 文件，里面是 [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) 文�
 
 含 espeak-ng-data 的语音包里，GPL 数据文件与模型并列存放；GPL 只约束这些数据文件。
 
+## 社区分级
+
+部分模型的许可证**未知**（上游没有任何声明，但也没有禁止使用）。它们不属于 `approved`，维护者可将其登记为
+`status: community`。Readori 只是**收集**这些模型，**不推荐**；由用户**自行添加使用**。
+
+- 模型及其训练数据的许可证**未经核实**。每个社区包都会明示：其 sidecar 与索引条目带有 `"tier": "community"`、
+  `"recommended": false`、`"license": {"verified": false}` 以及三语 `notice`（en / zh-Hans / zh-Hant）；
+  `readori-attribution.txt` 与包内 `LICENSE`（`registry/license-texts/COMMUNITY-NOTICE.txt`）开头是同一句声明。
+- 社区包**只通过 GitHub Releases 发布**，不会作为 Apple 托管资产包，也不会进入 App Store。`ba-manifest`
+  会拒绝社区包，工作流的 Apple 作业也会跳过它们。
+- 权利人可在本仓库提交 issue 申请移除，该包随即下架。
+- **任何分级都不接受：** 许可证或训练数据已知为非商用 / 仅研究用途的模型、禁止再分发的模型，以及游戏角色声音
+  （`gameCharacterVoice: true`）。这由代码（`evaluate_gate`）强制，而不只是登记表的约定。
+- 选择方式：`registry-check --select all-community`（或显式 id）。`all-approved` 永远不含社区包。
+- App 端预期行为：与官方包分开列出，绝不预选、绝不标为推荐，并且必须由用户明确操作才能添加，同时展示 `notice` 文案。
+
 ## 登记表状态
 
-`registry/models.yaml` 收录 sherpa-onnx `tts-models` 发布的调研结果：`approved` 通过闸门，`candidate` 仍需决定或补证据，`excluded` 不能发布（见 `excludedReason`）；`priority: 1` 为首批构建。`upstream.sha256: TODO` 表示尚未锁定：先用 `allow_unpinned` 构建一次，再把打印出的哈希写回；`pinnedFrom: github-digest` 表示哈希来自 GitHub 发布资产摘要。`minAppVersion: TODO` 只阻止发布（`--for-publish`），不阻止构建。`preset` 中值为 `TODO` 的项在构建时从真实压缩包自动识别。
+`registry/models.yaml` 收录 sherpa-onnx `tts-models` 发布的调研结果：`approved` 通过闸门，`candidate` 仍需决定或补证据，`community` 为上文所述的“许可证未核实”分级（见 `communityNote`），`excluded` 不能发布（见 `excludedReason`）；`priority: 1` 为首批构建。`upstream.sha256: TODO` 表示尚未锁定：先用 `allow_unpinned` 构建一次，再把打印出的哈希写回；`pinnedFrom: github-digest` 表示哈希来自 GitHub 发布资产摘要。`minAppVersion: TODO` 只阻止发布（`--for-publish`），不阻止构建。`preset` 中值为 `TODO` 的项在构建时从真实压缩包自动识别。
 
 闸门写在代码里（`registry-check`，并在 `fetch`、`build` 中再次检查），并有单元测试覆盖。只有
 `status: approved` 且满足以上全部条件的模型才会进入制作流程。工具代码使用 Apache-2.0
@@ -73,7 +89,7 @@ App 目前只支持 `vits` 与 `kokoro` 两类模型。其他类型可以在登�
 ## 命令
 
 ```
-python -m readori_voicepack registry-check [--select all-approved|id,id] [--matrix] [--json] [--require-pinned] [--for-publish]
+python -m readori_voicepack registry-check [--select all-approved|all-community|id,id] [--matrix] [--json] [--require-pinned] [--for-publish]
 python -m readori_voicepack fetch <id> [--allow-unpinned]
 python -m readori_voicepack build <id> [--archive 文件] [--allow-unpinned] [--display-lang en|zh-Hans|zh-Hant]
 python -m readori_voicepack validate <目录|zip> [--app-only]
@@ -82,7 +98,7 @@ python -m readori_voicepack audit <目录> [--max-speakers N] [--min-speakers N]
 python -m readori_voicepack catalog-init --speaker-count N --catalog-id ID [--language ..] [--speaker-file ..]
 python -m readori_voicepack pack <目录> [--out dist]
 python -m readori_voicepack index --repo owner/name [--sidecars dist]
-python -m readori_voicepack ba-manifest <目录>
+python -m readori_voicepack ba-manifest <目录> [--registry 文件] [--sidecar 文件]
 ```
 
 | 命令 | 作用 |
@@ -96,7 +112,7 @@ python -m readori_voicepack ba-manifest <目录>
 | `catalog-init` | 生成只含已知事实的音色目录 |
 | `pack` | 生成确定性 ZIP（条目排序、固定时间戳）和带 sha256 的 `.zip.json` 附属文件 |
 | `index` | 把发布结果合并进 `catalog/v1/index.json` |
-| `ba-manifest` | 生成 Apple Background Assets 清单草稿（**尚未验证**，见下） |
+| `ba-manifest` | 生成 Apple Background Assets 清单草稿（**尚未验证**，见下）；拒绝社区包（分级取自登记表条目或 `--sidecar`） |
 
 ## 新增模型
 

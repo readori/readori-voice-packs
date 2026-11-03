@@ -11,7 +11,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-from .common import MANIFEST_NAME, VoicePackError, loads_strict, safe_relative_path
+from .common import MANIFEST_NAME, TIER_COMMUNITY, VoicePackError, loads_strict, safe_relative_path
 from .pack import apple_asset_pack_id
 
 NOTES = """\
@@ -34,7 +34,18 @@ automatically with the app.
 """
 
 
-def build_ba_manifest(pack_dir: Path) -> dict[str, Any]:
+def build_ba_manifest(
+    pack_dir: Path,
+    *,
+    entry: dict[str, Any] | None = None,
+    sidecar: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Draft the Apple manifest for a pack directory.
+
+    Community-tier packs are GitHub-Releases-only and must never become Apple-hosted asset
+    packs, so this refuses them. The pack manifest (which mirrors the app importer) carries no
+    tier, so the tier comes from the registry ``entry`` (status) or the release ``sidecar``.
+    """
     manifest_path = pack_dir / MANIFEST_NAME
     if not manifest_path.is_file():
         raise VoicePackError(f"{MANIFEST_NAME} not found in {pack_dir}")
@@ -42,6 +53,11 @@ def build_ba_manifest(pack_dir: Path) -> dict[str, Any]:
     pack_id = manifest.get("packId")
     if not isinstance(pack_id, str):
         raise VoicePackError("manifest has no packId")
+    if (entry or {}).get("status") == "community" or (sidecar or {}).get("tier") == TIER_COMMUNITY:
+        raise VoicePackError(
+            f"{pack_id} is a community-tier pack: community packs are GitHub Releases only and "
+            "are never packaged as Apple-hosted asset packs"
+        )
     files = sorted(
         p.relative_to(pack_dir).as_posix() for p in pack_dir.rglob("*") if p.is_file()
     )

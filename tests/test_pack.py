@@ -100,7 +100,11 @@ def test_pack_directory_writes_zip_and_sidecar(built_vits, tmp_path):
         "spdx": "Apache-2.0",
         "url": "https://example.invalid/LICENSE",
         "attributionRequired": False,
+        "verified": True,
     }
+    assert sidecar["tier"] == "official"
+    assert sidecar["recommended"] is True
+    assert "notice" not in sidecar
     assert sidecar["displayName"]["zh-Hans"] == "测试普通话"
     assert sidecar["languages"] == ["zh-CN"]
     assert val.validate_target(result.zip_path).ok
@@ -110,6 +114,7 @@ def test_pack_without_registry_entry_has_minimal_sidecar(built_vits, tmp_path):
     _, built = built_vits
     result = pack_directory(built.pack_dir, tmp_path / "dist")
     assert "license" not in result.sidecar
+    assert "tier" not in result.sidecar  # unknown without a registry entry; the index treats it as official
     assert result.sidecar["id"] == "zh-fake-v1"
 
 

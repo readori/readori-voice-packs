@@ -1,0 +1,25 @@
+Collected from the community, not recommended by Readori. Add at your own discretion; the licence is not verified.
+社区收集，Readori 不推荐。由用户自行添加使用，许可证未经核实。
+
+COMMUNITY NOTICE / 社区模型声明
+
+English
+-------
+This voice model is part of the Readori "community" tier.
+
+* The licence of this model and of its training data has NOT been verified by Readori.
+* The model comes from the upstream source named in readori-attribution.txt (the "Source"
+  line). Readori only repackaged the files for the Readori app.
+* It is provided as is, without warranty of any kind. Use it at your own risk and at your own
+  discretion.
+* Rights holders who object to this model being listed can ask for its removal by opening an
+  issue in the readori/readori-voice-packs repository; it will be taken down.
+
+简体中文
+--------
+此语音模型属于 Readori 的“社区”分级。
+
+* Readori 未核实此模型及其训练数据的许可证。
+* 模型来自 readori-attribution.txt 中“Source”一行所列的上游来源，Readori 仅为适配 Readori 应用而重新打包文件。
+* 按“现状”提供，不附带任何形式的担保。请自行判断并自担风险。
+* 如权利人不同意收录此模型，可在 readori/readori-voice-packs 仓库提交 issue 申请移除，我们会将其下架。

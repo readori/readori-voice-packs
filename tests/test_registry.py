@@ -52,7 +52,7 @@ def test_shipped_priority_one_packs_are_buildable():
 
 def test_shipped_decisions_cantonese_and_japanese_korean_excluded():
     registry, by_id = _shipped()
-    assert by_id["yue-cantonese-v1"]["status"] == "excluded"
+    assert by_id["yue-cantonese-v1"]["status"] == "community"  # moved to the community tier 2026-11-03
     for model in registry.models:
         if model["status"] == "approved":
             assert model.get("voiceCatalog") != by_id["yue-cantonese-v1"]["voiceCatalog"]

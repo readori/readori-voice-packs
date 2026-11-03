@@ -38,7 +38,9 @@ COPYLEFT_DATA_SPDX = ("GPL-3.0-or-later", "GPL-3.0-only")
 COMPONENT_ROLES = ("data", "code")
 URL_RE = re.compile(r"https://[^\s)\]>\"']+")
 
-STATUSES = ("candidate", "approved", "excluded")
+STATUSES = ("candidate", "approved", "community", "excluded")
+# Non-commercial / research-only wording in a license or dataset spdx text.
+NC_SPDX_RE = re.compile(r"(^|[-_ ])NC([-_ ]|$)|non-?commercial|research", re.IGNORECASE)
 KNOWN_TYPES = ("vits", "kokoro", "matcha", "kitten", "zipvoice", "pocket", "supertonic", "other")
 LANGUAGE_RE = re.compile(r"^[A-Za-z]{2,3}(-[A-Za-z0-9]{2,8})*$")
 VERSION_RE = re.compile(r"^\d+(\.\d+){1,2}$")
@@ -141,6 +143,15 @@ def validate_entry_schema(entry: Any, index: int) -> list[str]:
         _err(errors, where, f"status must be one of {', '.join(STATUSES)}")
     if status == "excluded" and not _is_str(entry.get("excludedReason")):
         _err(errors, where, "excluded entries need excludedReason")
+    if status == "community" and not _is_str(entry.get("communityNote")):
+        _err(
+            errors,
+            where,
+            "community entries need communityNote (why it is community; licence not verified)",
+        )
+    game_flag = entry.get("gameCharacterVoice")
+    if game_flag is not None and not isinstance(game_flag, bool):
+        _err(errors, where, "gameCharacterVoice must be boolean")
 
     priority = entry.get("priority")
     if priority is not None and not (is_plain_int(priority) and 1 <= priority <= 3):
@@ -151,7 +162,7 @@ def validate_entry_schema(entry: Any, index: int) -> list[str]:
     hints = entry.get("catalogHints")
     if hints is not None:
         _validate_catalog_hints(hints, where, errors)
-    for key in ("notes", "excludedReason"):
+    for key in ("notes", "excludedReason", "communityNote"):
         if entry.get(key) is not None and not isinstance(entry[key], str):
             _err(errors, where, f"{key} must be a string")
 
@@ -421,7 +432,7 @@ def _component_reasons(lic: dict[str, Any]) -> list[str]:
         role = comp.get("role")
         if not spdx or is_todo(spdx) or spdx.lower() in ("unknown", "unlicensed", "none"):
             reasons.append(f"component '{name}' license is unknown")
-        elif re.search(r"(^|[-_ ])NC([-_ ]|$)|non-?commercial|research", spdx, re.IGNORECASE):
+        elif NC_SPDX_RE.search(spdx):
             reasons.append(f"component '{name}' license '{spdx}' is non-commercial / research-only")
         elif spdx in COPYLEFT_DATA_SPDX:
             if role != "data":
@@ -466,6 +477,57 @@ def _dataset_reasons(dataset: Any) -> list[str]:
     return reasons
 
 
+def _evaluate_community(
+    entry: dict[str, Any], *, require_pinned: bool, for_publish: bool
+) -> list[str]:
+    """Gate for the community tier (licence UNKNOWN is accepted, known-prohibited is not).
+
+    Community packs are published as GitHub Release assets only. What is still refused: a
+    licence or training-data licence that is known non-commercial / research-only, an explicit
+    commercialUse / redistribution ``false``, and game-character voices.
+    """
+    reasons: list[str] = []
+    if entry.get("gameCharacterVoice") is True:
+        reasons.append("game-character voices are never accepted (not even in the community tier)")
+    if not app_supported(entry):
+        reasons.append(f"type '{entry.get('type')}' is not supported by the app (vits/kokoro only)")
+
+    lic = entry.get("license") or {}
+    if lic.get("commercialUse") is False:
+        reasons.append("license.commercialUse is False: known non-commercial models are never accepted")
+    if lic.get("redistribution") is False:
+        reasons.append("license.redistribution is False: models that forbid redistribution are never accepted")
+    spdx = lic.get("spdx")
+    spdx_text = spdx.strip() if isinstance(spdx, str) else ""
+    if spdx_text and NC_SPDX_RE.search(spdx_text):
+        reasons.append(f"license '{spdx_text}' is non-commercial / research-only")
+    dataset = lic.get("dataset")
+    if isinstance(dataset, dict):
+        if dataset.get("commercialUse") is False:
+            reasons.append("license.dataset.commercialUse is False: non-commercial training data")
+        d_spdx = dataset.get("spdx")
+        if isinstance(d_spdx, str) and NC_SPDX_RE.search(d_spdx):
+            reasons.append(f"dataset license '{d_spdx}' is non-commercial / research-only")
+        for part in dataset.get("parts") or []:
+            p_spdx = part.get("spdx") if isinstance(part, dict) else None
+            if isinstance(p_spdx, str) and NC_SPDX_RE.search(p_spdx):
+                reasons.append(f"dataset part license '{p_spdx}' is non-commercial / research-only")
+    reasons.extend(_component_reasons(lic))
+
+    upstream = entry.get("upstream") or {}
+    up_url = upstream.get("url")
+    if not isinstance(up_url, str) or is_todo(up_url) or not up_url.startswith("https://"):
+        reasons.append("upstream.url must be an https URL")
+    if for_publish and is_todo(entry.get("minAppVersion")):
+        reasons.append("minAppVersion is TODO (required for publishing)")
+    preset = entry.get("preset") or {}
+    if not is_plain_int(preset.get("speakerCount")):
+        reasons.append("preset.speakerCount must be set for community entries")
+    if require_pinned and not is_pinned(entry):
+        reasons.append("upstream.sha256 / upstream.bytes are not pinned")
+    return reasons
+
+
 def evaluate_gate(
     entry: dict[str, Any], *, require_pinned: bool = False, for_publish: bool = False
 ) -> list[str]:
@@ -473,10 +535,14 @@ def evaluate_gate(
 
     ``for_publish`` additionally requires a concrete ``minAppVersion`` (a build does not).
     """
-    reasons: list[str] = []
     status = entry.get("status")
+    if status == "community":
+        return _evaluate_community(entry, require_pinned=require_pinned, for_publish=for_publish)
+    reasons: list[str] = []
     if status != "approved":
-        reasons.append(f"status is '{status}', must be 'approved'")
+        reasons.append(f"status is '{status}', must be 'approved' (or 'community' for the community tier)")
+    if entry.get("gameCharacterVoice") is True:
+        reasons.append("game-character voices are never accepted")
     if not app_supported(entry):
         reasons.append(f"type '{entry.get('type')}' is not supported by the app (vits/kokoro only)")
 
@@ -485,7 +551,7 @@ def evaluate_gate(
     spdx_text = spdx.strip() if isinstance(spdx, str) else ""
     if not spdx_text or is_todo(spdx_text) or spdx_text.lower() in ("unknown", "unlicensed", "none"):
         reasons.append("license.spdx is unknown")
-    elif re.search(r"(^|[-_ ])NC([-_ ]|$)|non-?commercial|research", spdx_text, re.IGNORECASE):
+    elif NC_SPDX_RE.search(spdx_text):
         reasons.append(f"license '{spdx_text}' is non-commercial / research-only")
     elif spdx_text not in ALLOWED_SPDX:
         reasons.append(f"license '{spdx_text}' is not in the allow list ({', '.join(ALLOWED_SPDX)})")
@@ -571,10 +637,16 @@ SELECT_ID_RE = re.compile(r"^[a-z0-9-]+$")
 
 
 def select_packs(results: list[GateResult], spec: str) -> list[GateResult]:
-    """Resolve ``all-approved`` or a comma-separated id list against gate results."""
+    """Resolve ``all-approved`` / ``all-community`` or a comma-separated id list.
+
+    ``all-approved`` returns only buildable status=approved entries, ``all-community`` only
+    buildable status=community entries. An explicit id list may mix both tiers.
+    """
     spec = spec.strip()
     if spec == "all-approved":
-        return [r for r in results if r.buildable]
+        return [r for r in results if r.buildable and r.entry.get("status") == "approved"]
+    if spec == "all-community":
+        return [r for r in results if r.buildable and r.entry.get("status") == "community"]
     ids = [part.strip() for part in spec.split(",") if part.strip()]
     if not ids:
         raise VoicePackError("empty pack selection")

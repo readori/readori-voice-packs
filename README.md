@@ -29,7 +29,7 @@ Only models that are **licensed for commercial use and for redistribution** are 
 | Evidence | every approved entry cites the upstream model card / README with at least one https link (`license.evidence`, a list of `{url, quote}`); the full research is in [docs/LICENSE_EVIDENCE.md](docs/LICENSE_EVIDENCE.md) |
 | Training data | `license.dataset.spdx` is an allowed license (also CC-BY-3.0, Unlicense), `mixed` (with `parts`, each allowed or `undisclosed`) or `undisclosed` (with a note; the model license itself must still be explicit) |
 | GPL data components | `license.components` lists bundled parts (`name`, `spdx`, `url`, `sourceURL`, `role: data\|code`). GPL-3.0-or-later / GPL-3.0-only is accepted **only** for `role: data` (espeak-ng-data); never as the model license and never as code |
-| Unknown / non-commercial / research-only | never built; `unknown` is treated as "no" |
+| Unknown / non-commercial / research-only | never built as an official pack; `unknown` is treated as "no" (unknown, not known-prohibited, models may enter the [community tier](#community-tier)) |
 | In every pack | the upstream license text and `readori-attribution.txt` (model, author, license, source URL, changes) |
 | Packs with `espeak-ng-data` | also `COPYING.espeak-ng` (GPL-3.0 text) and a GPL statement in `readori-attribution.txt` naming https://github.com/espeak-ng/espeak-ng |
 
@@ -43,10 +43,35 @@ holds. The tooling here is Apache-2.0 (see [LICENSE](LICENSE)); **each model kee
 Packs that bundle espeak-ng-data contain GPL data files next to the model; the GPL applies to those
 files only.
 
+## Community tier
+
+Some models have an **unknown** licence (nothing is stated upstream, but nothing prohibits use
+either). They are not approved, but the maintainer may list them as `status: community`. Readori
+only **collects** them; it does **not recommend** them. Users add them **at their own discretion**.
+
+- The licence of the model and of its training data is **not verified**. Every community pack says
+  so: its sidecar and index entry carry `"tier": "community"`, `"recommended": false`,
+  `"license": {"verified": false}` and a localized `notice` (en / zh-Hans / zh-Hant), and
+  `readori-attribution.txt` and the bundled `LICENSE` (`registry/license-texts/COMMUNITY-NOTICE.txt`)
+  open with the same sentence.
+- Community packs are published as **GitHub Releases only**, never as Apple-hosted asset packs and
+  never in the App Store. `ba-manifest` refuses them and the workflow skips them in the Apple job.
+- Rights holders can ask for removal by opening an issue in this repository; the pack is then taken
+  down.
+- **Never accepted, in any tier:** models whose licence or training data is known to be
+  non-commercial or research-only, models that forbid redistribution, and game-character voices
+  (`gameCharacterVoice: true`). The code enforces this (`evaluate_gate`), not just the registry.
+- Selection: `registry-check --select all-community` (or explicit ids). `all-approved` never
+  includes community packs.
+- Expected app behaviour: list community packs separately from the official packs, never
+  pre-select one, never mark one as recommended, and require an explicit user action to add one,
+  showing the `notice` text.
+
 ## Registry status
 
 `registry/models.yaml` holds the research results for the sherpa-onnx `tts-models` release.
 `status: approved` entries pass the gate, `candidate` entries still need a decision or evidence,
+`community` entries are the licence-unverified tier described above (`communityNote`),
 `excluded` entries cannot be published (`excludedReason`). `priority: 1` marks the first build
 batch. `upstream.sha256: TODO` means "not pinned yet": build once with `allow_unpinned`, then copy
 the printed hash into the registry. `pinnedFrom: github-digest` means the hash was taken from the
@@ -87,7 +112,7 @@ normalised and safe (no `..`, no absolute paths, no `:`), `speakerCount` is 1...
 ## Commands
 
 ```
-python -m readori_voicepack registry-check [--select all-approved|id,id] [--matrix] [--json] [--require-pinned] [--for-publish]
+python -m readori_voicepack registry-check [--select all-approved|all-community|id,id] [--matrix] [--json] [--require-pinned] [--for-publish]
 python -m readori_voicepack fetch <id> [--allow-unpinned]
 python -m readori_voicepack build <id> [--archive FILE] [--allow-unpinned] [--display-lang en|zh-Hans|zh-Hant]
 python -m readori_voicepack validate <dir|zip> [--app-only]
@@ -96,7 +121,7 @@ python -m readori_voicepack audit <dir> [--max-speakers N] [--min-speakers N] [-
 python -m readori_voicepack catalog-init --speaker-count N --catalog-id ID [--language ..] [--speaker-file ..]
 python -m readori_voicepack pack <dir> [--out dist]
 python -m readori_voicepack index --repo owner/name [--sidecars dist]
-python -m readori_voicepack ba-manifest <dir>
+python -m readori_voicepack ba-manifest <dir> [--registry FILE] [--sidecar FILE]
 ```
 
 | Command | What it does |
@@ -110,7 +135,7 @@ python -m readori_voicepack ba-manifest <dir>
 | `catalog-init` | writes a facts-only catalog |
 | `pack` | writes a deterministic ZIP (sorted entries, fixed timestamps) and a `.zip.json` sidecar with its sha256 |
 | `index` | merges release sidecars into `catalog/v1/index.json` |
-| `ba-manifest` | drafts an Apple Background Assets manifest (**unverified**, see below) |
+| `ba-manifest` | drafts an Apple Background Assets manifest (**unverified**, see below); refuses community packs (tier taken from the registry entry or `--sidecar`) |
 
 ## Add a model
 
