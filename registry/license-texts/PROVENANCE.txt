@@ -3,3 +3,11 @@ Used as COPYING.espeak-ng for packs that ship espeak-ng-data (GPL-3.0-or-later d
 Provenance: verbatim copy of https://www.gnu.org/licenses/gpl-3.0.txt (35149 bytes,
 sha256 3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986), fetched 2026-11-02.
 Builds prefer the COPYING found inside the upstream espeak-ng-data directory when present.
+
+Fallback model licenses (copied into a pack as LICENSE only when the upstream archive has none):
+Apache-2.0.txt: verbatim https://www.apache.org/licenses/LICENSE-2.0.txt
+  (11358 bytes, sha256 cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30), fetched 2026-11-03.
+CC-BY-4.0.txt: verbatim https://creativecommons.org/licenses/by/4.0/legalcode.txt
+  (18657 bytes, sha256 9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411), fetched 2026-11-03.
+MIT-MeloTTS.txt: verbatim https://github.com/myshell-ai/MeloTTS/blob/main/LICENSE ("Copyright (c) 2024 MyShell.ai")
+  (1053 bytes, sha256 88a50e5a02bbc2a5c2f084dc19da751aa97b1690f5fda76cd8005c8634d1ca70), fetched 2026-11-03.

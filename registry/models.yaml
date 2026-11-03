@@ -33,6 +33,7 @@ models:
     assetUpdatedAt: '2024-11-03T12:31:05Z'
   license:
     spdx: MIT
+    textFile: registry/license-texts/MIT-MeloTTS.txt
     url: https://huggingface.co/myshell-ai/MeloTTS-Chinese
     evidence:
     - url: https://huggingface.co/myshell-ai/MeloTTS-Chinese
@@ -97,6 +98,7 @@ models:
     assetUpdatedAt: '2024-04-08T01:43:46Z'
   license:
     spdx: Apache-2.0
+    textFile: registry/license-texts/Apache-2.0.txt
     url: https://github.com/k2-fsa/icefall/blob/master/LICENSE
     evidence:
     - url: https://huggingface.co/datasets/AISHELL/AISHELL-3
@@ -682,6 +684,7 @@ models:
     assetUpdatedAt: '2023-12-05T11:41:46Z'
   license:
     spdx: Apache-2.0
+    textFile: registry/license-texts/Apache-2.0.txt
     url: https://github.com/coqui-ai/TTS/blob/dev/TTS/.models.json
     evidence:
     - url: https://github.com/coqui-ai/TTS/blob/dev/TTS/.models.json
@@ -741,6 +744,7 @@ models:
     assetUpdatedAt: '2023-12-05T11:41:22Z'
   license:
     spdx: Apache-2.0
+    textFile: registry/license-texts/Apache-2.0.txt
     url: https://github.com/coqui-ai/TTS/blob/dev/TTS/.models.json
     evidence:
     - url: https://github.com/coqui-ai/TTS/blob/dev/TTS/.models.json
@@ -794,6 +798,7 @@ models:
     assetUpdatedAt: '2026-10-29T03:35:37Z'
   license:
     spdx: Apache-2.0
+    textFile: registry/license-texts/Apache-2.0.txt
     url: https://github.com/k2-fsa/icefall/blob/master/LICENSE
     evidence:
     - url: https://github.com/k2-fsa/icefall/blob/master/LICENSE
@@ -846,6 +851,7 @@ models:
     assetUpdatedAt: '2026-10-29T03:35:44Z'
   license:
     spdx: Apache-2.0
+    textFile: registry/license-texts/Apache-2.0.txt
     url: https://github.com/k2-fsa/icefall/blob/master/LICENSE
     evidence:
     - url: https://github.com/k2-fsa/icefall/blob/master/LICENSE
@@ -902,6 +908,7 @@ models:
     assetUpdatedAt: '2024-11-03T12:31:11Z'
   license:
     spdx: MIT
+    textFile: registry/license-texts/MIT-MeloTTS.txt
     url: https://huggingface.co/myshell-ai/MeloTTS-English
     evidence:
     - url: https://huggingface.co/myshell-ai/MeloTTS-English
@@ -3057,6 +3064,7 @@ models:
     assetUpdatedAt: '2025-12-02T06:55:21Z'
   license:
     spdx: CC-BY-4.0
+    textFile: registry/license-texts/CC-BY-4.0.txt
     url: https://huggingface.co/rhasspy/piper-voices
     evidence:
     - url: https://huggingface.co/rhasspy/piper-voices/blob/main/en/en_US/libritts/high/MODEL_CARD
@@ -3888,6 +3896,7 @@ models:
     assetUpdatedAt: '2024-04-08T01:42:55Z'
   license:
     spdx: Apache-2.0
+    textFile: registry/license-texts/Apache-2.0.txt
     url: https://huggingface.co/jackyqs/vits-aishell3-175-chinese
     evidence:
     - url: https://huggingface.co/jackyqs/vits-aishell3-175-chinese
