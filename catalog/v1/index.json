@@ -200,6 +200,37 @@
       "appleAssetPackId": "readori.voice.en-piper-en-us-libritts-high-v1"
     },
     {
+      "id": "yue-cantonese-v1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "Cantonese - VITS (1 voice)",
+        "zh-Hans": "粤语 · VITS（单音色）",
+        "zh-Hant": "粵語 · VITS（單一音色）"
+      },
+      "languages": [
+        "yue"
+      ],
+      "type": "vits",
+      "speakerCount": 1,
+      "bytes": 105351110,
+      "sha256": "6dec8a2b4280e62b9648d77e2957be0470bf540649578076b5240304bfe0f4bb",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/yue-cantonese-v1/v1/yue-cantonese-v1-v1.zip",
+      "license": {
+        "spdx": "UNKNOWN",
+        "url": "TODO",
+        "attributionRequired": false,
+        "verified": false
+      },
+      "minAppVersion": "1.1.2",
+      "tier": "community",
+      "recommended": false,
+      "notice": {
+        "en": "Collected from the community, not recommended by Readori. Add at your own discretion; the licence is not verified.",
+        "zh-Hans": "社区收集，Readori 不推荐。由用户自行添加使用，许可证未经核实。",
+        "zh-Hant": "社群收集，Readori 不推薦。由使用者自行加入使用，授權未經核實。"
+      }
+    },
+    {
       "id": "zh-aishell3-v1",
       "packVersion": 1,
       "displayName": {
@@ -273,6 +304,223 @@
       },
       "minAppVersion": "1.1.2",
       "appleAssetPackId": "readori.voice.zh-en-melo-v1"
+    },
+    {
+      "id": "zh-piper-huayan-medium-v1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "Mandarin - Piper huayan (1 voice)",
+        "zh-Hans": "普通话 · Piper huayan（单音色）",
+        "zh-Hant": "國語 · Piper huayan（單一音色）"
+      },
+      "languages": [
+        "zh-CN"
+      ],
+      "type": "vits",
+      "speakerCount": 1,
+      "bytes": 67453660,
+      "sha256": "a78a6df7943edb42812c7d4f4534792b87c22bc5af56bf8d1c1eefb1b83985c7",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/zh-piper-huayan-medium-v1/v1/zh-piper-huayan-medium-v1-v1.zip",
+      "license": {
+        "spdx": "UNKNOWN",
+        "url": "https://huggingface.co/rhasspy/piper-voices",
+        "attributionRequired": false,
+        "verified": false
+      },
+      "minAppVersion": "1.1.2",
+      "tier": "community",
+      "recommended": false,
+      "notice": {
+        "en": "Collected from the community, not recommended by Readori. Add at your own discretion; the licence is not verified.",
+        "zh-Hans": "社区收集，Readori 不推荐。由用户自行添加使用，许可证未经核实。",
+        "zh-Hant": "社群收集，Readori 不推薦。由使用者自行加入使用，授權未經核實。"
+      }
+    },
+    {
+      "id": "zh-vits-zh-hf-fanchen-c-v1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "Mandarin - fanchen-C (community Space model)",
+        "zh-Hans": "普通话 · fanchen-C（社区 Space 模型）",
+        "zh-Hant": "國語 · fanchen-C（社群 Space 模型）"
+      },
+      "languages": [
+        "zh-CN"
+      ],
+      "type": "vits",
+      "speakerCount": 187,
+      "bytes": 117766519,
+      "sha256": "dc4f12522e04485b466398cdd5e4895c4365d78280ebec08f97beb9216dd56f3",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/zh-vits-zh-hf-fanchen-c-v1/v1/zh-vits-zh-hf-fanchen-c-v1-v1.zip",
+      "license": {
+        "spdx": "UNKNOWN",
+        "url": "TODO",
+        "attributionRequired": false,
+        "verified": false
+      },
+      "minAppVersion": "1.1.2",
+      "tier": "community",
+      "recommended": false,
+      "notice": {
+        "en": "Collected from the community, not recommended by Readori. Add at your own discretion; the licence is not verified.",
+        "zh-Hans": "社区收集，Readori 不推荐。由用户自行添加使用，许可证未经核实。",
+        "zh-Hant": "社群收集，Readori 不推薦。由使用者自行加入使用，授權未經核實。"
+      }
+    },
+    {
+      "id": "zh-vits-zh-hf-fanchen-unity-v1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "Mandarin - fanchen-unity (community Space model)",
+        "zh-Hans": "普通话 · fanchen-unity（社区 Space 模型）",
+        "zh-Hant": "國語 · fanchen-unity（社群 Space 模型）"
+      },
+      "languages": [
+        "zh-CN"
+      ],
+      "type": "vits",
+      "speakerCount": 1,
+      "bytes": 117586401,
+      "sha256": "5ec86a32b716f47ed79b423154a054fd64efe79fc84d9546d5164d564a6cd637",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/zh-vits-zh-hf-fanchen-unity-v1/v1/zh-vits-zh-hf-fanchen-unity-v1-v1.zip",
+      "license": {
+        "spdx": "UNKNOWN",
+        "url": "TODO",
+        "attributionRequired": false,
+        "verified": false
+      },
+      "minAppVersion": "1.1.2",
+      "tier": "community",
+      "recommended": false,
+      "notice": {
+        "en": "Collected from the community, not recommended by Readori. Add at your own discretion; the licence is not verified.",
+        "zh-Hans": "社区收集，Readori 不推荐。由用户自行添加使用，许可证未经核实。",
+        "zh-Hant": "社群收集，Readori 不推薦。由使用者自行加入使用，授權未經核實。"
+      }
+    },
+    {
+      "id": "zh-vits-zh-hf-fanchen-wnj-v1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "Mandarin - fanchen-wnj (community Space model)",
+        "zh-Hans": "普通话 · fanchen-wnj（社区 Space 模型）",
+        "zh-Hant": "國語 · fanchen-wnj（社群 Space 模型）"
+      },
+      "languages": [
+        "zh-CN"
+      ],
+      "type": "vits",
+      "speakerCount": 1,
+      "bytes": 117595395,
+      "sha256": "9294a5a9f109c7d19854f090f9f2dd43c89110b23bd6bbfacf8db8f2ac9180ba",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/zh-vits-zh-hf-fanchen-wnj-v1/v1/zh-vits-zh-hf-fanchen-wnj-v1-v1.zip",
+      "license": {
+        "spdx": "UNKNOWN",
+        "url": "TODO",
+        "attributionRequired": false,
+        "verified": false
+      },
+      "minAppVersion": "1.1.2",
+      "tier": "community",
+      "recommended": false,
+      "notice": {
+        "en": "Collected from the community, not recommended by Readori. Add at your own discretion; the licence is not verified.",
+        "zh-Hans": "社区收集，Readori 不推荐。由用户自行添加使用，许可证未经核实。",
+        "zh-Hant": "社群收集，Readori 不推薦。由使用者自行加入使用，授權未經核實。"
+      }
+    },
+    {
+      "id": "zh-vits-zh-hf-fanchen-zhihuilaozhe-new-v1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "Mandarin - fanchen-ZhiHuiLaoZhe_new (community Space model)",
+        "zh-Hans": "普通话 · fanchen-ZhiHuiLaoZhe_new（社区 Space 模型）",
+        "zh-Hant": "國語 · fanchen-ZhiHuiLaoZhe_new（社群 Space 模型）"
+      },
+      "languages": [
+        "zh-CN"
+      ],
+      "type": "vits",
+      "speakerCount": 1,
+      "bytes": 117768679,
+      "sha256": "ac7e1a6509278a5cb308e459d5eff539bab14b8f7e946644a259c1f1ff09c896",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/zh-vits-zh-hf-fanchen-zhihuilaozhe-new-v1/v1/zh-vits-zh-hf-fanchen-zhihuilaozhe-new-v1-v1.zip",
+      "license": {
+        "spdx": "UNKNOWN",
+        "url": "TODO",
+        "attributionRequired": false,
+        "verified": false
+      },
+      "minAppVersion": "1.1.2",
+      "tier": "community",
+      "recommended": false,
+      "notice": {
+        "en": "Collected from the community, not recommended by Readori. Add at your own discretion; the licence is not verified.",
+        "zh-Hans": "社区收集，Readori 不推荐。由用户自行添加使用，许可证未经核实。",
+        "zh-Hant": "社群收集，Readori 不推薦。由使用者自行加入使用，授權未經核實。"
+      }
+    },
+    {
+      "id": "zh-vits-zh-hf-fanchen-zhihuilaozhe-v1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "Mandarin - fanchen-ZhiHuiLaoZhe (community Space model)",
+        "zh-Hans": "普通话 · fanchen-ZhiHuiLaoZhe（社区 Space 模型）",
+        "zh-Hant": "國語 · fanchen-ZhiHuiLaoZhe（社群 Space 模型）"
+      },
+      "languages": [
+        "zh-CN"
+      ],
+      "type": "vits",
+      "speakerCount": 1,
+      "bytes": 117829026,
+      "sha256": "1af96509f4918a1a0909b8c21d755eb6d1fc41c0eb32285cd6ac7a412bec25e2",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/zh-vits-zh-hf-fanchen-zhihuilaozhe-v1/v1/zh-vits-zh-hf-fanchen-zhihuilaozhe-v1-v1.zip",
+      "license": {
+        "spdx": "UNKNOWN",
+        "url": "TODO",
+        "attributionRequired": false,
+        "verified": false
+      },
+      "minAppVersion": "1.1.2",
+      "tier": "community",
+      "recommended": false,
+      "notice": {
+        "en": "Collected from the community, not recommended by Readori. Add at your own discretion; the licence is not verified.",
+        "zh-Hans": "社区收集，Readori 不推荐。由用户自行添加使用，许可证未经核实。",
+        "zh-Hant": "社群收集，Readori 不推薦。由使用者自行加入使用，授權未經核實。"
+      }
+    },
+    {
+      "id": "zh-vits-zh-ll-v1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "Mandarin - community fine-tune (5 voices)",
+        "zh-Hans": "普通话 · 社区微调（5 音色）",
+        "zh-Hant": "國語 · 社群微調（5 種音色）"
+      },
+      "languages": [
+        "zh-CN"
+      ],
+      "type": "vits",
+      "speakerCount": 5,
+      "bytes": 117138032,
+      "sha256": "44aaf3a566d21ce9981811c2fc316404b23739e15cbad612454e16167be29532",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/zh-vits-zh-ll-v1/v1/zh-vits-zh-ll-v1-v1.zip",
+      "license": {
+        "spdx": "UNKNOWN",
+        "url": "TODO",
+        "attributionRequired": false,
+        "verified": false
+      },
+      "minAppVersion": "1.1.2",
+      "tier": "community",
+      "recommended": false,
+      "notice": {
+        "en": "Collected from the community, not recommended by Readori. Add at your own discretion; the licence is not verified.",
+        "zh-Hans": "社区收集，Readori 不推荐。由用户自行添加使用，许可证未经核实。",
+        "zh-Hant": "社群收集，Readori 不推薦。由使用者自行加入使用，授權未經核實。"
+      }
     }
   ]
 }
