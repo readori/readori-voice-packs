@@ -16,6 +16,7 @@ from .build import build_pack
 from .common import MANIFEST_NAME, VoicePackError, loads_strict, sha256_file, write_json
 from .fetch import cache_path, fetch_model, verify_archive
 from .index import DEFAULT_INDEX, find_sidecars, update_index
+from .local import DEFAULT_LOCAL_OUT, LocalOptions, build_local
 from .pack import pack_directory
 from .smoke import run_smoke
 from .validate import validate_target
@@ -136,6 +137,37 @@ def cmd_build(args: argparse.Namespace) -> int:
     _out(f"catalogSHA256: {m.get('voiceCatalogSHA256', 'none')}")
     for note in result.notes:
         _out(f"note: {note}")
+    return 0
+
+
+def cmd_build_local(args: argparse.Namespace) -> int:
+    options = LocalOptions(
+        source=args.source,
+        out_dir=args.out,
+        accept_upstream_license=args.accept_upstream_license,
+        name=args.name,
+        model_type=args.type,
+        language=args.language,
+        speaker_count=args.speaker_count,
+        default_speaker=args.default_speaker,
+        display_name=args.display_name,
+        sha256=args.sha256,
+        skip_smoke=args.skip_smoke,
+        registry_path=args.registry,
+    )
+    result = build_local(options, progress=_out)
+    for note in result.notes:
+        _out(f"note: {note}")
+    m = result.manifest
+    _out(f"pack id:  {result.pack_id} (self-built, tier local)")
+    _out(f"type:     {m['type']}   speakers: {m['speakerCount']} (default {m['defaultSpeaker']})")
+    _out(f"smoke:    {result.smoke}")
+    _out(f"zip:      {result.pack.zip_path}")
+    _out(f"sidecar:  {result.pack.sidecar_path}")
+    _out(f"bytes:    {result.pack.bytes}")
+    _out(f"sha256:   {result.pack.sha256}")
+    _out("Import the ZIP in Readori: add a voice pack from a file. Readori does not review or")
+    _out("distribute self-built packs; you are responsible for the upstream licence.")
     return 0
 
 
@@ -323,6 +355,28 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--archive", type=Path, help="use this local archive instead of the cache")
     p.add_argument("--allow-unpinned", action="store_true")
     p.add_argument("--display-lang", default="en", choices=("en", "zh-Hans", "zh-Hant"))
+
+    p = add(
+        "build-local",
+        cmd_build_local,
+        "build a ZIP from an upstream archive you fetched yourself (not reviewed or distributed by Readori)",
+    )
+    p.add_argument("source", help="https URL or local .tar.bz2 / .tar.gz / .zip path")
+    p.add_argument(
+        "--accept-upstream-license",
+        action="store_true",
+        help="confirm that you read and accept the upstream licence yourself",
+    )
+    registry_arg(p)
+    p.add_argument("--out", type=Path, default=DEFAULT_LOCAL_OUT)
+    p.add_argument("--name", help="pack id (lowercase letters, digits, hyphens); default from the file name")
+    p.add_argument("--type", choices=("vits", "kokoro"), help="default: detected from the archive")
+    p.add_argument("--language", help="BCP-47 tag(s), comma-separated; default guessed from the name")
+    p.add_argument("--speaker-count", type=int)
+    p.add_argument("--default-speaker", type=int)
+    p.add_argument("--display-name")
+    p.add_argument("--sha256", help="expected sha256 of the archive (verified when given)")
+    p.add_argument("--skip-smoke", action="store_true", help="do not synthesise a test sentence")
 
     p = add("validate", cmd_validate, "validate a pack directory or ZIP with the app importer rules")
     p.add_argument("target", type=Path)

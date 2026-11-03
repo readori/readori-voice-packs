@@ -11,7 +11,15 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-from .common import MANIFEST_NAME, TIER_COMMUNITY, VoicePackError, loads_strict, safe_relative_path
+from .common import (
+    MANIFEST_NAME,
+    TIER_COMMUNITY,
+    TIER_LOCAL,
+    VoicePackError,
+    is_self_built_dir,
+    loads_strict,
+    safe_relative_path,
+)
 from .pack import apple_asset_pack_id
 
 NOTES = """\
@@ -43,7 +51,7 @@ def build_ba_manifest(
     """Draft the Apple manifest for a pack directory.
 
     Community-tier packs are GitHub-Releases-only and must never become Apple-hosted asset
-    packs, so this refuses them. The pack manifest (which mirrors the app importer) carries no
+    packs, and self-built (local) packs are never published at all, so this refuses both. The pack manifest (which mirrors the app importer) carries no
     tier, so the tier comes from the registry ``entry`` (status) or the release ``sidecar``.
     """
     manifest_path = pack_dir / MANIFEST_NAME
@@ -57,6 +65,11 @@ def build_ba_manifest(
         raise VoicePackError(
             f"{pack_id} is a community-tier pack: community packs are GitHub Releases only and "
             "are never packaged as Apple-hosted asset packs"
+        )
+    if (sidecar or {}).get("tier") == TIER_LOCAL or is_self_built_dir(pack_dir):
+        raise VoicePackError(
+            f"{pack_id} is a self-built (local) pack: local packs are never packaged as "
+            "Apple-hosted asset packs"
         )
     files = sorted(
         p.relative_to(pack_dir).as_posix() for p in pack_dir.rglob("*") if p.is_file()

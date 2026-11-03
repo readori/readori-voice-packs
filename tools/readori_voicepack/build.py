@@ -257,6 +257,27 @@ def _require_dir(root: Path, rel: str | None, what: str) -> None:
         raise VoicePackError(f"preset {what} directory not found in upstream archive: {rel}")
 
 
+def espeak_attribution_lines() -> list[str]:
+    """GPL statement for packs that contain espeak-ng-data (also used by self-built packs)."""
+    return [
+        "",
+        "espeak-ng-data (GPL-3.0-or-later)",
+        f"  This pack contains the espeak-ng-data directory from {ESPEAK_UPSTREAM_URL}.",
+        "  espeak-ng-data is licensed under the GNU General Public License, version 3 or",
+        "  (at your option) any later version. It is shipped here as separate, unmodified data",
+        f"  files; the full license text is included as {ESPEAK_COPYING_NAME}. The corresponding",
+        f"  source is available at {ESPEAK_UPSTREAM_URL}. The GPL applies to these data files only,",
+        "  not to the model weights or to the Readori app.",
+    ]
+
+
+def write_espeak_copying(pack_dir: Path, paths: list[str], repo_root: Path) -> str:
+    """Write ``COPYING.espeak-ng`` into the pack and return the note describing its source."""
+    copying_text, copying_source = resolve_espeak_copying(pack_dir, paths, repo_root)
+    (pack_dir / ESPEAK_COPYING_NAME).write_text(copying_text, encoding="utf-8", newline="\n")
+    return f"{ESPEAK_COPYING_NAME} taken from {copying_source}"
+
+
 def render_attribution(
     entry: dict[str, Any],
     *,
@@ -319,16 +340,7 @@ def render_attribution(
         lines.append(f"  License: {comp.get('spdx')}  ({comp.get('url')})")
         lines.append(f"  Source: {comp.get('sourceURL')}")
     if has_espeak:
-        lines += [
-            "",
-            "espeak-ng-data (GPL-3.0-or-later)",
-            f"  This pack contains the espeak-ng-data directory from {ESPEAK_UPSTREAM_URL}.",
-            "  espeak-ng-data is licensed under the GNU General Public License, version 3 or",
-            "  (at your option) any later version. It is shipped here as separate, unmodified data",
-            f"  files; the full license text is included as {ESPEAK_COPYING_NAME}. The corresponding",
-            f"  source is available at {ESPEAK_UPSTREAM_URL}. The GPL applies to these data files only,",
-            "  not to the model weights or to the Readori app.",
-        ]
+        lines += espeak_attribution_lines()
     lines += [
         "",
         "Modifications by Readori",
@@ -358,21 +370,53 @@ def render_attribution(
 # --------------------------------------------------------------------------- build
 
 
-def build_pack(
+@dataclass
+class Assembled:
+    """Everything known about a pack directory once files, layout and catalog are in place.
+
+    The license / attribution step and the manifest are the only parts that differ between
+    registry builds (``build_pack``) and self-built packs (``local.build_local_pack``).
+    """
+
+    pack_id: str
+    pack_version: int
+    pack_dir: Path
+    model_type: str
+    paths: list[str]
+    model: str
+    tokens: str
+    voices: str | None
+    speaker_file: str | None
+    data_dir: str | None
+    dict_dir: str | None
+    lexicons: list[str]
+    lexicon: str | None
+    rule_fsts: list[str]
+    rule_fars: list[str]
+    speaker_count: int
+    default_speaker: int
+    language: str
+    profile: str | None
+    catalog: dict[str, Any] | None
+    notes: list[str] = field(default_factory=list)
+
+
+def assemble_pack(
     entry: dict[str, Any],
     archive: Path,
     out_dir: Path,
     *,
     repo_root: Path,
-    archive_sha256: str | None = None,
-    display_lang: str = "en",
     generate_catalog: bool = True,
-) -> BuildResult:
-    model_type = entry["type"]
-    if model_type not in APP_SUPPORTED_TYPES:
+) -> Assembled:
+    """Extract the archive, detect the layout from the preset and write the voice catalog.
+
+    ``entry`` needs ``id``, ``languages``, ``preset`` and ``type`` (``None`` = detect from the archive);
+    optional: ``packVersion``, ``catalogHints``, ``voiceCatalog``. Licence handling is left to the caller.
+    """
+    model_type = entry.get("type")  # None: detect from the archive (self-built packs)
+    if model_type is not None and model_type not in APP_SUPPORTED_TYPES:
         raise VoicePackError(f"type {model_type!r} is not supported by the app")
-    if display_lang not in entry["displayName"]:
-        raise VoicePackError(f"unknown display language {display_lang!r}")
     preset = entry["preset"]
     pack_id = entry["id"]
     pack_version = int(entry.get("packVersion", 1))
@@ -400,6 +444,10 @@ def build_pack(
     lowered = [p.lower() for p in paths]
     if len(set(lowered)) != len(lowered):
         raise VoicePackError("upstream archive has file names differing only by case")
+
+    if model_type is None:
+        model_type = "kokoro" if detect_voices(paths) else "vits"
+        notes.append(f"model type detected from the archive: {model_type}")
 
     # --- layout -------------------------------------------------------------
     model = preset["model"] if _preset_has(preset, "model") and preset["model"] else detect_model(paths)
@@ -509,6 +557,88 @@ def build_pack(
             raise VoicePackError("voice catalog inconsistent with pack: " + "; ".join(problems))
         catalog_mod.write_catalog(pack_dir / CATALOG_NAME, catalog)
 
+    return Assembled(
+        pack_id=pack_id,
+        pack_version=pack_version,
+        pack_dir=pack_dir,
+        model_type=model_type,
+        paths=paths,
+        model=model,
+        tokens=tokens,
+        voices=voices,
+        speaker_file=speaker_file,
+        data_dir=data_dir,
+        dict_dir=dict_dir,
+        lexicons=lexicons,
+        lexicon=lexicon,
+        rule_fsts=rule_fsts,
+        rule_fars=rule_fars,
+        speaker_count=speaker_count,
+        default_speaker=default_speaker,
+        language=language,
+        profile=profile,
+        catalog=catalog,
+        notes=notes,
+    )
+
+
+def write_manifest(
+    asm: Assembled, *, display_name: str, source_url: str, license_file: str
+) -> dict[str, Any]:
+    """Write ``readori-tts-model.json`` (field names mirror the app's SherpaOnnxModelManifest)."""
+    pack_dir = asm.pack_dir
+    model_path = pack_dir / asm.model
+    manifest: dict[str, Any] = {
+        "type": asm.model_type,
+        "displayName": display_name,
+        "model": asm.model,
+        "tokens": asm.tokens,
+        "dataDir": asm.data_dir,
+        "lexicon": asm.lexicon,
+        "lexicons": asm.lexicons or None,
+        "voices": asm.voices,
+        "language": asm.language,
+        "speakerCount": asm.speaker_count,
+        "defaultSpeaker": asm.default_speaker,
+        "ruleFsts": asm.rule_fsts or None,
+        "ruleFars": asm.rule_fars or None,
+        "dictDir": asm.dict_dir,
+        "licenseFile": license_file,
+        "sourceURL": source_url,
+        "profile": asm.profile,
+        "modelBytes": model_path.stat().st_size,
+        "modelSHA256": sha256_file(model_path),
+        "speakerFile": asm.speaker_file,
+    }
+    if asm.catalog is not None:
+        manifest["voiceCatalog"] = CATALOG_NAME
+        manifest["voiceCatalogVersion"] = int(asm.catalog.get("schemaVersion", 1))
+        manifest["voiceCatalogSHA256"] = sha256_file(pack_dir / CATALOG_NAME)
+    manifest["packId"] = asm.pack_id
+    manifest["packVersion"] = asm.pack_version
+    manifest = {k: v for k, v in manifest.items() if v is not None}
+    write_json(pack_dir / MANIFEST_NAME, manifest)
+    return manifest
+
+
+def build_pack(
+    entry: dict[str, Any],
+    archive: Path,
+    out_dir: Path,
+    *,
+    repo_root: Path,
+    archive_sha256: str | None = None,
+    display_lang: str = "en",
+    generate_catalog: bool = True,
+) -> BuildResult:
+    if display_lang not in entry["displayName"]:
+        raise VoicePackError(f"unknown display language {display_lang!r}")
+    asm = assemble_pack(
+        entry, archive, out_dir, repo_root=repo_root, generate_catalog=generate_catalog
+    )
+    pack_dir, paths, notes = asm.pack_dir, asm.paths, asm.notes
+    pack_version = asm.pack_version
+
     # --- license ------------------------------------------------------------------
     license_file = detect_license(paths)
     lic = entry["license"]
@@ -531,9 +661,7 @@ def build_pack(
                 f"pack contains {ESPEAK_DATA_DIRNAME} (GPL-3.0-or-later data) but the registry entry "
                 "declares no license.components item with role=data for espeak-ng-data"
             )
-        copying_text, copying_source = resolve_espeak_copying(pack_dir, paths, repo_root)
-        (pack_dir / ESPEAK_COPYING_NAME).write_text(copying_text, encoding="utf-8", newline="\n")
-        notes.append(f"{ESPEAK_COPYING_NAME} taken from {copying_source}")
+        notes.append(write_espeak_copying(pack_dir, paths, repo_root))
     (pack_dir / ATTRIBUTION_NAME).write_text(
         render_attribution(
             entry,
@@ -546,41 +674,14 @@ def build_pack(
         newline="\n",
     )
 
-    # --- manifest ------------------------------------------------------------------
-    model_path = pack_dir / model
-    manifest: dict[str, Any] = {
-        "type": model_type,
-        "displayName": entry["displayName"][display_lang],
-        "model": model,
-        "tokens": tokens,
-        "dataDir": data_dir,
-        "lexicon": lexicon,
-        "lexicons": lexicons or None,
-        "voices": voices,
-        "language": language,
-        "speakerCount": speaker_count,
-        "defaultSpeaker": default_speaker,
-        "ruleFsts": rule_fsts or None,
-        "ruleFars": rule_fars or None,
-        "dictDir": dict_dir,
-        "licenseFile": license_file,
-        "sourceURL": entry["upstream"].get("homepage") or entry["upstream"]["url"],
-        "profile": profile,
-        "modelBytes": model_path.stat().st_size,
-        "modelSHA256": sha256_file(model_path),
-        "speakerFile": speaker_file,
-    }
-    if catalog is not None:
-        manifest["voiceCatalog"] = CATALOG_NAME
-        manifest["voiceCatalogVersion"] = int(catalog.get("schemaVersion", 1))
-        manifest["voiceCatalogSHA256"] = sha256_file(pack_dir / CATALOG_NAME)
-    manifest["packId"] = pack_id
-    manifest["packVersion"] = pack_version
-    manifest = {k: v for k, v in manifest.items() if v is not None}
-    write_json(pack_dir / MANIFEST_NAME, manifest)
-
+    manifest = write_manifest(
+        asm,
+        display_name=entry["displayName"][display_lang],
+        source_url=entry["upstream"].get("homepage") or entry["upstream"]["url"],
+        license_file=license_file,
+    )
     return BuildResult(
-        pack_id=pack_id,
+        pack_id=asm.pack_id,
         pack_version=pack_version,
         pack_dir=pack_dir,
         manifest=manifest,

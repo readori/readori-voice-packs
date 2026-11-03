@@ -13,9 +13,11 @@ from .common import (
     MAX_ARCHIVE_ENTRIES,
     MAX_ZIP_BYTES,
     TIER_COMMUNITY,
+    TIER_LOCAL,
     TIER_OFFICIAL,
     ZIP_FIXED_DATE_TIME,
     VoicePackError,
+    is_self_built_dir,
     loads_strict,
     safe_relative_path,
     sha256_file,
@@ -35,6 +37,14 @@ class PackResult:
     bytes: int
     entries: int
     sidecar: dict[str, Any]
+
+
+@dataclass
+class LocalMeta:
+    """Sidecar facts for a self-built pack (there is no registry entry)."""
+
+    display_name: str
+    languages: list[str]
 
 
 def apple_asset_pack_id(pack_id: str) -> str:
@@ -98,6 +108,7 @@ def build_sidecar(
     sha256: str,
     size: int,
     entry: dict[str, Any] | None,
+    local: LocalMeta | None = None,
 ) -> dict[str, Any]:
     pack_id = manifest["packId"]
     sidecar: dict[str, Any] = {
@@ -113,9 +124,15 @@ def build_sidecar(
         "modelBytes": manifest.get("modelBytes"),
     }
     community = entry is not None and entry.get("status") == "community"
-    if not community:
-        # Community packs are never offered as Apple-hosted asset packs.
+    if not community and local is None:
+        # Community and self-built packs are never offered as Apple-hosted asset packs.
         sidecar["appleAssetPackId"] = apple_asset_pack_id(pack_id)
+    if local is not None:
+        sidecar["tier"] = TIER_LOCAL
+        sidecar["recommended"] = False
+        sidecar["displayName"] = {"en": local.display_name}
+        sidecar["languages"] = list(local.languages)
+        sidecar["license"] = {"verified": False, "selfBuilt": True}
     if entry is not None:
         lic = entry["license"]
         sidecar["tier"] = TIER_COMMUNITY if community else TIER_OFFICIAL
@@ -139,7 +156,16 @@ def pack_directory(
     out_dir: Path,
     *,
     entry: dict[str, Any] | None = None,
+    local: LocalMeta | None = None,
 ) -> PackResult:
+    """``local`` is only passed by ``build-local``; registry packs can never become local."""
+    if local is not None and entry is not None:
+        raise VoicePackError("a registry pack cannot be packed as a local (self-built) pack")
+    if local is None and is_self_built_dir(pack_dir):
+        raise VoicePackError(
+            f"{pack_dir} is a self-built pack; 'pack' is only for registry packs "
+            "(use 'build-local' to build a self-built ZIP)"
+        )
     manifest_path = pack_dir / MANIFEST_NAME
     if not manifest_path.is_file():
         raise VoicePackError(f"{MANIFEST_NAME} not found in {pack_dir}")
@@ -154,7 +180,9 @@ def pack_directory(
     name = archive_name(manifest["packId"], manifest["packVersion"])
     zip_path = out_dir / name
     sha, size, entries = make_deterministic_zip(pack_dir, zip_path)
-    sidecar = build_sidecar(manifest, file_name=name, sha256=sha, size=size, entry=entry)
+    sidecar = build_sidecar(
+        manifest, file_name=name, sha256=sha, size=size, entry=entry, local=local
+    )
     sidecar_path = out_dir / f"{name}.json"
     write_json(sidecar_path, sidecar)
     return PackResult(zip_path, sidecar_path, sha, size, entries, sidecar)

@@ -5,7 +5,14 @@ import re
 from pathlib import Path
 from typing import Any
 
-from .common import SHA256_RE, TIER_OFFICIAL, VoicePackError, loads_strict, write_json
+from .common import (
+    SHA256_RE,
+    TIER_LOCAL,
+    TIER_OFFICIAL,
+    VoicePackError,
+    loads_strict,
+    write_json,
+)
 
 REPO_RE = re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
 DEFAULT_INDEX = Path("catalog/v1/index.json")
@@ -25,6 +32,11 @@ def entry_from_sidecar(sidecar: dict[str, Any], repo: str) -> dict[str, Any]:
     for key in ("id", "packVersion", "file", "bytes", "sha256", "type", "speakerCount"):
         if key not in sidecar:
             raise VoicePackError(f"sidecar is missing '{key}'")
+    if sidecar.get("tier") == TIER_LOCAL:
+        raise VoicePackError(
+            f"{sidecar['id']} is a self-built (local) pack: local packs are never published "
+            "and never enter the release index"
+        )
     if not SHA256_RE.match(sidecar["sha256"]):
         raise VoicePackError(f"sidecar for {sidecar['id']} has an invalid sha256")
     entry: dict[str, Any] = {

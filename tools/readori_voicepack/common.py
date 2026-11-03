@@ -20,6 +20,9 @@ ATTRIBUTION_NAME = "readori-attribution.txt"
 # licence, are published as GitHub Release assets only and are only collected, never recommended.
 TIER_OFFICIAL = "official"
 TIER_COMMUNITY = "community"
+# "local" packs are built by the user on their own machine (``build-local``). They never enter the
+# release index, the Apple asset-pack pipeline or any registry-driven publishing step.
+TIER_LOCAL = "local"
 
 # Label shown by the app for community packs (sidecar / index ``notice``), keyed by display
 # language. The same en and zh-Hans sentences open COMMUNITY-NOTICE.txt and the community
@@ -32,6 +35,15 @@ COMMUNITY_NOTICE = {
     "zh-Hans": "社区收集，Readori 不推荐。由用户自行添加使用，许可证未经核实。",
     "zh-Hant": "社群收集，Readori 不推薦。由使用者自行加入使用，授權未經核實。",
 }
+
+# First two lines of the readori-attribution.txt of a self-built pack. The English line is
+# completed with the source; the prefix identifies self-built packs (see ``is_self_built_dir``).
+LOCAL_ATTRIBUTION_PREFIX = "Self-built by the user from "
+LOCAL_ATTRIBUTION_EN = (
+    "Self-built by the user from {source}. Readori did not review, build or distribute this "
+    "pack; the user is responsible for complying with the upstream licence."
+)
+LOCAL_ATTRIBUTION_ZH = "用户自行构建，Readori 未审核、未构建、未分发；上游许可证由用户自行遵守。"
 
 # TTSEnginePackageImporter.swift:131-137
 MAX_ZIP_BYTES = 1_500 * 1024 * 1024
@@ -96,6 +108,15 @@ def sha256_file(path: Path) -> str:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def is_self_built_dir(pack_dir: Path) -> bool:
+    """True when the pack directory carries the self-built attribution notice."""
+    path = Path(pack_dir) / ATTRIBUTION_NAME
+    if not path.is_file():
+        return False
+    with path.open(encoding="utf-8", errors="replace") as handle:
+        return handle.readline().startswith(LOCAL_ATTRIBUTION_PREFIX)
 
 
 def sha256_bytes(data: bytes) -> str:

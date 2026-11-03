@@ -99,6 +99,7 @@ python -m readori_voicepack catalog-init --speaker-count N --catalog-id ID [--la
 python -m readori_voicepack pack <目录> [--out dist]
 python -m readori_voicepack index --repo owner/name [--sidecars dist]
 python -m readori_voicepack ba-manifest <目录> [--registry 文件] [--sidecar 文件]
+python -m readori_voicepack build-local <来源> --accept-upstream-license [--out 目录] [--skip-smoke]
 ```
 
 | 命令 | 作用 |
@@ -112,7 +113,34 @@ python -m readori_voicepack ba-manifest <目录> [--registry 文件] [--sidecar 
 | `catalog-init` | 生成只含已知事实的音色目录 |
 | `pack` | 生成确定性 ZIP（条目排序、固定时间戳）和带 sha256 的 `.zip.json` 附属文件 |
 | `index` | 把发布结果合并进 `catalog/v1/index.json` |
-| `ba-manifest` | 生成 Apple Background Assets 清单草稿（**尚未验证**，见下）；拒绝社区包（分级取自登记表条目或 `--sidecar`） |
+| `ba-manifest` | 生成 Apple Background Assets 清单草稿（**尚未验证**，见下）；拒绝社区包和自行构建的包（分级取自登记表条目或 `--sidecar`） |
+| `build-local` | 用你自行获取的压缩包构建自用 ZIP，见 [本地自行构建](#本地自行构建) |
+
+## 本地自行构建
+
+如果你从上游来源自行获取了 sherpa-onnx 的 `vits` 或 `kokoro` 模型压缩包，可以在自己的电脑上把它转换成
+Readori App 可导入的 ZIP。Readori **不会**审核、构建或分发这类包：下载什么由你决定，你必须自行阅读并接受
+上游许可证，并对遵守该许可证负责。
+
+```
+python -m readori_voicepack build-local <来源> --accept-upstream-license [--out 目录] [--name ID] [--type vits|kokoro] [--language BCP47] [--speaker-count N] [--default-speaker N] [--display-name 文本] [--sha256 十六进制] [--skip-smoke]
+
+# 来源可以是 https 链接，或本地的 .tar.bz2 / .tar.gz / .zip 文件，例如
+python -m readori_voicepack build-local https://example.com/models/vits-example.tar.bz2 --accept-upstream-license
+```
+
+- 不加 `--accept-upstream-license` 命令会直接停止。链接通过 HTTPS 下载并有大小上限；会打印压缩包的
+  sha256，加 `--sha256` 时还会校验。
+- 解包、布局识别、音色目录生成与 `validate` 检查和 `build` 相同（不经过登记表许可证闸门）。如果已安装
+  `sherpa-onnx`，会先合成一句测试语音（`--skip-smoke` 可关闭）。
+- 上游的 `LICENSE` / `COPYING` 文件原样保留。`readori-attribution.txt` 开头写明该包为用户自行构建、
+  未经 Readori 审核（中英文各一行）。
+- 输出（默认 `build/local/`）：`<id>-v1.zip` 和 `.zip.json` 附属文件，标注 `"tier": "local"`、
+  `"recommended": false`、`"license": {"verified": false, "selfBuilt": true}`。本地包永远不会发布：
+  `index` 与 `ba-manifest` 会拒绝它们。
+- 如果来源与登记表中的某个模型相同，只会打印其状态和一行许可证概要作为提示，不会阻止构建。
+
+使用方法：在 App 阅读界面打开语音朗读设置，进入「离线语音模型」，点「导入离线模型 ZIP」选择该文件（需账号可使用离线语音功能）。
 
 ## 新增模型
 

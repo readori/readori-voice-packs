@@ -122,6 +122,7 @@ python -m readori_voicepack catalog-init --speaker-count N --catalog-id ID [--la
 python -m readori_voicepack pack <dir> [--out dist]
 python -m readori_voicepack index --repo owner/name [--sidecars dist]
 python -m readori_voicepack ba-manifest <dir> [--registry FILE] [--sidecar FILE]
+python -m readori_voicepack build-local <SOURCE> --accept-upstream-license [--out DIR] [--skip-smoke]
 ```
 
 | Command | What it does |
@@ -135,7 +136,38 @@ python -m readori_voicepack ba-manifest <dir> [--registry FILE] [--sidecar FILE]
 | `catalog-init` | writes a facts-only catalog |
 | `pack` | writes a deterministic ZIP (sorted entries, fixed timestamps) and a `.zip.json` sidecar with its sha256 |
 | `index` | merges release sidecars into `catalog/v1/index.json` |
-| `ba-manifest` | drafts an Apple Background Assets manifest (**unverified**, see below); refuses community packs (tier taken from the registry entry or `--sidecar`) |
+| `ba-manifest` | drafts an Apple Background Assets manifest (**unverified**, see below); refuses community and self-built packs (tier taken from the registry entry or `--sidecar`) |
+| `build-local` | builds a self-built ZIP from an archive you fetched yourself; see [Build it yourself (local)](#build-it-yourself-local) |
+
+## Build it yourself (local)
+
+If you have a sherpa-onnx `vits` or `kokoro` model archive that you fetched from its upstream
+source, you can turn it into a ZIP for the Readori app on your own machine. Readori does **not**
+review, build or distribute these packs: you decide what to download, you must read and accept the
+upstream licence, and you are responsible for complying with it.
+
+```
+python -m readori_voicepack build-local <SOURCE> --accept-upstream-license [--out DIR] [--name ID] [--type vits|kokoro] [--language BCP47] [--speaker-count N] [--default-speaker N] [--display-name TEXT] [--sha256 HEX] [--skip-smoke]
+
+# SOURCE is an https URL or a local .tar.bz2 / .tar.gz / .zip file, for example
+python -m readori_voicepack build-local https://example.com/models/vits-example.tar.bz2 --accept-upstream-license
+```
+
+- Without `--accept-upstream-license` the command stops. A URL is downloaded over HTTPS with a
+  size cap; the archive's sha256 is printed and, with `--sha256`, verified.
+- The same extraction, layout detection, catalog generation and `validate` checks as `build` run
+  (the registry licence gate does not). If `sherpa-onnx` is installed a test sentence is
+  synthesised first (`--skip-smoke` turns that off).
+- The upstream `LICENSE` / `COPYING` files are copied unchanged. `readori-attribution.txt` opens
+  with a notice that the pack was self-built and not reviewed by Readori (English and Chinese).
+- Output (default `build/local/`): `<id>-v1.zip` and a `.zip.json` sidecar marked
+  `"tier": "local"`, `"recommended": false`, `"license": {"verified": false, "selfBuilt": true}`.
+  Local packs are never published: `index` and `ba-manifest` refuse them.
+- If the source matches a model in the registry, its status and a short licence summary are printed
+  as information only; the build is never blocked by it.
+
+To use the ZIP, open the reader's text-to-speech settings in the app, go to **Offline Voice Models**
+and tap **Import Offline Model ZIP** (the offline voice feature must be available on your account).
 
 ## Add a model
 
