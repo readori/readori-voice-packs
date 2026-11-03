@@ -36,6 +36,7 @@ where = ["tools"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["integrations/cosyvoice"]
 addopts = "-q"
 
 [tool.ruff]

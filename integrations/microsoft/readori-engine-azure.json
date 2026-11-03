@@ -1,0 +1,28 @@
+{
+  "name": "Azure Speech (my own key)",
+  "url": "https://<region>.tts.speech.microsoft.com/cognitiveservices/v1,{\"method\":\"POST\",\"body\":\"<speak version='1.0' xml:lang='zh-CN'><voice name='{{voice}}'><prosody rate='{{(speakSpeed - 5) * 10}}%'>{{String(speakText).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}}</prosody></voice></speak>\"}",
+  "header": "{\"Ocp-Apim-Subscription-Key\":\"<YOUR_KEY>\",\"Content-Type\":\"application/ssml+xml\",\"X-Microsoft-OutputFormat\":\"audio-24khz-48kbitrate-mono-mp3\",\"User-Agent\":\"Readori\"}",
+  "contentType": "audio/mpeg",
+  "voices": [
+    "zh-CN-XiaoxiaoNeural",
+    "zh-CN-YunxiNeural",
+    "zh-CN-YunjianNeural",
+    "zh-CN-XiaoyiNeural",
+    "zh-CN-sichuan-YunxiNeural",
+    "zh-CN-shandong-YunxiangNeural",
+    "zh-CN-liaoning-XiaobeiNeural",
+    "zh-CN-liaoning-YunbiaoNeural",
+    "zh-CN-henan-YundengNeural",
+    "zh-CN-shaanxi-XiaoniNeural",
+    "zh-HK-HiuMaanNeural",
+    "zh-HK-WanLungNeural",
+    "zh-HK-HiuGaaiNeural",
+    "zh-TW-HsiaoChenNeural",
+    "zh-TW-YunJheNeural",
+    "zh-TW-HsiaoYuNeural",
+    "en-US-JennyNeural",
+    "en-US-GuyNeural",
+    "en-US-AriaNeural",
+    "en-US-AndrewNeural"
+  ]
+}

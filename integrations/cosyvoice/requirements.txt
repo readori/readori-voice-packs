@@ -1,0 +1,13 @@
+# Readori CosyVoice server: only the web layer is listed here.
+fastapi>=0.110
+uvicorn>=0.29
+
+# CosyVoice itself is NOT installed from PyPI. Install it from your own checkout, following
+# the upstream README (Python 3.10 conda env, `pip install -r requirements.txt` inside the
+# CosyVoice checkout, plus the sox system package on Linux):
+#   https://github.com/FunAudioLLM/CosyVoice
+# Verified against upstream commit 074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc (2026-05-25):
+#   git clone --recursive https://github.com/FunAudioLLM/CosyVoice.git
+#   cd CosyVoice && git checkout 074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc
+#   git submodule update --init --recursive
+# The upstream repository has only the tags v2.0 and flow_cache, so a commit is pinned instead.

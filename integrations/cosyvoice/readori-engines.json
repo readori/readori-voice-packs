@@ -1,0 +1,64 @@
+[
+  {
+    "name": "CosyVoice 自托管 · 普通话 (mandarin)",
+    "url": "http://192.168.1.10:9880/v1/audio/speech,{\"method\":\"POST\",\"body\":{\"model\":\"fun-cosyvoice3\",\"input\":\"{{speakText}}\",\"voice\":\"mandarin\",\"speed\":\"{{speakSpeed}}\",\"response_format\":\"wav\"}}",
+    "header": "{\"Content-Type\":\"application/json\"}",
+    "contentType": "audio/wav"
+  },
+  {
+    "name": "CosyVoice 自托管 · 粤语 (cantonese)",
+    "url": "http://192.168.1.10:9880/v1/audio/speech,{\"method\":\"POST\",\"body\":{\"model\":\"fun-cosyvoice3\",\"input\":\"{{speakText}}\",\"voice\":\"cantonese\",\"speed\":\"{{speakSpeed}}\",\"response_format\":\"wav\"}}",
+    "header": "{\"Content-Type\":\"application/json\"}",
+    "contentType": "audio/wav"
+  },
+  {
+    "name": "CosyVoice 自托管 · 闽南话 (minnan)",
+    "url": "http://192.168.1.10:9880/v1/audio/speech,{\"method\":\"POST\",\"body\":{\"model\":\"fun-cosyvoice3\",\"input\":\"{{speakText}}\",\"voice\":\"minnan\",\"speed\":\"{{speakSpeed}}\",\"response_format\":\"wav\"}}",
+    "header": "{\"Content-Type\":\"application/json\"}",
+    "contentType": "audio/wav"
+  },
+  {
+    "name": "CosyVoice 自托管 · 四川话 (sichuan)",
+    "url": "http://192.168.1.10:9880/v1/audio/speech,{\"method\":\"POST\",\"body\":{\"model\":\"fun-cosyvoice3\",\"input\":\"{{speakText}}\",\"voice\":\"sichuan\",\"speed\":\"{{speakSpeed}}\",\"response_format\":\"wav\"}}",
+    "header": "{\"Content-Type\":\"application/json\"}",
+    "contentType": "audio/wav"
+  },
+  {
+    "name": "CosyVoice 自托管 · 东北话 (dongbei)",
+    "url": "http://192.168.1.10:9880/v1/audio/speech,{\"method\":\"POST\",\"body\":{\"model\":\"fun-cosyvoice3\",\"input\":\"{{speakText}}\",\"voice\":\"dongbei\",\"speed\":\"{{speakSpeed}}\",\"response_format\":\"wav\"}}",
+    "header": "{\"Content-Type\":\"application/json\"}",
+    "contentType": "audio/wav"
+  },
+  {
+    "name": "CosyVoice 自托管 · 上海话 (shanghai)",
+    "url": "http://192.168.1.10:9880/v1/audio/speech,{\"method\":\"POST\",\"body\":{\"model\":\"fun-cosyvoice3\",\"input\":\"{{speakText}}\",\"voice\":\"shanghai\",\"speed\":\"{{speakSpeed}}\",\"response_format\":\"wav\"}}",
+    "header": "{\"Content-Type\":\"application/json\"}",
+    "contentType": "audio/wav"
+  },
+  {
+    "name": "CosyVoice 自托管 · 天津话 (tianjin)",
+    "url": "http://192.168.1.10:9880/v1/audio/speech,{\"method\":\"POST\",\"body\":{\"model\":\"fun-cosyvoice3\",\"input\":\"{{speakText}}\",\"voice\":\"tianjin\",\"speed\":\"{{speakSpeed}}\",\"response_format\":\"wav\"}}",
+    "header": "{\"Content-Type\":\"application/json\"}",
+    "contentType": "audio/wav"
+  },
+  {
+    "name": "CosyVoice 自托管 · 方言可选 (voice picker)",
+    "url": "http://192.168.1.10:9880/v1/audio/speech,{\"method\":\"POST\",\"body\":{\"model\":\"fun-cosyvoice3\",\"input\":\"{{speakText}}\",\"voice\":\"{{voice}}\",\"speed\":\"{{speakSpeed}}\",\"response_format\":\"wav\"}}",
+    "header": "{\"Content-Type\":\"application/json\"}",
+    "contentType": "audio/wav",
+    "voices": [
+      "mandarin",
+      "cantonese",
+      "minnan",
+      "sichuan",
+      "dongbei",
+      "shanghai",
+      "tianjin",
+      "shandong",
+      "shaanxi",
+      "shanxi",
+      "ningxia",
+      "gansu"
+    ]
+  }
+]

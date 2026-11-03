@@ -178,6 +178,13 @@ Background Assets 清单生成器是**未经 Xcode 验证的草稿**。使用前
 `xcrun ba-package template`，把键名、`downloadPolicy` 结构、`fileSelectors` 写法以及 `assetPackID` 允许的字符
 与 `readori_voicepack/bamanifest.py` 对照。工作流会把该模板作为 artifact 输出，便于比对。
 
+## 接入
+
+在 Readori 自定义朗读引擎（需要 Readori Pro）中使用其他声音的指南与引擎模板。以下内容均不由 Readori 内置或托管。
+
+- [integrations/cosyvoice](integrations/cosyvoice/README.zh-CN.md)：自托管方言语音服务（CosyVoice3），支持粤语、闽南话、四川话等。
+- [integrations/microsoft](integrations/microsoft/README.zh-CN.md)：通过官方 Azure Speech 服务使用微软语音，使用你自己的密钥。
+
 ## 目录结构
 
 ```

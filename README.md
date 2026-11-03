@@ -212,6 +212,13 @@ the `fileSelectors` form and the allowed characters of `assetPackID` with
 `readori_voicepack/bamanifest.py`. The workflow dumps that template as an artifact for the
 comparison.
 
+## Integrations
+
+Guides and engine templates for using other voices from Readori's custom TTS engines (Readori Pro). None of these are bundled or hosted by Readori.
+
+- [integrations/cosyvoice](integrations/cosyvoice/README.md): a self-hosted dialect TTS server (CosyVoice3) for Cantonese, Minnan, Sichuan and more.
+- [integrations/microsoft](integrations/microsoft/README.md): Microsoft voices through the official Azure Speech service, with your own key.
+
 ## Repository layout
 
 ```

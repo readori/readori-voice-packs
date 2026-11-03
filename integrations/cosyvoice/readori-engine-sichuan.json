@@ -1,0 +1,6 @@
+{
+  "name": "CosyVoice 自托管 · 四川话 (sichuan)",
+  "url": "http://192.168.1.10:9880/v1/audio/speech,{\"method\":\"POST\",\"body\":{\"model\":\"fun-cosyvoice3\",\"input\":\"{{speakText}}\",\"voice\":\"sichuan\",\"speed\":\"{{speakSpeed}}\",\"response_format\":\"wav\"}}",
+  "header": "{\"Content-Type\":\"application/json\"}",
+  "contentType": "audio/wav"
+}
