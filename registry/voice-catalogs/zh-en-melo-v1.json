@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "readori.melo.zh-en.v1",
+  "modelProfile": "vits-melo-tts-zh_en",
+  "language": "zh-CN,en-US",
+  "speakerCount": 1,
+  "defaultSpeaker": 0,
+  "speakers": [
+    {
+      "sid": 0,
+      "sourceSpeakerId": "default",
+      "displayName": {
+        "zh": "Melo 中英女声",
+        "en": "Melo Chinese/English Female"
+      },
+      "languages": [
+        "zh-CN",
+        "en-US"
+      ],
+      "gender": "female",
+      "genderSource": "model package README",
+      "metadataSource": "vits-melo-tts-zh_en package README",
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "自然"
+      ],
+      "acoustics": {
+        "sampleRate": 44100,
+        "durationSec": 5.2129,
+        "rmsDbfs": -29.193,
+        "peakDbfs": -14.138,
+        "medianF0Hz": 242.31,
+        "spectralCentroidHz": 2019.85,
+        "integratedLufs": -29.544
+      },
+      "attributes": {
+        "capability": [
+          "bilingual"
+        ],
+        "speakerMode": [
+          "single"
+        ]
+      },
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    }
+  ]
+}

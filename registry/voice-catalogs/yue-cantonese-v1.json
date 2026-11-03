@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "readori.cantonese.xiaomaiiwn.v1",
+  "modelProfile": "vits-cantonese-hf-xiaomaiiwn",
+  "language": "yue",
+  "speakerCount": 1,
+  "defaultSpeaker": 0,
+  "speakers": [
+    {
+      "sid": 0,
+      "sourceSpeakerId": "default",
+      "displayName": {
+        "zh": "粤语默认音色",
+        "en": "Cantonese Default Voice"
+      },
+      "language": "yue",
+      "metadataSource": "model package manifest; gender not declared",
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acoustics": {
+        "sampleRate": 22050,
+        "durationSec": 5.178,
+        "rmsDbfs": -19.936,
+        "peakDbfs": -7.237,
+        "medianF0Hz": 245.0,
+        "spectralCentroidHz": 1659.75,
+        "integratedLufs": -20.222
+      },
+      "attributes": {
+        "speakerMode": [
+          "single"
+        ]
+      },
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    }
+  ]
+}

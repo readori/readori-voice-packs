@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Voice-pack factory working directories (never commit models)
+.cache/
+build/
+dist/
+*.onnx
+*.zip
+*.tar.bz2
+*.tar.gz
+*.aar
+*.bin
+*.wav
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

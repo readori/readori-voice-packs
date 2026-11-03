@@ -1,0 +1,2279 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "readori.kokoro.v1_1",
+  "modelProfile": "kokoro-multi-lang-v1_1",
+  "speakerCount": 103,
+  "defaultSpeaker": 3,
+  "summary": {
+    "en-US-female": 2,
+    "en-GB-female": 1,
+    "zh-CN-female": 55,
+    "zh-CN-male": 45
+  },
+  "speakers": [
+    {
+      "sid": 0,
+      "sourceSpeakerId": "af_maple",
+      "language": "en-US",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 5.7172,
+        "rmsDbfs": -27.943,
+        "peakDbfs": -11.431,
+        "medianF0Hz": 206.9,
+        "spectralCentroidHz": 2545.86,
+        "integratedLufs": -30.084
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 1,
+      "sourceSpeakerId": "af_sol",
+      "language": "en-US",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.0266,
+        "rmsDbfs": -23.885,
+        "peakDbfs": -7.661,
+        "medianF0Hz": 184.62,
+        "spectralCentroidHz": 3195.6,
+        "integratedLufs": -25.397
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏清亮"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 2,
+      "sourceSpeakerId": "bf_vale",
+      "language": "en-GB",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.5777,
+        "rmsDbfs": -27.27,
+        "peakDbfs": -13.478,
+        "medianF0Hz": 153.85,
+        "spectralCentroidHz": 2441.57,
+        "integratedLufs": -29.659
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 3,
+      "sourceSpeakerId": "zf_001",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.1578,
+        "rmsDbfs": -23.093,
+        "peakDbfs": -8.571,
+        "medianF0Hz": 263.74,
+        "spectralCentroidHz": 1876.47,
+        "integratedLufs": -24.853
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 4,
+      "sourceSpeakerId": "zf_002",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.9123,
+        "rmsDbfs": -21.698,
+        "peakDbfs": -9.649,
+        "medianF0Hz": 224.3,
+        "spectralCentroidHz": 1317.22,
+        "integratedLufs": -23.448
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 5,
+      "sourceSpeakerId": "zf_003",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.7992,
+        "rmsDbfs": -20.919,
+        "peakDbfs": -6.612,
+        "medianF0Hz": 230.77,
+        "spectralCentroidHz": 1569.94,
+        "integratedLufs": -22.864
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 6,
+      "sourceSpeakerId": "zf_004",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.7572,
+        "rmsDbfs": -23.204,
+        "peakDbfs": -8.83,
+        "medianF0Hz": 237.62,
+        "spectralCentroidHz": 1785.46,
+        "integratedLufs": -25.058
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 7,
+      "sourceSpeakerId": "zf_005",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.9415,
+        "rmsDbfs": -24.309,
+        "peakDbfs": -9.701,
+        "medianF0Hz": 227.49,
+        "spectralCentroidHz": 1743.77,
+        "integratedLufs": -26.439
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 8,
+      "sourceSpeakerId": "zf_006",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.0393,
+        "rmsDbfs": -22.687,
+        "peakDbfs": -7.639,
+        "medianF0Hz": 200.0,
+        "spectralCentroidHz": 1112.26,
+        "integratedLufs": -24.477
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 9,
+      "sourceSpeakerId": "zf_007",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.1235,
+        "rmsDbfs": -24.695,
+        "peakDbfs": -8.218,
+        "medianF0Hz": 200.0,
+        "spectralCentroidHz": 1257.5,
+        "integratedLufs": -26.627
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 10,
+      "sourceSpeakerId": "zf_008",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.97,
+        "rmsDbfs": -20.164,
+        "peakDbfs": -5.37,
+        "medianF0Hz": 208.7,
+        "spectralCentroidHz": 1649.33,
+        "integratedLufs": -21.842
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 11,
+      "sourceSpeakerId": "zf_017",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.7616,
+        "rmsDbfs": -25.082,
+        "peakDbfs": -8.421,
+        "medianF0Hz": 296.3,
+        "spectralCentroidHz": 2080.86,
+        "integratedLufs": -26.975
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 12,
+      "sourceSpeakerId": "zf_018",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.379,
+        "rmsDbfs": -26.202,
+        "peakDbfs": -10.405,
+        "medianF0Hz": 240.0,
+        "spectralCentroidHz": 2301.47,
+        "integratedLufs": -27.954
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 13,
+      "sourceSpeakerId": "zf_019",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.7554,
+        "rmsDbfs": -24.746,
+        "peakDbfs": -8.807,
+        "medianF0Hz": 175.18,
+        "spectralCentroidHz": 2085.73,
+        "integratedLufs": -26.639
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 14,
+      "sourceSpeakerId": "zf_021",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.7943,
+        "rmsDbfs": null,
+        "peakDbfs": null,
+        "medianF0Hz": 244.9,
+        "spectralCentroidHz": null,
+        "integratedLufs": -23.365
+      },
+      "analysisTags": [
+        "高音"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 15,
+      "sourceSpeakerId": "zf_022",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.3688,
+        "rmsDbfs": -21.848,
+        "peakDbfs": -8.472,
+        "medianF0Hz": 206.01,
+        "spectralCentroidHz": 1823.18,
+        "integratedLufs": -23.46
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 16,
+      "sourceSpeakerId": "zf_023",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.4331,
+        "rmsDbfs": -22.115,
+        "peakDbfs": -6.045,
+        "medianF0Hz": 224.3,
+        "spectralCentroidHz": 1669.89,
+        "integratedLufs": -23.867
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 17,
+      "sourceSpeakerId": "zf_024",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.3253,
+        "rmsDbfs": -23.164,
+        "peakDbfs": -7.817,
+        "medianF0Hz": 223.26,
+        "spectralCentroidHz": 2595.61,
+        "integratedLufs": -24.573
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 18,
+      "sourceSpeakerId": "zf_026",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.8169,
+        "rmsDbfs": -24.128,
+        "peakDbfs": -8.651,
+        "medianF0Hz": 228.57,
+        "spectralCentroidHz": 2431.86,
+        "integratedLufs": -25.556
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 19,
+      "sourceSpeakerId": "zf_027",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 5.9619,
+        "rmsDbfs": -21.559,
+        "peakDbfs": -6.942,
+        "medianF0Hz": 220.18,
+        "spectralCentroidHz": 2579.31,
+        "integratedLufs": -23.034
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 20,
+      "sourceSpeakerId": "zf_028",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.8445,
+        "rmsDbfs": -24.373,
+        "peakDbfs": -9.008,
+        "medianF0Hz": 240.0,
+        "spectralCentroidHz": 1876.76,
+        "integratedLufs": -26.152
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 21,
+      "sourceSpeakerId": "zf_032",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.999,
+        "rmsDbfs": -21.456,
+        "peakDbfs": -7.167,
+        "medianF0Hz": 222.22,
+        "spectralCentroidHz": 2037.33,
+        "integratedLufs": -22.985
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 22,
+      "sourceSpeakerId": "zf_036",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.3976,
+        "rmsDbfs": -23.698,
+        "peakDbfs": -9.615,
+        "medianF0Hz": 206.9,
+        "spectralCentroidHz": 1946.27,
+        "integratedLufs": -25.41
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 23,
+      "sourceSpeakerId": "zf_038",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.3819,
+        "rmsDbfs": -28.336,
+        "peakDbfs": -11.424,
+        "medianF0Hz": 289.16,
+        "spectralCentroidHz": 2253.52,
+        "integratedLufs": -29.935
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 24,
+      "sourceSpeakerId": "zf_039",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.3737,
+        "rmsDbfs": -25.702,
+        "peakDbfs": -11.732,
+        "medianF0Hz": 218.18,
+        "spectralCentroidHz": 2304.86,
+        "integratedLufs": -27.429
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 25,
+      "sourceSpeakerId": "zf_040",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.4452,
+        "rmsDbfs": -22.683,
+        "peakDbfs": -6.689,
+        "medianF0Hz": 206.9,
+        "spectralCentroidHz": 1649.4,
+        "integratedLufs": -24.376
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 26,
+      "sourceSpeakerId": "zf_042",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.5023,
+        "rmsDbfs": -25.23,
+        "peakDbfs": -9.048,
+        "medianF0Hz": 263.74,
+        "spectralCentroidHz": 1954.97,
+        "integratedLufs": -26.928
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 27,
+      "sourceSpeakerId": "zf_043",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.0334,
+        "rmsDbfs": -24.936,
+        "peakDbfs": -8.221,
+        "medianF0Hz": 266.67,
+        "spectralCentroidHz": 2139.52,
+        "integratedLufs": -26.647
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 28,
+      "sourceSpeakerId": "zf_044",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.0164,
+        "rmsDbfs": -22.27,
+        "peakDbfs": -9.915,
+        "medianF0Hz": 233.01,
+        "spectralCentroidHz": 2764.03,
+        "integratedLufs": -23.74
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏清亮"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 29,
+      "sourceSpeakerId": "zf_046",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.834,
+        "rmsDbfs": -23.89,
+        "peakDbfs": -8.338,
+        "medianF0Hz": 173.91,
+        "spectralCentroidHz": 3119.25,
+        "integratedLufs": -25.273
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏清亮"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 30,
+      "sourceSpeakerId": "zf_047",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.6182,
+        "rmsDbfs": -22.63,
+        "peakDbfs": -6.706,
+        "medianF0Hz": 218.18,
+        "spectralCentroidHz": 2412.5,
+        "integratedLufs": -24.198
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 31,
+      "sourceSpeakerId": "zf_048",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 8.2777,
+        "rmsDbfs": -23.172,
+        "peakDbfs": -5.841,
+        "medianF0Hz": 237.62,
+        "spectralCentroidHz": 1937.43,
+        "integratedLufs": -24.775
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 32,
+      "sourceSpeakerId": "zf_049",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.2319,
+        "rmsDbfs": -24.819,
+        "peakDbfs": -10.401,
+        "medianF0Hz": 240.0,
+        "spectralCentroidHz": 2332.86,
+        "integratedLufs": -26.357
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 33,
+      "sourceSpeakerId": "zf_051",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.7047,
+        "rmsDbfs": -24.596,
+        "peakDbfs": -8.897,
+        "medianF0Hz": 210.53,
+        "spectralCentroidHz": 1670.85,
+        "integratedLufs": -26.398
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 34,
+      "sourceSpeakerId": "zf_059",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.8417,
+        "rmsDbfs": -24.228,
+        "peakDbfs": -6.77,
+        "medianF0Hz": 224.3,
+        "spectralCentroidHz": 2114.73,
+        "integratedLufs": -25.923
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 35,
+      "sourceSpeakerId": "zf_060",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.2287,
+        "rmsDbfs": -24.607,
+        "peakDbfs": -8.819,
+        "medianF0Hz": 252.63,
+        "spectralCentroidHz": 2215.12,
+        "integratedLufs": -26.189
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 36,
+      "sourceSpeakerId": "zf_067",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.288,
+        "rmsDbfs": -26.863,
+        "peakDbfs": -8.352,
+        "medianF0Hz": 266.67,
+        "spectralCentroidHz": 2689.46,
+        "integratedLufs": -28.327
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏清亮"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 37,
+      "sourceSpeakerId": "zf_070",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.4279,
+        "rmsDbfs": -25.383,
+        "peakDbfs": -8.012,
+        "medianF0Hz": 260.87,
+        "spectralCentroidHz": 2173.56,
+        "integratedLufs": -27.205
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 38,
+      "sourceSpeakerId": "zf_071",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.399,
+        "rmsDbfs": -24.703,
+        "peakDbfs": -7.706,
+        "medianF0Hz": 240.0,
+        "spectralCentroidHz": 1665.9,
+        "integratedLufs": -26.811
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 39,
+      "sourceSpeakerId": "zf_072",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.0134,
+        "rmsDbfs": -25.466,
+        "peakDbfs": -8.51,
+        "medianF0Hz": 292.68,
+        "spectralCentroidHz": 2370.62,
+        "integratedLufs": -27.2
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 40,
+      "sourceSpeakerId": "zf_073",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.1239,
+        "rmsDbfs": -23.487,
+        "peakDbfs": -6.935,
+        "medianF0Hz": 300.0,
+        "spectralCentroidHz": 1701.53,
+        "integratedLufs": -25.277
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 41,
+      "sourceSpeakerId": "zf_074",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.9738,
+        "rmsDbfs": -25.858,
+        "peakDbfs": -9.872,
+        "medianF0Hz": 320.0,
+        "spectralCentroidHz": 2046.83,
+        "integratedLufs": -27.86
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 42,
+      "sourceSpeakerId": "zf_075",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.4665,
+        "rmsDbfs": -26.685,
+        "peakDbfs": -9.63,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 2532.93,
+        "integratedLufs": -27.954
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 43,
+      "sourceSpeakerId": "zf_076",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.0341,
+        "rmsDbfs": -27.511,
+        "peakDbfs": -10.451,
+        "medianF0Hz": 284.03,
+        "spectralCentroidHz": 2042.46,
+        "integratedLufs": -28.906
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 44,
+      "sourceSpeakerId": "zf_077",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.4317,
+        "rmsDbfs": -27.621,
+        "peakDbfs": -9.992,
+        "medianF0Hz": 282.35,
+        "spectralCentroidHz": 2483.13,
+        "integratedLufs": -29.325
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 45,
+      "sourceSpeakerId": "zf_078",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.289,
+        "rmsDbfs": -25.329,
+        "peakDbfs": -8.403,
+        "medianF0Hz": 220.18,
+        "spectralCentroidHz": 1590.62,
+        "integratedLufs": -27.051
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 46,
+      "sourceSpeakerId": "zf_079",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.0871,
+        "rmsDbfs": -24.238,
+        "peakDbfs": -8.814,
+        "medianF0Hz": 138.73,
+        "spectralCentroidHz": 3104.64,
+        "integratedLufs": -25.846
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏清亮"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 47,
+      "sourceSpeakerId": "zf_083",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.6197,
+        "rmsDbfs": -26.711,
+        "peakDbfs": -9.186,
+        "medianF0Hz": 252.63,
+        "spectralCentroidHz": 1934.36,
+        "integratedLufs": -28.254
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 48,
+      "sourceSpeakerId": "zf_084",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.2479,
+        "rmsDbfs": -26.134,
+        "peakDbfs": -10.393,
+        "medianF0Hz": 272.73,
+        "spectralCentroidHz": 2069.92,
+        "integratedLufs": -27.911
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 49,
+      "sourceSpeakerId": "zf_085",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.0131,
+        "rmsDbfs": -26.278,
+        "peakDbfs": -11.957,
+        "medianF0Hz": 282.35,
+        "spectralCentroidHz": 1983.07,
+        "integratedLufs": -28.298
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 50,
+      "sourceSpeakerId": "zf_086",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.4499,
+        "rmsDbfs": -25.928,
+        "peakDbfs": -8.704,
+        "medianF0Hz": 240.0,
+        "spectralCentroidHz": 2275.01,
+        "integratedLufs": -27.213
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 51,
+      "sourceSpeakerId": "zf_087",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.3057,
+        "rmsDbfs": -25.895,
+        "peakDbfs": -7.404,
+        "medianF0Hz": 240.0,
+        "spectralCentroidHz": 2362.39,
+        "integratedLufs": -27.339
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 52,
+      "sourceSpeakerId": "zf_088",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 5.8463,
+        "rmsDbfs": -24.651,
+        "peakDbfs": -10.603,
+        "medianF0Hz": 258.06,
+        "spectralCentroidHz": 1802.05,
+        "integratedLufs": -26.861
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 53,
+      "sourceSpeakerId": "zf_090",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.4946,
+        "rmsDbfs": -24.982,
+        "peakDbfs": -8.408,
+        "medianF0Hz": 230.77,
+        "spectralCentroidHz": 2624.02,
+        "integratedLufs": -26.424
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏清亮"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 54,
+      "sourceSpeakerId": "zf_092",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.5233,
+        "rmsDbfs": -27.437,
+        "peakDbfs": -10.324,
+        "medianF0Hz": 282.35,
+        "spectralCentroidHz": 1997.55,
+        "integratedLufs": -29.61
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 55,
+      "sourceSpeakerId": "zf_093",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.986,
+        "rmsDbfs": -26.109,
+        "peakDbfs": -10.29,
+        "medianF0Hz": 272.73,
+        "spectralCentroidHz": 2018.53,
+        "integratedLufs": -27.789
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 56,
+      "sourceSpeakerId": "zf_094",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.7106,
+        "rmsDbfs": -24.243,
+        "peakDbfs": -9.049,
+        "medianF0Hz": 200.84,
+        "spectralCentroidHz": 1365.86,
+        "integratedLufs": -25.813
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 57,
+      "sourceSpeakerId": "zf_099",
+      "language": "zh-CN",
+      "gender": "female",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.1831,
+        "rmsDbfs": -23.725,
+        "peakDbfs": -7.812,
+        "medianF0Hz": 187.5,
+        "spectralCentroidHz": 1578.15,
+        "integratedLufs": -25.615
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 58,
+      "sourceSpeakerId": "zm_009",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.2082,
+        "rmsDbfs": -25.217,
+        "peakDbfs": -7.791,
+        "medianF0Hz": 120.0,
+        "spectralCentroidHz": 1444.69,
+        "integratedLufs": -27.449
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 59,
+      "sourceSpeakerId": "zm_010",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.2368,
+        "rmsDbfs": -23.881,
+        "peakDbfs": -6.247,
+        "medianF0Hz": 137.14,
+        "spectralCentroidHz": 1212.4,
+        "integratedLufs": -26.539
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 60,
+      "sourceSpeakerId": "zm_011",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.0484,
+        "rmsDbfs": -21.727,
+        "peakDbfs": -7.311,
+        "medianF0Hz": 114.56,
+        "spectralCentroidHz": 1298.06,
+        "integratedLufs": -23.967
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 61,
+      "sourceSpeakerId": "zm_012",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.4402,
+        "rmsDbfs": -21.947,
+        "peakDbfs": -8.48,
+        "medianF0Hz": 138.73,
+        "spectralCentroidHz": 1312.17,
+        "integratedLufs": -23.969
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 62,
+      "sourceSpeakerId": "zm_013",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 5.7485,
+        "rmsDbfs": -23.809,
+        "peakDbfs": -8.213,
+        "medianF0Hz": 117.65,
+        "spectralCentroidHz": 1005.97,
+        "integratedLufs": -26.23
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 63,
+      "sourceSpeakerId": "zm_014",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.652,
+        "rmsDbfs": -24.205,
+        "peakDbfs": -8.439,
+        "medianF0Hz": 102.56,
+        "spectralCentroidHz": 1025.35,
+        "integratedLufs": -26.841
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 64,
+      "sourceSpeakerId": "zm_015",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.3362,
+        "rmsDbfs": -26.825,
+        "peakDbfs": -8.59,
+        "medianF0Hz": 117.07,
+        "spectralCentroidHz": 1252.59,
+        "integratedLufs": -29.097
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 65,
+      "sourceSpeakerId": "zm_016",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.0511,
+        "rmsDbfs": -23.134,
+        "peakDbfs": -8.779,
+        "medianF0Hz": 150.0,
+        "spectralCentroidHz": 825.59,
+        "integratedLufs": -24.894
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 66,
+      "sourceSpeakerId": "zm_020",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 8.9065,
+        "rmsDbfs": -23.506,
+        "peakDbfs": -7.081,
+        "medianF0Hz": 200.0,
+        "spectralCentroidHz": 1347.22,
+        "integratedLufs": -25.486
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 67,
+      "sourceSpeakerId": "zm_025",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.3314,
+        "rmsDbfs": -23.737,
+        "peakDbfs": -6.217,
+        "medianF0Hz": 114.29,
+        "spectralCentroidHz": 1024.82,
+        "integratedLufs": -25.625
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 68,
+      "sourceSpeakerId": "zm_029",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.4747,
+        "rmsDbfs": -18.999,
+        "peakDbfs": -5.07,
+        "medianF0Hz": 105.73,
+        "spectralCentroidHz": 1752.31,
+        "integratedLufs": -21.104
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 69,
+      "sourceSpeakerId": "zm_030",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.5075,
+        "rmsDbfs": -26.682,
+        "peakDbfs": -8.748,
+        "medianF0Hz": 125.0,
+        "spectralCentroidHz": 1927.55,
+        "integratedLufs": -28.759
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 70,
+      "sourceSpeakerId": "zm_031",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.8276,
+        "rmsDbfs": -22.164,
+        "peakDbfs": -5.05,
+        "medianF0Hz": 125.0,
+        "spectralCentroidHz": 1230.55,
+        "integratedLufs": -23.996
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 71,
+      "sourceSpeakerId": "zm_033",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.7806,
+        "rmsDbfs": -19.65,
+        "peakDbfs": -3.239,
+        "medianF0Hz": 107.87,
+        "spectralCentroidHz": 894.94,
+        "integratedLufs": -21.85
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 72,
+      "sourceSpeakerId": "zm_034",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.7462,
+        "rmsDbfs": -24.937,
+        "peakDbfs": -7.16,
+        "medianF0Hz": 109.09,
+        "spectralCentroidHz": 1145.76,
+        "integratedLufs": -27.477
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 73,
+      "sourceSpeakerId": "zm_035",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.508,
+        "rmsDbfs": -24.229,
+        "peakDbfs": -7.441,
+        "medianF0Hz": 125.0,
+        "spectralCentroidHz": 1003.92,
+        "integratedLufs": -26.63
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 74,
+      "sourceSpeakerId": "zm_037",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.3407,
+        "rmsDbfs": -22.071,
+        "peakDbfs": -4.253,
+        "medianF0Hz": 113.74,
+        "spectralCentroidHz": 852.37,
+        "integratedLufs": -23.966
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 75,
+      "sourceSpeakerId": "zm_041",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.7735,
+        "rmsDbfs": -23.926,
+        "peakDbfs": -7.625,
+        "medianF0Hz": 186.77,
+        "spectralCentroidHz": 1283.15,
+        "integratedLufs": -25.853
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 76,
+      "sourceSpeakerId": "zm_045",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.296,
+        "rmsDbfs": -23.609,
+        "peakDbfs": -5.955,
+        "medianF0Hz": 148.15,
+        "spectralCentroidHz": 1650.19,
+        "integratedLufs": -25.406
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 77,
+      "sourceSpeakerId": "zm_050",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 5.9908,
+        "rmsDbfs": -26.393,
+        "peakDbfs": -7.761,
+        "medianF0Hz": 143.71,
+        "spectralCentroidHz": 1740.17,
+        "integratedLufs": -28.595
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 78,
+      "sourceSpeakerId": "zm_052",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.8896,
+        "rmsDbfs": -25.788,
+        "peakDbfs": -6.498,
+        "medianF0Hz": 152.87,
+        "spectralCentroidHz": 1343.64,
+        "integratedLufs": -27.659
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 79,
+      "sourceSpeakerId": "zm_053",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.417,
+        "rmsDbfs": -22.817,
+        "peakDbfs": -7.047,
+        "medianF0Hz": 129.73,
+        "spectralCentroidHz": 1473.18,
+        "integratedLufs": -24.749
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 80,
+      "sourceSpeakerId": "zm_054",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.222,
+        "rmsDbfs": -26.4,
+        "peakDbfs": -10.14,
+        "medianF0Hz": 147.24,
+        "spectralCentroidHz": 1681.96,
+        "integratedLufs": -28.21
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 81,
+      "sourceSpeakerId": "zm_055",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.5103,
+        "rmsDbfs": -24.17,
+        "peakDbfs": -6.733,
+        "medianF0Hz": 118.23,
+        "spectralCentroidHz": 1844.93,
+        "integratedLufs": -26.213
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 82,
+      "sourceSpeakerId": "zm_056",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.3277,
+        "rmsDbfs": -23.76,
+        "peakDbfs": -8.239,
+        "medianF0Hz": 148.15,
+        "spectralCentroidHz": 1805.63,
+        "integratedLufs": -25.798
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 83,
+      "sourceSpeakerId": "zm_057",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.9498,
+        "rmsDbfs": -24.071,
+        "peakDbfs": -7.454,
+        "medianF0Hz": 121.21,
+        "spectralCentroidHz": 1477.83,
+        "integratedLufs": -25.877
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 84,
+      "sourceSpeakerId": "zm_058",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.279,
+        "rmsDbfs": -26.73,
+        "peakDbfs": -8.522,
+        "medianF0Hz": 127.66,
+        "spectralCentroidHz": 1960.51,
+        "integratedLufs": -29.16
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 85,
+      "sourceSpeakerId": "zm_061",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.0258,
+        "rmsDbfs": -24.974,
+        "peakDbfs": -8.374,
+        "medianF0Hz": 158.94,
+        "spectralCentroidHz": 1326.8,
+        "integratedLufs": -26.695
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 86,
+      "sourceSpeakerId": "zm_062",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.8915,
+        "rmsDbfs": -26.108,
+        "peakDbfs": -8.926,
+        "medianF0Hz": 135.98,
+        "spectralCentroidHz": 1425.86,
+        "integratedLufs": -28.126
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 87,
+      "sourceSpeakerId": "zm_063",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.7209,
+        "rmsDbfs": -23.805,
+        "peakDbfs": -6.054,
+        "medianF0Hz": 162.16,
+        "spectralCentroidHz": 1218.12,
+        "integratedLufs": -25.35
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 88,
+      "sourceSpeakerId": "zm_064",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.4204,
+        "rmsDbfs": -23.813,
+        "peakDbfs": -5.485,
+        "medianF0Hz": 118.23,
+        "spectralCentroidHz": 1520.24,
+        "integratedLufs": -26.002
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 89,
+      "sourceSpeakerId": "zm_065",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.0675,
+        "rmsDbfs": -24.274,
+        "peakDbfs": -8.851,
+        "medianF0Hz": 166.67,
+        "spectralCentroidHz": 1672.48,
+        "integratedLufs": -26.305
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 90,
+      "sourceSpeakerId": "zm_066",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.8348,
+        "rmsDbfs": -25.322,
+        "peakDbfs": -8.8,
+        "medianF0Hz": 127.32,
+        "spectralCentroidHz": 1503.4,
+        "integratedLufs": -27.41
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 91,
+      "sourceSpeakerId": "zm_068",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.6813,
+        "rmsDbfs": -26.358,
+        "peakDbfs": -7.89,
+        "medianF0Hz": 145.45,
+        "spectralCentroidHz": 1810.66,
+        "integratedLufs": -27.866
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 92,
+      "sourceSpeakerId": "zm_069",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.0961,
+        "rmsDbfs": -26.543,
+        "peakDbfs": -8.225,
+        "medianF0Hz": 146.34,
+        "spectralCentroidHz": 2557.23,
+        "integratedLufs": -27.885
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 93,
+      "sourceSpeakerId": "zm_080",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 8.3784,
+        "rmsDbfs": -24.316,
+        "peakDbfs": -7.125,
+        "medianF0Hz": 129.03,
+        "spectralCentroidHz": 1937.85,
+        "integratedLufs": -26.587
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 94,
+      "sourceSpeakerId": "zm_081",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 8.0277,
+        "rmsDbfs": -27.373,
+        "peakDbfs": -9.093,
+        "medianF0Hz": 134.08,
+        "spectralCentroidHz": 1965.91,
+        "integratedLufs": -29.186
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 95,
+      "sourceSpeakerId": "zm_082",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.5599,
+        "rmsDbfs": -25.291,
+        "peakDbfs": -7.39,
+        "medianF0Hz": 134.08,
+        "spectralCentroidHz": 1206.24,
+        "integratedLufs": -27.024
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 96,
+      "sourceSpeakerId": "zm_089",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.5697,
+        "rmsDbfs": -25.364,
+        "peakDbfs": -8.08,
+        "medianF0Hz": 139.13,
+        "spectralCentroidHz": 1732.61,
+        "integratedLufs": -27.104
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 97,
+      "sourceSpeakerId": "zm_091",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.3234,
+        "rmsDbfs": -26.765,
+        "peakDbfs": -8.21,
+        "medianF0Hz": 133.33,
+        "spectralCentroidHz": 1947.24,
+        "integratedLufs": -28.515
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "自然"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 98,
+      "sourceSpeakerId": "zm_095",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.7904,
+        "rmsDbfs": -24.453,
+        "peakDbfs": -8.824,
+        "medianF0Hz": 162.16,
+        "spectralCentroidHz": 1671.51,
+        "integratedLufs": -26.369
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 99,
+      "sourceSpeakerId": "zm_096",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.4493,
+        "rmsDbfs": -24.063,
+        "peakDbfs": -7.867,
+        "medianF0Hz": 163.27,
+        "spectralCentroidHz": 1168.25,
+        "integratedLufs": -26.292
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 100,
+      "sourceSpeakerId": "zm_097",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 6.6693,
+        "rmsDbfs": -24.786,
+        "peakDbfs": -8.221,
+        "medianF0Hz": 126.32,
+        "spectralCentroidHz": 1367.9,
+        "integratedLufs": -27.213
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 101,
+      "sourceSpeakerId": "zm_098",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.6283,
+        "rmsDbfs": -21.136,
+        "peakDbfs": -4.912,
+        "medianF0Hz": 106.67,
+        "spectralCentroidHz": 1118.14,
+        "integratedLufs": -23.238
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 102,
+      "sourceSpeakerId": "zm_100",
+      "language": "zh-CN",
+      "gender": "male",
+      "metadataSource": "sherpa-onnx kokoro-multi-lang-v1_1 official mapping",
+      "acoustics": {
+        "sampleRate": 24000,
+        "durationSec": 7.8173,
+        "rmsDbfs": -25.204,
+        "peakDbfs": -7.468,
+        "medianF0Hz": 134.83,
+        "spectralCentroidHz": 1417.75,
+        "integratedLufs": -27.249
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    }
+  ]
+}

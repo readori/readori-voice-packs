@@ -1,0 +1,6297 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "readori.aishell3.v1",
+  "modelProfile": "vits-icefall-zh-aishell3",
+  "language": "zh-CN",
+  "speakerCount": 174,
+  "defaultSpeaker": 0,
+  "source": {
+    "dataset": "AISHELL-3 / SLR93",
+    "speakerOrder": "speakers.txt in the model package; zero-based line order is used as sid",
+    "metadata": "AISHELL-3 spk-info.txt",
+    "metadataLicense": "Apache-2.0"
+  },
+  "summary": {
+    "gender": {
+      "female": 138,
+      "male": 36
+    },
+    "ageGroupCode": {
+      "B": 136,
+      "C": 30,
+      "D": 7,
+      "A": 1
+    },
+    "accent": {
+      "north": 128,
+      "south": 44,
+      "others": 2
+    }
+  },
+  "speakers": [
+    {
+      "sid": 0,
+      "sourceSpeakerId": "SSB0005",
+      "displayName": {
+        "zh": "女声 001",
+        "en": "Female 001"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 7.7621,
+        "rmsDbfs": -27.971,
+        "peakDbfs": -14.027,
+        "medianF0Hz": 258.06,
+        "spectralCentroidHz": 874.52,
+        "integratedLufs": -28.406
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 1,
+      "sourceSpeakerId": "SSB0009",
+      "displayName": {
+        "zh": "女声 002",
+        "en": "Female 002"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.9595,
+        "rmsDbfs": -26.98,
+        "peakDbfs": -11.337,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 1094.27,
+        "integratedLufs": -27.453
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 2,
+      "sourceSpeakerId": "SSB0011",
+      "displayName": {
+        "zh": "女声 003",
+        "en": "Female 003"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.2533,
+        "rmsDbfs": -32.355,
+        "peakDbfs": -16.471,
+        "medianF0Hz": 242.42,
+        "spectralCentroidHz": 805.4,
+        "integratedLufs": -33.256
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 3,
+      "sourceSpeakerId": "SSB0012",
+      "displayName": {
+        "zh": "女声 004",
+        "en": "Female 004"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.4489,
+        "rmsDbfs": -30.662,
+        "peakDbfs": -11.908,
+        "medianF0Hz": 235.29,
+        "spectralCentroidHz": 1162.8,
+        "integratedLufs": -30.692
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 4,
+      "sourceSpeakerId": "SSB0016",
+      "displayName": {
+        "zh": "女声 005",
+        "en": "Female 005"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.5355,
+        "rmsDbfs": -38.199,
+        "peakDbfs": -21.453,
+        "medianF0Hz": 210.53,
+        "spectralCentroidHz": 693.14,
+        "integratedLufs": -38.836
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 5,
+      "sourceSpeakerId": "SSB0018",
+      "displayName": {
+        "zh": "女声 006",
+        "en": "Female 006"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.7795,
+        "rmsDbfs": -28.995,
+        "peakDbfs": -14.258,
+        "medianF0Hz": 275.86,
+        "spectralCentroidHz": 949.59,
+        "integratedLufs": -29.416
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 6,
+      "sourceSpeakerId": "SSB0033",
+      "displayName": {
+        "zh": "女声 007",
+        "en": "Female 007"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.3863,
+        "rmsDbfs": -25.169,
+        "peakDbfs": -11.714,
+        "medianF0Hz": 222.22,
+        "spectralCentroidHz": 673.96,
+        "integratedLufs": -25.915
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 7,
+      "sourceSpeakerId": "SSB0038",
+      "displayName": {
+        "zh": "女声 008",
+        "en": "Female 008"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.0624,
+        "rmsDbfs": -29.448,
+        "peakDbfs": -15.604,
+        "medianF0Hz": 200.0,
+        "spectralCentroidHz": 979.36,
+        "integratedLufs": -30.044
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 8,
+      "sourceSpeakerId": "SSB0043",
+      "displayName": {
+        "zh": "女声 009",
+        "en": "Female 009"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.0765,
+        "rmsDbfs": -33.544,
+        "peakDbfs": -19.378,
+        "medianF0Hz": 266.67,
+        "spectralCentroidHz": 889.77,
+        "integratedLufs": -34.072
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 9,
+      "sourceSpeakerId": "SSB0057",
+      "displayName": {
+        "zh": "女声 010",
+        "en": "Female 010"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.9307,
+        "rmsDbfs": -25.474,
+        "peakDbfs": -8.78,
+        "medianF0Hz": 216.22,
+        "spectralCentroidHz": 949.34,
+        "integratedLufs": -25.802
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 10,
+      "sourceSpeakerId": "SSB0073",
+      "displayName": {
+        "zh": "男声 011",
+        "en": "Male 011"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.0453,
+        "rmsDbfs": -28.021,
+        "peakDbfs": -9.019,
+        "medianF0Hz": 140.35,
+        "spectralCentroidHz": 877.82,
+        "integratedLufs": -28.479
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 11,
+      "sourceSpeakerId": "SSB0080",
+      "displayName": {
+        "zh": "女声 012",
+        "en": "Female 012"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 7.1336,
+        "rmsDbfs": -31.718,
+        "peakDbfs": -16.877,
+        "medianF0Hz": 228.57,
+        "spectralCentroidHz": 821.97,
+        "integratedLufs": -32.319
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 12,
+      "sourceSpeakerId": "SSB0112",
+      "displayName": {
+        "zh": "女声 013",
+        "en": "Female 013"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.285,
+        "rmsDbfs": -35.963,
+        "peakDbfs": -18.922,
+        "medianF0Hz": 228.57,
+        "spectralCentroidHz": 1038.98,
+        "integratedLufs": -36.298
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 13,
+      "sourceSpeakerId": "SSB0122",
+      "displayName": {
+        "zh": "女声 014",
+        "en": "Female 014"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.1096,
+        "rmsDbfs": -28.448,
+        "peakDbfs": -14.613,
+        "medianF0Hz": 200.0,
+        "spectralCentroidHz": 831.16,
+        "integratedLufs": -28.94
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 14,
+      "sourceSpeakerId": "SSB0133",
+      "displayName": {
+        "zh": "女声 015",
+        "en": "Female 015"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.7544,
+        "rmsDbfs": -30.844,
+        "peakDbfs": -16.79,
+        "medianF0Hz": 266.67,
+        "spectralCentroidHz": 1053.12,
+        "integratedLufs": -31.439
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 15,
+      "sourceSpeakerId": "SSB0139",
+      "displayName": {
+        "zh": "男声 016",
+        "en": "Male 016"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.1253,
+        "rmsDbfs": -24.255,
+        "peakDbfs": -7.69,
+        "medianF0Hz": 142.86,
+        "spectralCentroidHz": 1106.33,
+        "integratedLufs": -24.265
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 16,
+      "sourceSpeakerId": "SSB0145",
+      "displayName": {
+        "zh": "女声 017",
+        "en": "Female 017"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.4274,
+        "rmsDbfs": -27.809,
+        "peakDbfs": -10.319,
+        "medianF0Hz": 235.29,
+        "spectralCentroidHz": 948.09,
+        "integratedLufs": -28.317
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 17,
+      "sourceSpeakerId": "SSB0149",
+      "displayName": {
+        "zh": "女声 018",
+        "en": "Female 018"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 7.0086,
+        "rmsDbfs": -28.361,
+        "peakDbfs": -9.749,
+        "medianF0Hz": 258.06,
+        "spectralCentroidHz": 1360.86,
+        "integratedLufs": -28.101
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 18,
+      "sourceSpeakerId": "SSB0193",
+      "displayName": {
+        "zh": "女声 019",
+        "en": "Female 019"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.704,
+        "rmsDbfs": -34.975,
+        "peakDbfs": -16.749,
+        "medianF0Hz": 235.29,
+        "spectralCentroidHz": 923.61,
+        "integratedLufs": -35.222
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 19,
+      "sourceSpeakerId": "SSB0197",
+      "displayName": {
+        "zh": "女声 020",
+        "en": "Female 020"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.4813,
+        "rmsDbfs": -38.459,
+        "peakDbfs": -22.894,
+        "medianF0Hz": 216.22,
+        "spectralCentroidHz": 765.61,
+        "integratedLufs": -39.21
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 20,
+      "sourceSpeakerId": "SSB0200",
+      "displayName": {
+        "zh": "女声 021",
+        "en": "Female 021"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.2646,
+        "rmsDbfs": -35.649,
+        "peakDbfs": -20.967,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 832.92,
+        "integratedLufs": -36.117
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 21,
+      "sourceSpeakerId": "SSB0241",
+      "displayName": {
+        "zh": "男声 022",
+        "en": "Male 022"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.9248,
+        "rmsDbfs": -27.119,
+        "peakDbfs": -10.305,
+        "medianF0Hz": 148.15,
+        "spectralCentroidHz": 1168.77,
+        "integratedLufs": -27.159
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 22,
+      "sourceSpeakerId": "SSB0246",
+      "displayName": {
+        "zh": "女声 023",
+        "en": "Female 023"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.2555,
+        "rmsDbfs": -31.459,
+        "peakDbfs": -16.594,
+        "medianF0Hz": 242.42,
+        "spectralCentroidHz": 890.23,
+        "integratedLufs": -32.042
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 23,
+      "sourceSpeakerId": "SSB0261",
+      "displayName": {
+        "zh": "男声 024",
+        "en": "Male 024"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.4989,
+        "rmsDbfs": -25.737,
+        "peakDbfs": -8.123,
+        "medianF0Hz": 181.82,
+        "spectralCentroidHz": 928.19,
+        "integratedLufs": -26.145
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 24,
+      "sourceSpeakerId": "SSB0267",
+      "displayName": {
+        "zh": "女声 025",
+        "en": "Female 025"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.1925,
+        "rmsDbfs": -31.783,
+        "peakDbfs": -14.933,
+        "medianF0Hz": 228.57,
+        "spectralCentroidHz": 935.71,
+        "integratedLufs": -32.292
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 25,
+      "sourceSpeakerId": "SSB0273",
+      "displayName": {
+        "zh": "男声 026",
+        "en": "Male 026"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 7.1414,
+        "rmsDbfs": -22.503,
+        "peakDbfs": -6.524,
+        "medianF0Hz": 142.86,
+        "spectralCentroidHz": 676.47,
+        "integratedLufs": -23.25
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 26,
+      "sourceSpeakerId": "SSB0287",
+      "displayName": {
+        "zh": "女声 027",
+        "en": "Female 027"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.0884,
+        "rmsDbfs": -32.547,
+        "peakDbfs": -15.772,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 1125.33,
+        "integratedLufs": -33.323
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 27,
+      "sourceSpeakerId": "SSB0288",
+      "displayName": {
+        "zh": "女声 028",
+        "en": "Female 028"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.7535,
+        "rmsDbfs": -29.632,
+        "peakDbfs": -17.102,
+        "medianF0Hz": 202.56,
+        "spectralCentroidHz": 762.37,
+        "integratedLufs": -30.322
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 28,
+      "sourceSpeakerId": "SSB0299",
+      "displayName": {
+        "zh": "女声 029",
+        "en": "Female 029"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.4501,
+        "rmsDbfs": -30.085,
+        "peakDbfs": -17.243,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 995.41,
+        "integratedLufs": -30.629
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 29,
+      "sourceSpeakerId": "SSB0307",
+      "displayName": {
+        "zh": "女声 030",
+        "en": "Female 030"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.2916,
+        "rmsDbfs": -38.434,
+        "peakDbfs": -21.854,
+        "medianF0Hz": 195.12,
+        "spectralCentroidHz": 815.19,
+        "integratedLufs": -39.294
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 30,
+      "sourceSpeakerId": "SSB0309",
+      "displayName": {
+        "zh": "女声 031",
+        "en": "Female 031"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "D",
+      "ageGroup": {
+        "zh": "成熟（41+）",
+        "en": "Mature (41+)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.7044,
+        "rmsDbfs": -29.436,
+        "peakDbfs": -15.398,
+        "medianF0Hz": 216.22,
+        "spectralCentroidHz": 988.3,
+        "integratedLufs": -29.85
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 31,
+      "sourceSpeakerId": "SSB0315",
+      "displayName": {
+        "zh": "女声 032",
+        "en": "Female 032"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.2739,
+        "rmsDbfs": -24.759,
+        "peakDbfs": -8.357,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 1229.4,
+        "integratedLufs": -24.664
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 32,
+      "sourceSpeakerId": "SSB0316",
+      "displayName": {
+        "zh": "男声 033",
+        "en": "Male 033"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.5751,
+        "rmsDbfs": -26.662,
+        "peakDbfs": -11.225,
+        "medianF0Hz": 173.91,
+        "spectralCentroidHz": 892.5,
+        "integratedLufs": -27.252
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 33,
+      "sourceSpeakerId": "SSB0323",
+      "displayName": {
+        "zh": "女声 034",
+        "en": "Female 034"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.1167,
+        "rmsDbfs": -26.332,
+        "peakDbfs": -11.765,
+        "medianF0Hz": 285.71,
+        "spectralCentroidHz": 1238.05,
+        "integratedLufs": -26.272
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 34,
+      "sourceSpeakerId": "SSB0338",
+      "displayName": {
+        "zh": "女声 035",
+        "en": "Female 035"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.3803,
+        "rmsDbfs": -33.486,
+        "peakDbfs": -15.269,
+        "medianF0Hz": 258.06,
+        "spectralCentroidHz": 1155.55,
+        "integratedLufs": -33.704
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 35,
+      "sourceSpeakerId": "SSB0339",
+      "displayName": {
+        "zh": "女声 036",
+        "en": "Female 036"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.0016,
+        "rmsDbfs": -33.925,
+        "peakDbfs": -19.007,
+        "medianF0Hz": 235.29,
+        "spectralCentroidHz": 849.33,
+        "integratedLufs": -34.448
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 36,
+      "sourceSpeakerId": "SSB0341",
+      "displayName": {
+        "zh": "女声 037",
+        "en": "Female 037"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.1935,
+        "rmsDbfs": -25.915,
+        "peakDbfs": -11.073,
+        "medianF0Hz": 186.05,
+        "spectralCentroidHz": 793.94,
+        "integratedLufs": -26.484
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 37,
+      "sourceSpeakerId": "SSB0342",
+      "displayName": {
+        "zh": "女声 038",
+        "en": "Female 038"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "others",
+      "accentLabel": {
+        "zh": "其他",
+        "en": "Other accent"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.8856,
+        "rmsDbfs": -29.78,
+        "peakDbfs": -13.498,
+        "medianF0Hz": 228.57,
+        "spectralCentroidHz": 709.37,
+        "integratedLufs": -30.641
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 38,
+      "sourceSpeakerId": "SSB0354",
+      "displayName": {
+        "zh": "女声 039",
+        "en": "Female 039"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "D",
+      "ageGroup": {
+        "zh": "成熟（41+）",
+        "en": "Mature (41+)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.5694,
+        "rmsDbfs": -29.108,
+        "peakDbfs": -13.957,
+        "medianF0Hz": 195.12,
+        "spectralCentroidHz": 799.26,
+        "integratedLufs": -29.72
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 39,
+      "sourceSpeakerId": "SSB0366",
+      "displayName": {
+        "zh": "女声 040",
+        "en": "Female 040"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.1716,
+        "rmsDbfs": -32.708,
+        "peakDbfs": -18.845,
+        "medianF0Hz": 275.86,
+        "spectralCentroidHz": 918.33,
+        "integratedLufs": -33.036
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 40,
+      "sourceSpeakerId": "SSB0375",
+      "displayName": {
+        "zh": "男声 041",
+        "en": "Male 041"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.1246,
+        "rmsDbfs": -27.26,
+        "peakDbfs": -8.479,
+        "medianF0Hz": 135.59,
+        "spectralCentroidHz": 1083.85,
+        "integratedLufs": -27.709
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 41,
+      "sourceSpeakerId": "SSB0379",
+      "displayName": {
+        "zh": "女声 042",
+        "en": "Female 042"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.716,
+        "rmsDbfs": -31.408,
+        "peakDbfs": -17.573,
+        "medianF0Hz": 235.29,
+        "spectralCentroidHz": 980.17,
+        "integratedLufs": -31.819
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 42,
+      "sourceSpeakerId": "SSB0380",
+      "displayName": {
+        "zh": "女声 043",
+        "en": "Female 043"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.6392,
+        "rmsDbfs": -35.057,
+        "peakDbfs": -19.982,
+        "medianF0Hz": 296.3,
+        "spectralCentroidHz": 1199.91,
+        "integratedLufs": -35.043
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 43,
+      "sourceSpeakerId": "SSB0382",
+      "displayName": {
+        "zh": "女声 044",
+        "en": "Female 044"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.7519,
+        "rmsDbfs": -30.767,
+        "peakDbfs": -14.762,
+        "medianF0Hz": 275.86,
+        "spectralCentroidHz": 1120.56,
+        "integratedLufs": -31.098
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 44,
+      "sourceSpeakerId": "SSB0385",
+      "displayName": {
+        "zh": "女声 045",
+        "en": "Female 045"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.691,
+        "rmsDbfs": -26.476,
+        "peakDbfs": -8.337,
+        "medianF0Hz": 266.67,
+        "spectralCentroidHz": 1322.61,
+        "integratedLufs": -26.013
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 45,
+      "sourceSpeakerId": "SSB0393",
+      "displayName": {
+        "zh": "女声 046",
+        "en": "Female 046"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "A",
+      "ageGroup": {
+        "zh": "少年（<14）",
+        "en": "Child (<14)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.474,
+        "rmsDbfs": -29.077,
+        "peakDbfs": -12.192,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 1115.97,
+        "integratedLufs": -29.423
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 46,
+      "sourceSpeakerId": "SSB0394",
+      "displayName": {
+        "zh": "男声 047",
+        "en": "Male 047"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.9745,
+        "rmsDbfs": -31.311,
+        "peakDbfs": -17.678,
+        "medianF0Hz": 140.35,
+        "spectralCentroidHz": 751.54,
+        "integratedLufs": -32.1
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 47,
+      "sourceSpeakerId": "SSB0395",
+      "displayName": {
+        "zh": "女声 048",
+        "en": "Female 048"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.5096,
+        "rmsDbfs": -30.904,
+        "peakDbfs": -16.011,
+        "medianF0Hz": 210.53,
+        "spectralCentroidHz": 828.84,
+        "integratedLufs": -31.566
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 48,
+      "sourceSpeakerId": "SSB0407",
+      "displayName": {
+        "zh": "男声 049",
+        "en": "Male 049"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.7355,
+        "rmsDbfs": -29.339,
+        "peakDbfs": -15.021,
+        "medianF0Hz": 177.78,
+        "spectralCentroidHz": 711.39,
+        "integratedLufs": -30.097
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 49,
+      "sourceSpeakerId": "SSB0415",
+      "displayName": {
+        "zh": "女声 050",
+        "en": "Female 050"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.8594,
+        "rmsDbfs": -28.138,
+        "peakDbfs": -12.596,
+        "medianF0Hz": 242.42,
+        "spectralCentroidHz": 917.01,
+        "integratedLufs": -28.792
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 50,
+      "sourceSpeakerId": "SSB0426",
+      "displayName": {
+        "zh": "女声 051",
+        "en": "Female 051"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.3741,
+        "rmsDbfs": -33.436,
+        "peakDbfs": -19.469,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 905.46,
+        "integratedLufs": -33.909
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 51,
+      "sourceSpeakerId": "SSB0427",
+      "displayName": {
+        "zh": "女声 052",
+        "en": "Female 052"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.9772,
+        "rmsDbfs": -24.361,
+        "peakDbfs": -8.649,
+        "medianF0Hz": 235.29,
+        "spectralCentroidHz": 1176.98,
+        "integratedLufs": -24.44
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 52,
+      "sourceSpeakerId": "SSB0434",
+      "displayName": {
+        "zh": "男声 053",
+        "en": "Male 053"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "D",
+      "ageGroup": {
+        "zh": "成熟（41+）",
+        "en": "Mature (41+)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.7076,
+        "rmsDbfs": -30.177,
+        "peakDbfs": -12.264,
+        "medianF0Hz": 145.45,
+        "spectralCentroidHz": 1103.58,
+        "integratedLufs": -30.292
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 53,
+      "sourceSpeakerId": "SSB0435",
+      "displayName": {
+        "zh": "女声 054",
+        "en": "Female 054"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.8513,
+        "rmsDbfs": -35.242,
+        "peakDbfs": -18.833,
+        "medianF0Hz": 258.06,
+        "spectralCentroidHz": 945.42,
+        "integratedLufs": -35.806
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 54,
+      "sourceSpeakerId": "SSB0470",
+      "displayName": {
+        "zh": "女声 055",
+        "en": "Female 055"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.6002,
+        "rmsDbfs": -35.067,
+        "peakDbfs": -18.523,
+        "medianF0Hz": 235.29,
+        "spectralCentroidHz": 1081.53,
+        "integratedLufs": -35.183
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 55,
+      "sourceSpeakerId": "SSB0482",
+      "displayName": {
+        "zh": "女声 056",
+        "en": "Female 056"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 7.5432,
+        "rmsDbfs": -27.548,
+        "peakDbfs": -9.456,
+        "medianF0Hz": 222.22,
+        "spectralCentroidHz": 1240.95,
+        "integratedLufs": -27.025
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 56,
+      "sourceSpeakerId": "SSB0502",
+      "displayName": {
+        "zh": "女声 057",
+        "en": "Female 057"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.8629,
+        "rmsDbfs": -24.755,
+        "peakDbfs": -8.501,
+        "medianF0Hz": 228.57,
+        "spectralCentroidHz": 1011.43,
+        "integratedLufs": -25.045
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 57,
+      "sourceSpeakerId": "SSB0534",
+      "displayName": {
+        "zh": "女声 058",
+        "en": "Female 058"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.2654,
+        "rmsDbfs": -30.376,
+        "peakDbfs": -16.283,
+        "medianF0Hz": 213.37,
+        "spectralCentroidHz": 796.89,
+        "integratedLufs": -31.019
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 58,
+      "sourceSpeakerId": "SSB0535",
+      "displayName": {
+        "zh": "男声 059",
+        "en": "Male 059"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.0144,
+        "rmsDbfs": -28.245,
+        "peakDbfs": -9.13,
+        "medianF0Hz": 135.59,
+        "spectralCentroidHz": 954.99,
+        "integratedLufs": -28.765
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 59,
+      "sourceSpeakerId": "SSB0539",
+      "displayName": {
+        "zh": "女声 060",
+        "en": "Female 060"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.2079,
+        "rmsDbfs": -32.406,
+        "peakDbfs": -17.244,
+        "medianF0Hz": 205.13,
+        "spectralCentroidHz": 1055.49,
+        "integratedLufs": -32.732
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 60,
+      "sourceSpeakerId": "SSB0544",
+      "displayName": {
+        "zh": "男声 061",
+        "en": "Male 061"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.7518,
+        "rmsDbfs": -28.657,
+        "peakDbfs": -12.755,
+        "medianF0Hz": 137.93,
+        "spectralCentroidHz": 976.39,
+        "integratedLufs": -29.284
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 61,
+      "sourceSpeakerId": "SSB0565",
+      "displayName": {
+        "zh": "女声 062",
+        "en": "Female 062"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 3.9857,
+        "rmsDbfs": -34.963,
+        "peakDbfs": -19.542,
+        "medianF0Hz": 235.29,
+        "spectralCentroidHz": 944.66,
+        "integratedLufs": -35.401
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 62,
+      "sourceSpeakerId": "SSB0570",
+      "displayName": {
+        "zh": "女声 063",
+        "en": "Female 063"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.2992,
+        "rmsDbfs": -27.121,
+        "peakDbfs": -11.996,
+        "medianF0Hz": 228.57,
+        "spectralCentroidHz": 812.61,
+        "integratedLufs": -27.832
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 63,
+      "sourceSpeakerId": "SSB0578",
+      "displayName": {
+        "zh": "女声 064",
+        "en": "Female 064"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.78,
+        "rmsDbfs": -29.073,
+        "peakDbfs": -12.065,
+        "medianF0Hz": 242.42,
+        "spectralCentroidHz": 1056.68,
+        "integratedLufs": -29.453
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 64,
+      "sourceSpeakerId": "SSB0588",
+      "displayName": {
+        "zh": "女声 065",
+        "en": "Female 065"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.4039,
+        "rmsDbfs": -37.96,
+        "peakDbfs": -20.692,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 804.38,
+        "integratedLufs": -38.36
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 65,
+      "sourceSpeakerId": "SSB0590",
+      "displayName": {
+        "zh": "男声 066",
+        "en": "Male 066"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.8066,
+        "rmsDbfs": -22.513,
+        "peakDbfs": -6.158,
+        "medianF0Hz": 166.67,
+        "spectralCentroidHz": 654.01,
+        "integratedLufs": -23.164
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 66,
+      "sourceSpeakerId": "SSB0594",
+      "displayName": {
+        "zh": "女声 067",
+        "en": "Female 067"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.187,
+        "rmsDbfs": -34.203,
+        "peakDbfs": -17.239,
+        "medianF0Hz": 258.06,
+        "spectralCentroidHz": 1012.03,
+        "integratedLufs": -34.372
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 67,
+      "sourceSpeakerId": "SSB0599",
+      "displayName": {
+        "zh": "女声 068",
+        "en": "Female 068"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.368,
+        "rmsDbfs": -35.704,
+        "peakDbfs": -21.127,
+        "medianF0Hz": 228.57,
+        "spectralCentroidHz": 812.07,
+        "integratedLufs": -36.307
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 68,
+      "sourceSpeakerId": "SSB0601",
+      "displayName": {
+        "zh": "女声 069",
+        "en": "Female 069"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.429,
+        "rmsDbfs": -34.534,
+        "peakDbfs": -20.684,
+        "medianF0Hz": 258.06,
+        "spectralCentroidHz": 933.95,
+        "integratedLufs": -35.024
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 69,
+      "sourceSpeakerId": "SSB0603",
+      "displayName": {
+        "zh": "男声 070",
+        "en": "Male 070"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.4431,
+        "rmsDbfs": -25.743,
+        "peakDbfs": -9.673,
+        "medianF0Hz": 129.03,
+        "spectralCentroidHz": 779.46,
+        "integratedLufs": -26.648
+      },
+      "analysisTags": [
+        "标准响度",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 70,
+      "sourceSpeakerId": "SSB0606",
+      "displayName": {
+        "zh": "女声 071",
+        "en": "Female 071"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "D",
+      "ageGroup": {
+        "zh": "成熟（41+）",
+        "en": "Mature (41+)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.6402,
+        "rmsDbfs": -29.471,
+        "peakDbfs": -13.552,
+        "medianF0Hz": 242.42,
+        "spectralCentroidHz": 979.45,
+        "integratedLufs": -29.72
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 71,
+      "sourceSpeakerId": "SSB0607",
+      "displayName": {
+        "zh": "女声 072",
+        "en": "Female 072"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.7713,
+        "rmsDbfs": -35.85,
+        "peakDbfs": -17.692,
+        "medianF0Hz": 235.29,
+        "spectralCentroidHz": 806.13,
+        "integratedLufs": -36.345
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 72,
+      "sourceSpeakerId": "SSB0609",
+      "displayName": {
+        "zh": "男声 073",
+        "en": "Male 073"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.9201,
+        "rmsDbfs": -32.555,
+        "peakDbfs": -12.208,
+        "medianF0Hz": 163.27,
+        "spectralCentroidHz": 893.07,
+        "integratedLufs": -32.993
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 73,
+      "sourceSpeakerId": "SSB0614",
+      "displayName": {
+        "zh": "女声 074",
+        "en": "Female 074"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.1723,
+        "rmsDbfs": -35.181,
+        "peakDbfs": -17.002,
+        "medianF0Hz": 242.42,
+        "spectralCentroidHz": 1149.17,
+        "integratedLufs": -35.245
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 74,
+      "sourceSpeakerId": "SSB0623",
+      "displayName": {
+        "zh": "男声 075",
+        "en": "Male 075"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.8223,
+        "rmsDbfs": -37.025,
+        "peakDbfs": -17.139,
+        "medianF0Hz": 112.68,
+        "spectralCentroidHz": 950.9,
+        "integratedLufs": -37.536
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 75,
+      "sourceSpeakerId": "SSB0629",
+      "displayName": {
+        "zh": "男声 076",
+        "en": "Male 076"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.335,
+        "rmsDbfs": -24.007,
+        "peakDbfs": -7.537,
+        "medianF0Hz": 145.45,
+        "spectralCentroidHz": 957.28,
+        "integratedLufs": -24.251
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 76,
+      "sourceSpeakerId": "SSB0631",
+      "displayName": {
+        "zh": "男声 077",
+        "en": "Male 077"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.4638,
+        "rmsDbfs": -28.594,
+        "peakDbfs": -9.569,
+        "medianF0Hz": 137.93,
+        "spectralCentroidHz": 884.32,
+        "integratedLufs": -29.213
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 77,
+      "sourceSpeakerId": "SSB0632",
+      "displayName": {
+        "zh": "女声 078",
+        "en": "Female 078"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.6792,
+        "rmsDbfs": -26.771,
+        "peakDbfs": -12.565,
+        "medianF0Hz": 222.22,
+        "spectralCentroidHz": 797.22,
+        "integratedLufs": -27.417
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 78,
+      "sourceSpeakerId": "SSB0666",
+      "displayName": {
+        "zh": "女声 079",
+        "en": "Female 079"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.5667,
+        "rmsDbfs": -33.66,
+        "peakDbfs": -15.18,
+        "medianF0Hz": 228.57,
+        "spectralCentroidHz": 1019.43,
+        "integratedLufs": -33.797
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 79,
+      "sourceSpeakerId": "SSB0668",
+      "displayName": {
+        "zh": "女声 080",
+        "en": "Female 080"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.505,
+        "rmsDbfs": -41.151,
+        "peakDbfs": -24.538,
+        "medianF0Hz": 235.29,
+        "spectralCentroidHz": 975.83,
+        "integratedLufs": -41.546
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 80,
+      "sourceSpeakerId": "SSB0671",
+      "displayName": {
+        "zh": "女声 081",
+        "en": "Female 081"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.7815,
+        "rmsDbfs": -29.118,
+        "peakDbfs": -14.616,
+        "medianF0Hz": 195.12,
+        "spectralCentroidHz": 615.57,
+        "integratedLufs": -29.817
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 81,
+      "sourceSpeakerId": "SSB0686",
+      "displayName": {
+        "zh": "女声 082",
+        "en": "Female 082"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.3708,
+        "rmsDbfs": -40.608,
+        "peakDbfs": -23.557,
+        "medianF0Hz": 216.22,
+        "spectralCentroidHz": 867.2,
+        "integratedLufs": -41.112
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 82,
+      "sourceSpeakerId": "SSB0700",
+      "displayName": {
+        "zh": "女声 083",
+        "en": "Female 083"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.4184,
+        "rmsDbfs": -25.806,
+        "peakDbfs": -10.806,
+        "medianF0Hz": 210.53,
+        "spectralCentroidHz": 990.75,
+        "integratedLufs": -26.413
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 83,
+      "sourceSpeakerId": "SSB0710",
+      "displayName": {
+        "zh": "男声 084",
+        "en": "Male 084"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.4884,
+        "rmsDbfs": -36.851,
+        "peakDbfs": -19.533,
+        "medianF0Hz": 186.05,
+        "spectralCentroidHz": 986.95,
+        "integratedLufs": -37.158
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 84,
+      "sourceSpeakerId": "SSB0720",
+      "displayName": {
+        "zh": "女声 085",
+        "en": "Female 085"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.3803,
+        "rmsDbfs": -29.929,
+        "peakDbfs": -12.115,
+        "medianF0Hz": 235.29,
+        "spectralCentroidHz": 1063.59,
+        "integratedLufs": -29.933
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 85,
+      "sourceSpeakerId": "SSB0723",
+      "displayName": {
+        "zh": "女声 086",
+        "en": "Female 086"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.6661,
+        "rmsDbfs": -31.696,
+        "peakDbfs": -15.433,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 1169.33,
+        "integratedLufs": -32.216
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 86,
+      "sourceSpeakerId": "SSB0737",
+      "displayName": {
+        "zh": "女声 087",
+        "en": "Female 087"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "D",
+      "ageGroup": {
+        "zh": "成熟（41+）",
+        "en": "Mature (41+)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.1149,
+        "rmsDbfs": -36.942,
+        "peakDbfs": -18.695,
+        "medianF0Hz": 258.06,
+        "spectralCentroidHz": 1167.41,
+        "integratedLufs": -36.759
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 87,
+      "sourceSpeakerId": "SSB0746",
+      "displayName": {
+        "zh": "女声 088",
+        "en": "Female 088"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.5222,
+        "rmsDbfs": -40.995,
+        "peakDbfs": -25.832,
+        "medianF0Hz": 242.42,
+        "spectralCentroidHz": 885.67,
+        "integratedLufs": -41.514
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 88,
+      "sourceSpeakerId": "SSB0748",
+      "displayName": {
+        "zh": "女声 089",
+        "en": "Female 089"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.9751,
+        "rmsDbfs": -30.283,
+        "peakDbfs": -14.769,
+        "medianF0Hz": 216.22,
+        "spectralCentroidHz": 968.94,
+        "integratedLufs": -30.676
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 89,
+      "sourceSpeakerId": "SSB0751",
+      "displayName": {
+        "zh": "女声 090",
+        "en": "Female 090"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.9104,
+        "rmsDbfs": -32.545,
+        "peakDbfs": -16.212,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 1044.69,
+        "integratedLufs": -32.954
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 90,
+      "sourceSpeakerId": "SSB0758",
+      "displayName": {
+        "zh": "女声 091",
+        "en": "Female 091"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.693,
+        "rmsDbfs": -25.652,
+        "peakDbfs": -9.111,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 1240.85,
+        "integratedLufs": -25.639
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 91,
+      "sourceSpeakerId": "SSB0760",
+      "displayName": {
+        "zh": "女声 092",
+        "en": "Female 092"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.8972,
+        "rmsDbfs": -32.886,
+        "peakDbfs": -13.765,
+        "medianF0Hz": 222.22,
+        "spectralCentroidHz": 1131.07,
+        "integratedLufs": -33.104
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 92,
+      "sourceSpeakerId": "SSB0762",
+      "displayName": {
+        "zh": "女声 093",
+        "en": "Female 093"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.6854,
+        "rmsDbfs": -25.149,
+        "peakDbfs": -13.928,
+        "medianF0Hz": 285.71,
+        "spectralCentroidHz": 718.31,
+        "integratedLufs": -25.862
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 93,
+      "sourceSpeakerId": "SSB0778",
+      "displayName": {
+        "zh": "女声 094",
+        "en": "Female 094"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.0563,
+        "rmsDbfs": -33.814,
+        "peakDbfs": -21.386,
+        "medianF0Hz": 228.57,
+        "spectralCentroidHz": 830.08,
+        "integratedLufs": -34.525
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 94,
+      "sourceSpeakerId": "SSB0780",
+      "displayName": {
+        "zh": "女声 095",
+        "en": "Female 095"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.4134,
+        "rmsDbfs": -30.821,
+        "peakDbfs": -15.871,
+        "medianF0Hz": 216.22,
+        "spectralCentroidHz": 865.95,
+        "integratedLufs": -31.405
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 95,
+      "sourceSpeakerId": "SSB0784",
+      "displayName": {
+        "zh": "男声 096",
+        "en": "Male 096"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.0165,
+        "rmsDbfs": -25.992,
+        "peakDbfs": -10.036,
+        "medianF0Hz": 148.15,
+        "spectralCentroidHz": 837.59,
+        "integratedLufs": -26.456
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 96,
+      "sourceSpeakerId": "SSB0786",
+      "displayName": {
+        "zh": "女声 097",
+        "en": "Female 097"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.8099,
+        "rmsDbfs": -28.439,
+        "peakDbfs": -14.942,
+        "medianF0Hz": 210.53,
+        "spectralCentroidHz": 907.4,
+        "integratedLufs": -28.954
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 97,
+      "sourceSpeakerId": "SSB0794",
+      "displayName": {
+        "zh": "女声 098",
+        "en": "Female 098"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.1333,
+        "rmsDbfs": -33.184,
+        "peakDbfs": -14.034,
+        "medianF0Hz": 266.67,
+        "spectralCentroidHz": 1332.69,
+        "integratedLufs": -32.776
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 98,
+      "sourceSpeakerId": "SSB0817",
+      "displayName": {
+        "zh": "男声 099",
+        "en": "Male 099"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.4875,
+        "rmsDbfs": -29.131,
+        "peakDbfs": -10.067,
+        "medianF0Hz": 156.92,
+        "spectralCentroidHz": 970.24,
+        "integratedLufs": -29.56
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 99,
+      "sourceSpeakerId": "SSB0851",
+      "displayName": {
+        "zh": "女声 100",
+        "en": "Female 100"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.711,
+        "rmsDbfs": -39.267,
+        "peakDbfs": -24.343,
+        "medianF0Hz": 216.22,
+        "spectralCentroidHz": 871.8,
+        "integratedLufs": -39.59
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 100,
+      "sourceSpeakerId": "SSB0863",
+      "displayName": {
+        "zh": "男声 101",
+        "en": "Male 101"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.5113,
+        "rmsDbfs": -28.187,
+        "peakDbfs": -10.163,
+        "medianF0Hz": 140.35,
+        "spectralCentroidHz": 1042.5,
+        "integratedLufs": -28.573
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 101,
+      "sourceSpeakerId": "SSB0871",
+      "displayName": {
+        "zh": "女声 102",
+        "en": "Female 102"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.3489,
+        "rmsDbfs": -28.927,
+        "peakDbfs": -14.748,
+        "medianF0Hz": 235.29,
+        "spectralCentroidHz": 766.43,
+        "integratedLufs": -29.553
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 102,
+      "sourceSpeakerId": "SSB0887",
+      "displayName": {
+        "zh": "男声 103",
+        "en": "Male 103"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.8481,
+        "rmsDbfs": -21.161,
+        "peakDbfs": -4.334,
+        "medianF0Hz": 163.27,
+        "spectralCentroidHz": 1045.08,
+        "integratedLufs": -21.346
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 103,
+      "sourceSpeakerId": "SSB0913",
+      "displayName": {
+        "zh": "女声 104",
+        "en": "Female 104"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.7145,
+        "rmsDbfs": -34.868,
+        "peakDbfs": -19.313,
+        "medianF0Hz": 258.06,
+        "spectralCentroidHz": 965.54,
+        "integratedLufs": -35.381
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 104,
+      "sourceSpeakerId": "SSB0915",
+      "displayName": {
+        "zh": "女声 105",
+        "en": "Female 105"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.4324,
+        "rmsDbfs": -27.332,
+        "peakDbfs": -11.942,
+        "medianF0Hz": 216.22,
+        "spectralCentroidHz": 972.29,
+        "integratedLufs": -27.659
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 105,
+      "sourceSpeakerId": "SSB0919",
+      "displayName": {
+        "zh": "女声 106",
+        "en": "Female 106"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.3273,
+        "rmsDbfs": -34.783,
+        "peakDbfs": -15.73,
+        "medianF0Hz": 296.3,
+        "spectralCentroidHz": 1334.8,
+        "integratedLufs": -34.314
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 106,
+      "sourceSpeakerId": "SSB0935",
+      "displayName": {
+        "zh": "女声 107",
+        "en": "Female 107"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.5619,
+        "rmsDbfs": -29.111,
+        "peakDbfs": -9.764,
+        "medianF0Hz": 216.22,
+        "spectralCentroidHz": 1282.29,
+        "integratedLufs": -28.642
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 107,
+      "sourceSpeakerId": "SSB0966",
+      "displayName": {
+        "zh": "男声 108",
+        "en": "Male 108"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.3056,
+        "rmsDbfs": -32.951,
+        "peakDbfs": -13.751,
+        "medianF0Hz": 133.33,
+        "spectralCentroidHz": 924.69,
+        "integratedLufs": -33.352
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 108,
+      "sourceSpeakerId": "SSB0987",
+      "displayName": {
+        "zh": "女声 109",
+        "en": "Female 109"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.1629,
+        "rmsDbfs": -41.323,
+        "peakDbfs": -26.115,
+        "medianF0Hz": 235.29,
+        "spectralCentroidHz": 874.39,
+        "integratedLufs": -41.907
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 109,
+      "sourceSpeakerId": "SSB1008",
+      "displayName": {
+        "zh": "女声 110",
+        "en": "Female 110"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.867,
+        "rmsDbfs": -21.349,
+        "peakDbfs": -6.757,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 1128.05,
+        "integratedLufs": -21.622
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 110,
+      "sourceSpeakerId": "SSB1020",
+      "displayName": {
+        "zh": "男声 111",
+        "en": "Male 111"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.7629,
+        "rmsDbfs": -33.043,
+        "peakDbfs": -15.123,
+        "medianF0Hz": 153.85,
+        "spectralCentroidHz": 925.46,
+        "integratedLufs": -33.516
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 111,
+      "sourceSpeakerId": "SSB1024",
+      "displayName": {
+        "zh": "女声 112",
+        "en": "Female 112"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.3264,
+        "rmsDbfs": -26.072,
+        "peakDbfs": -7.868,
+        "medianF0Hz": 258.06,
+        "spectralCentroidHz": 1118.92,
+        "integratedLufs": -26.191
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 112,
+      "sourceSpeakerId": "SSB1050",
+      "displayName": {
+        "zh": "女声 113",
+        "en": "Female 113"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "D",
+      "ageGroup": {
+        "zh": "成熟（41+）",
+        "en": "Mature (41+)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.2313,
+        "rmsDbfs": -27.045,
+        "peakDbfs": -7.528,
+        "medianF0Hz": 216.22,
+        "spectralCentroidHz": 975.26,
+        "integratedLufs": -27.435
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 113,
+      "sourceSpeakerId": "SSB1055",
+      "displayName": {
+        "zh": "女声 114",
+        "en": "Female 114"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.391,
+        "rmsDbfs": -32.113,
+        "peakDbfs": -15.605,
+        "medianF0Hz": 210.53,
+        "spectralCentroidHz": 882.82,
+        "integratedLufs": -32.544
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 114,
+      "sourceSpeakerId": "SSB1056",
+      "displayName": {
+        "zh": "女声 115",
+        "en": "Female 115"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.3872,
+        "rmsDbfs": -25.35,
+        "peakDbfs": -7.559,
+        "medianF0Hz": 228.57,
+        "spectralCentroidHz": 1131.26,
+        "integratedLufs": -25.574
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 115,
+      "sourceSpeakerId": "SSB1064",
+      "displayName": {
+        "zh": "女声 116",
+        "en": "Female 116"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.539,
+        "rmsDbfs": -23.938,
+        "peakDbfs": -6.708,
+        "medianF0Hz": 275.86,
+        "spectralCentroidHz": 1296.67,
+        "integratedLufs": -23.014
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 116,
+      "sourceSpeakerId": "SSB1072",
+      "displayName": {
+        "zh": "女声 117",
+        "en": "Female 117"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.6965,
+        "rmsDbfs": -23.648,
+        "peakDbfs": -6.679,
+        "medianF0Hz": 296.3,
+        "spectralCentroidHz": 1263.66,
+        "integratedLufs": -23.488
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 117,
+      "sourceSpeakerId": "SSB1091",
+      "displayName": {
+        "zh": "女声 118",
+        "en": "Female 118"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.9826,
+        "rmsDbfs": -28.054,
+        "peakDbfs": -9.611,
+        "medianF0Hz": 242.42,
+        "spectralCentroidHz": 1285.6,
+        "integratedLufs": -27.9
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 118,
+      "sourceSpeakerId": "SSB1096",
+      "displayName": {
+        "zh": "女声 119",
+        "en": "Female 119"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.3144,
+        "rmsDbfs": -31.195,
+        "peakDbfs": -12.558,
+        "medianF0Hz": 258.06,
+        "spectralCentroidHz": 1213.5,
+        "integratedLufs": -31.418
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 119,
+      "sourceSpeakerId": "SSB1100",
+      "displayName": {
+        "zh": "男声 120",
+        "en": "Male 120"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.0179,
+        "rmsDbfs": -36.151,
+        "peakDbfs": -17.965,
+        "medianF0Hz": 119.4,
+        "spectralCentroidHz": 797.42,
+        "integratedLufs": -37.144
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 120,
+      "sourceSpeakerId": "SSB1108",
+      "displayName": {
+        "zh": "女声 121",
+        "en": "Female 121"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 7.0945,
+        "rmsDbfs": -27.545,
+        "peakDbfs": -10.143,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 1244.36,
+        "integratedLufs": -27.477
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 121,
+      "sourceSpeakerId": "SSB1115",
+      "displayName": {
+        "zh": "女声 122",
+        "en": "Female 122"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.3549,
+        "rmsDbfs": -29.224,
+        "peakDbfs": -13.775,
+        "medianF0Hz": 266.67,
+        "spectralCentroidHz": 1058.56,
+        "integratedLufs": -29.3
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 122,
+      "sourceSpeakerId": "SSB1125",
+      "displayName": {
+        "zh": "女声 123",
+        "en": "Female 123"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.4376,
+        "rmsDbfs": -30.113,
+        "peakDbfs": -12.899,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 1058.5,
+        "integratedLufs": -30.482
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 123,
+      "sourceSpeakerId": "SSB1131",
+      "displayName": {
+        "zh": "女声 124",
+        "en": "Female 124"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.4195,
+        "rmsDbfs": -30.077,
+        "peakDbfs": -12.793,
+        "medianF0Hz": 242.42,
+        "spectralCentroidHz": 972.3,
+        "integratedLufs": -30.563
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 124,
+      "sourceSpeakerId": "SSB1136",
+      "displayName": {
+        "zh": "男声 125",
+        "en": "Male 125"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.6396,
+        "rmsDbfs": -38.861,
+        "peakDbfs": -23.817,
+        "medianF0Hz": 106.67,
+        "spectralCentroidHz": 812.68,
+        "integratedLufs": -40.12
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 125,
+      "sourceSpeakerId": "SSB1138",
+      "displayName": {
+        "zh": "女声 126",
+        "en": "Female 126"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.1045,
+        "rmsDbfs": -33.624,
+        "peakDbfs": -15.707,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 1226.99,
+        "integratedLufs": -33.641
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 126,
+      "sourceSpeakerId": "SSB1161",
+      "displayName": {
+        "zh": "女声 127",
+        "en": "Female 127"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.9999,
+        "rmsDbfs": -33.378,
+        "peakDbfs": -16.327,
+        "medianF0Hz": 258.06,
+        "spectralCentroidHz": 1025.77,
+        "integratedLufs": -33.596
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 127,
+      "sourceSpeakerId": "SSB1203",
+      "displayName": {
+        "zh": "女声 128",
+        "en": "Female 128"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.9336,
+        "rmsDbfs": -34.142,
+        "peakDbfs": -20.556,
+        "medianF0Hz": 275.86,
+        "spectralCentroidHz": 818.15,
+        "integratedLufs": -34.667
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 128,
+      "sourceSpeakerId": "SSB1204",
+      "displayName": {
+        "zh": "女声 129",
+        "en": "Female 129"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.4099,
+        "rmsDbfs": -29.542,
+        "peakDbfs": -12.552,
+        "medianF0Hz": 266.67,
+        "spectralCentroidHz": 1276.68,
+        "integratedLufs": -29.452
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 129,
+      "sourceSpeakerId": "SSB1218",
+      "displayName": {
+        "zh": "女声 130",
+        "en": "Female 130"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.1714,
+        "rmsDbfs": -32.998,
+        "peakDbfs": -15.897,
+        "medianF0Hz": 228.57,
+        "spectralCentroidHz": 1046.67,
+        "integratedLufs": -33.525
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 130,
+      "sourceSpeakerId": "SSB1221",
+      "displayName": {
+        "zh": "女声 131",
+        "en": "Female 131"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.7012,
+        "rmsDbfs": -28.193,
+        "peakDbfs": -12.032,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 768.04,
+        "integratedLufs": -28.471
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 131,
+      "sourceSpeakerId": "SSB1253",
+      "displayName": {
+        "zh": "女声 132",
+        "en": "Female 132"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 7.0441,
+        "rmsDbfs": -32.693,
+        "peakDbfs": -11.898,
+        "medianF0Hz": 200.0,
+        "spectralCentroidHz": 1246.51,
+        "integratedLufs": -32.592
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 132,
+      "sourceSpeakerId": "SSB1320",
+      "displayName": {
+        "zh": "女声 133",
+        "en": "Female 133"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "D",
+      "ageGroup": {
+        "zh": "成熟（41+）",
+        "en": "Mature (41+)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.5709,
+        "rmsDbfs": -29.7,
+        "peakDbfs": -12.795,
+        "medianF0Hz": 235.29,
+        "spectralCentroidHz": 818.61,
+        "integratedLufs": -30.171
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 133,
+      "sourceSpeakerId": "SSB1341",
+      "displayName": {
+        "zh": "女声 134",
+        "en": "Female 134"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 7.2915,
+        "rmsDbfs": -31.324,
+        "peakDbfs": -15.501,
+        "medianF0Hz": 222.22,
+        "spectralCentroidHz": 950.09,
+        "integratedLufs": -31.867
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 134,
+      "sourceSpeakerId": "SSB1366",
+      "displayName": {
+        "zh": "女声 135",
+        "en": "Female 135"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.5349,
+        "rmsDbfs": -31.039,
+        "peakDbfs": -12.272,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 1064.19,
+        "integratedLufs": -31.009
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 135,
+      "sourceSpeakerId": "SSB1377",
+      "displayName": {
+        "zh": "女声 136",
+        "en": "Female 136"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.2236,
+        "rmsDbfs": -25.601,
+        "peakDbfs": -11.53,
+        "medianF0Hz": 228.57,
+        "spectralCentroidHz": 897.94,
+        "integratedLufs": -26.138
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 136,
+      "sourceSpeakerId": "SSB1383",
+      "displayName": {
+        "zh": "男声 137",
+        "en": "Male 137"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.2947,
+        "rmsDbfs": -30.726,
+        "peakDbfs": -12.682,
+        "medianF0Hz": 121.21,
+        "spectralCentroidHz": 818.79,
+        "integratedLufs": -31.441
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 137,
+      "sourceSpeakerId": "SSB1385",
+      "displayName": {
+        "zh": "女声 138",
+        "en": "Female 138"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.1258,
+        "rmsDbfs": -29.194,
+        "peakDbfs": -13.676,
+        "medianF0Hz": 242.42,
+        "spectralCentroidHz": 1003.84,
+        "integratedLufs": -29.67
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 138,
+      "sourceSpeakerId": "SSB1392",
+      "displayName": {
+        "zh": "女声 139",
+        "en": "Female 139"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.2375,
+        "rmsDbfs": -23.032,
+        "peakDbfs": -6.545,
+        "medianF0Hz": 205.13,
+        "spectralCentroidHz": 887.3,
+        "integratedLufs": -23.549
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 139,
+      "sourceSpeakerId": "SSB1393",
+      "displayName": {
+        "zh": "女声 140",
+        "en": "Female 140"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.3351,
+        "rmsDbfs": -29.152,
+        "peakDbfs": -10.349,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 1193.93,
+        "integratedLufs": -29.223
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 140,
+      "sourceSpeakerId": "SSB1408",
+      "displayName": {
+        "zh": "男声 141",
+        "en": "Male 141"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.1454,
+        "rmsDbfs": -30.494,
+        "peakDbfs": -13.084,
+        "medianF0Hz": 181.82,
+        "spectralCentroidHz": 880.99,
+        "integratedLufs": -31.045
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 141,
+      "sourceSpeakerId": "SSB1431",
+      "displayName": {
+        "zh": "女声 142",
+        "en": "Female 142"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.8952,
+        "rmsDbfs": -27.565,
+        "peakDbfs": -10.025,
+        "medianF0Hz": 222.22,
+        "spectralCentroidHz": 1091.27,
+        "integratedLufs": -27.739
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 142,
+      "sourceSpeakerId": "SSB1437",
+      "displayName": {
+        "zh": "女声 143",
+        "en": "Female 143"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.3818,
+        "rmsDbfs": -29.039,
+        "peakDbfs": -14.26,
+        "medianF0Hz": 242.42,
+        "spectralCentroidHz": 832.6,
+        "integratedLufs": -29.875
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 143,
+      "sourceSpeakerId": "SSB1448",
+      "displayName": {
+        "zh": "男声 144",
+        "en": "Male 144"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.44,
+        "rmsDbfs": -26.396,
+        "peakDbfs": -8.735,
+        "medianF0Hz": 150.94,
+        "spectralCentroidHz": 1100.89,
+        "integratedLufs": -26.535
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 144,
+      "sourceSpeakerId": "SSB1555",
+      "displayName": {
+        "zh": "女声 145",
+        "en": "Female 145"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.2244,
+        "rmsDbfs": -27.442,
+        "peakDbfs": -13.804,
+        "medianF0Hz": 200.0,
+        "spectralCentroidHz": 911.05,
+        "integratedLufs": -28.023
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 145,
+      "sourceSpeakerId": "SSB1563",
+      "displayName": {
+        "zh": "女声 146",
+        "en": "Female 146"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.2899,
+        "rmsDbfs": -24.961,
+        "peakDbfs": -6.097,
+        "medianF0Hz": 235.29,
+        "spectralCentroidHz": 1132.34,
+        "integratedLufs": -24.723
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 146,
+      "sourceSpeakerId": "SSB1567",
+      "displayName": {
+        "zh": "女声 147",
+        "en": "Female 147"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "others",
+      "accentLabel": {
+        "zh": "其他",
+        "en": "Other accent"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.9115,
+        "rmsDbfs": -27.149,
+        "peakDbfs": -9.998,
+        "medianF0Hz": 222.22,
+        "spectralCentroidHz": 1038.2,
+        "integratedLufs": -27.317
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 147,
+      "sourceSpeakerId": "SSB1575",
+      "displayName": {
+        "zh": "女声 148",
+        "en": "Female 148"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.4231,
+        "rmsDbfs": -28.908,
+        "peakDbfs": -10.368,
+        "medianF0Hz": 222.22,
+        "spectralCentroidHz": 793.22,
+        "integratedLufs": -29.508
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 148,
+      "sourceSpeakerId": "SSB1585",
+      "displayName": {
+        "zh": "女声 149",
+        "en": "Female 149"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.2592,
+        "rmsDbfs": -27.102,
+        "peakDbfs": -12.028,
+        "medianF0Hz": 186.05,
+        "spectralCentroidHz": 748.91,
+        "integratedLufs": -27.826
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 149,
+      "sourceSpeakerId": "SSB1593",
+      "displayName": {
+        "zh": "女声 150",
+        "en": "Female 150"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.1762,
+        "rmsDbfs": -28.93,
+        "peakDbfs": -13.775,
+        "medianF0Hz": 205.13,
+        "spectralCentroidHz": 815.13,
+        "integratedLufs": -29.558
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 150,
+      "sourceSpeakerId": "SSB1607",
+      "displayName": {
+        "zh": "女声 151",
+        "en": "Female 151"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.136,
+        "rmsDbfs": -32.122,
+        "peakDbfs": -14.404,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 1200.79,
+        "integratedLufs": -32.258
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 151,
+      "sourceSpeakerId": "SSB1624",
+      "displayName": {
+        "zh": "男声 152",
+        "en": "Male 152"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.0738,
+        "rmsDbfs": -28.334,
+        "peakDbfs": -12.324,
+        "medianF0Hz": 163.27,
+        "spectralCentroidHz": 966.78,
+        "integratedLufs": -28.597
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 152,
+      "sourceSpeakerId": "SSB1625",
+      "displayName": {
+        "zh": "女声 153",
+        "en": "Female 153"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.4366,
+        "rmsDbfs": -31.105,
+        "peakDbfs": -14.375,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 1110.99,
+        "integratedLufs": -31.464
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 153,
+      "sourceSpeakerId": "SSB1630",
+      "displayName": {
+        "zh": "男声 154",
+        "en": "Male 154"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.3667,
+        "rmsDbfs": -27.782,
+        "peakDbfs": -9.706,
+        "medianF0Hz": 140.35,
+        "spectralCentroidHz": 808.62,
+        "integratedLufs": -28.246
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 154,
+      "sourceSpeakerId": "SSB1650",
+      "displayName": {
+        "zh": "女声 155",
+        "en": "Female 155"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 7.3644,
+        "rmsDbfs": -27.119,
+        "peakDbfs": -9.654,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 1139.45,
+        "integratedLufs": -26.237
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 155,
+      "sourceSpeakerId": "SSB1670",
+      "displayName": {
+        "zh": "女声 156",
+        "en": "Female 156"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.1132,
+        "rmsDbfs": -31.127,
+        "peakDbfs": -12.179,
+        "medianF0Hz": 235.29,
+        "spectralCentroidHz": 1171.25,
+        "integratedLufs": -31.166
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 156,
+      "sourceSpeakerId": "SSB1684",
+      "displayName": {
+        "zh": "男声 157",
+        "en": "Male 157"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.7266,
+        "rmsDbfs": -24.535,
+        "peakDbfs": -6.564,
+        "medianF0Hz": 153.85,
+        "spectralCentroidHz": 855.27,
+        "integratedLufs": -24.857
+      },
+      "analysisTags": [
+        "标准响度",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 157,
+      "sourceSpeakerId": "SSB1686",
+      "displayName": {
+        "zh": "女声 158",
+        "en": "Female 158"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.0854,
+        "rmsDbfs": -26.383,
+        "peakDbfs": -7.698,
+        "medianF0Hz": 258.06,
+        "spectralCentroidHz": 1080.25,
+        "integratedLufs": -26.123
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 158,
+      "sourceSpeakerId": "SSB1699",
+      "displayName": {
+        "zh": "女声 159",
+        "en": "Female 159"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.8818,
+        "rmsDbfs": -33.987,
+        "peakDbfs": -18.848,
+        "medianF0Hz": 216.22,
+        "spectralCentroidHz": 991.35,
+        "integratedLufs": -34.316
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 159,
+      "sourceSpeakerId": "SSB1711",
+      "displayName": {
+        "zh": "女声 160",
+        "en": "Female 160"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.4394,
+        "rmsDbfs": -32.242,
+        "peakDbfs": -14.95,
+        "medianF0Hz": 242.42,
+        "spectralCentroidHz": 1178.95,
+        "integratedLufs": -32.206
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 160,
+      "sourceSpeakerId": "SSB1759",
+      "displayName": {
+        "zh": "女声 161",
+        "en": "Female 161"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.6729,
+        "rmsDbfs": -28.694,
+        "peakDbfs": -10.681,
+        "medianF0Hz": 228.57,
+        "spectralCentroidHz": 1236.8,
+        "integratedLufs": -28.784
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 161,
+      "sourceSpeakerId": "SSB1806",
+      "displayName": {
+        "zh": "女声 162",
+        "en": "Female 162"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.0245,
+        "rmsDbfs": -37.994,
+        "peakDbfs": -22.403,
+        "medianF0Hz": 258.06,
+        "spectralCentroidHz": 883.38,
+        "integratedLufs": -38.488
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 162,
+      "sourceSpeakerId": "SSB1828",
+      "displayName": {
+        "zh": "女声 163",
+        "en": "Female 163"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.4689,
+        "rmsDbfs": -28.206,
+        "peakDbfs": -12.934,
+        "medianF0Hz": 205.13,
+        "spectralCentroidHz": 931.26,
+        "integratedLufs": -28.849
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 163,
+      "sourceSpeakerId": "SSB1831",
+      "displayName": {
+        "zh": "男声 164",
+        "en": "Male 164"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 7.082,
+        "rmsDbfs": -26.551,
+        "peakDbfs": -8.703,
+        "medianF0Hz": 135.59,
+        "spectralCentroidHz": 848.42,
+        "integratedLufs": -27.102
+      },
+      "analysisTags": [
+        "偏轻",
+        "低音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 164,
+      "sourceSpeakerId": "SSB1832",
+      "displayName": {
+        "zh": "女声 165",
+        "en": "Female 165"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.0794,
+        "rmsDbfs": -29.691,
+        "peakDbfs": -11.52,
+        "medianF0Hz": 228.57,
+        "spectralCentroidHz": 1093.76,
+        "integratedLufs": -29.496
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 165,
+      "sourceSpeakerId": "SSB1837",
+      "displayName": {
+        "zh": "女声 166",
+        "en": "Female 166"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.2977,
+        "rmsDbfs": -30.706,
+        "peakDbfs": -12.702,
+        "medianF0Hz": 216.22,
+        "spectralCentroidHz": 939.07,
+        "integratedLufs": -31.164
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 166,
+      "sourceSpeakerId": "SSB1846",
+      "displayName": {
+        "zh": "女声 167",
+        "en": "Female 167"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "south",
+      "accentLabel": {
+        "zh": "南方",
+        "en": "Southern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 7.5607,
+        "rmsDbfs": -35.926,
+        "peakDbfs": -17.719,
+        "medianF0Hz": 242.42,
+        "spectralCentroidHz": 1079.78,
+        "integratedLufs": -36.374
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 167,
+      "sourceSpeakerId": "SSB1863",
+      "displayName": {
+        "zh": "男声 168",
+        "en": "Male 168"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.8964,
+        "rmsDbfs": -27.04,
+        "peakDbfs": -12.782,
+        "medianF0Hz": 145.45,
+        "spectralCentroidHz": 746.79,
+        "integratedLufs": -27.734
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 168,
+      "sourceSpeakerId": "SSB1878",
+      "displayName": {
+        "zh": "女声 169",
+        "en": "Female 169"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 7.3092,
+        "rmsDbfs": -33.751,
+        "peakDbfs": -16.182,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 1017.65,
+        "integratedLufs": -34.09
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 169,
+      "sourceSpeakerId": "SSB1891",
+      "displayName": {
+        "zh": "女声 170",
+        "en": "Female 170"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "C",
+      "ageGroup": {
+        "zh": "成年（26–40）",
+        "en": "Adult (26–40)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.2291,
+        "rmsDbfs": -28.267,
+        "peakDbfs": -13.285,
+        "medianF0Hz": 190.48,
+        "spectralCentroidHz": 870.82,
+        "integratedLufs": -28.836
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 170,
+      "sourceSpeakerId": "SSB1918",
+      "displayName": {
+        "zh": "女声 171",
+        "en": "Female 171"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.4165,
+        "rmsDbfs": -38.235,
+        "peakDbfs": -22.037,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 886.02,
+        "integratedLufs": -39.012
+      },
+      "analysisTags": [
+        "偏轻",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 171,
+      "sourceSpeakerId": "SSB1935",
+      "displayName": {
+        "zh": "男声 172",
+        "en": "Male 172"
+      },
+      "gender": "male",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 4.6816,
+        "rmsDbfs": -26.539,
+        "peakDbfs": -9.271,
+        "medianF0Hz": 153.85,
+        "spectralCentroidHz": 705.66,
+        "integratedLufs": -27.125
+      },
+      "analysisTags": [
+        "偏轻",
+        "中音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 172,
+      "sourceSpeakerId": "SSB1939",
+      "displayName": {
+        "zh": "女声 173",
+        "en": "Female 173"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 6.1631,
+        "rmsDbfs": -24.829,
+        "peakDbfs": -10.21,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 998.94,
+        "integratedLufs": -25.345
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    },
+    {
+      "sid": 173,
+      "sourceSpeakerId": "SSB1956",
+      "displayName": {
+        "zh": "女声 174",
+        "en": "Female 174"
+      },
+      "gender": "female",
+      "genderSource": "AISHELL-3 official spk-info",
+      "ageGroupCode": "B",
+      "ageGroup": {
+        "zh": "青年（14–25）",
+        "en": "Young (14–25)"
+      },
+      "accent": "north",
+      "accentLabel": {
+        "zh": "北方",
+        "en": "Northern Mandarin"
+      },
+      "metadataSource": "AISHELL-3 official spk-info",
+      "acoustics": {
+        "sampleRate": 8000,
+        "durationSec": 5.9306,
+        "rmsDbfs": -24.701,
+        "peakDbfs": -7.618,
+        "medianF0Hz": 250.0,
+        "spectralCentroidHz": 1234.34,
+        "integratedLufs": -24.718
+      },
+      "analysisTags": [
+        "标准响度",
+        "高音",
+        "偏温暖"
+      ],
+      "acousticAnalysisSource": "Readori objective audit; labels are derived, not official dataset metadata"
+    }
+  ]
+}
