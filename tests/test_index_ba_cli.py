@@ -91,9 +91,21 @@ def test_load_index_rejects_foreign_documents(tmp_path):
     assert ix.load_index(tmp_path / "missing.json") == {"schemaVersion": 1, "packs": []}
 
 
-def test_shipped_index_is_a_valid_empty_index():
+def test_shipped_index_is_valid():
+    # Written by CI (readori/test-env-setup) after publishing; never by hand.
     doc = ix.load_index(Path(__file__).resolve().parent.parent / "catalog" / "v1" / "index.json")
-    assert doc == {"schemaVersion": 1, "packs": []}
+    ids = [p["id"] for p in doc["packs"]]
+    assert ids == sorted(ids) and len(ids) == len(set(ids))
+    for pack in doc["packs"]:
+        for key in ("packVersion", "type", "speakerCount", "bytes", "sha256", "url"):
+            assert key in pack, (pack["id"], key)
+        assert len(pack["sha256"]) == 64
+        assert pack["url"].startswith(
+            f"https://github.com/{REPO}/releases/download/pack/{pack['id']}/v{pack['packVersion']}/"
+        )
+        assert pack.get("tier", "official") in ("official", "community")
+        if pack.get("tier") == "community":
+            assert pack.get("recommended") is False and "appleAssetPackId" not in pack
 
 
 def test_find_sidecars(built_vits, tmp_path):
