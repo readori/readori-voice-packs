@@ -10,7 +10,7 @@ ZIP 文件，里面是 [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) 文�
 
 - `registry/models.yaml`：唯一事实来源，记录有哪些上游模型、各自的许可证，以及如何制成语音包。
 - `tools/readori_voicepack/`：Python 工具（`python -m readori_voicepack <命令>`）。
-- `.github/workflows/build-pack.yml`：制作并（可选）发布语音包。
+- 本仓库不运行 CI：检查与制作统一在公开 CI 仓库 [readori/test-env-setup](https://github.com/readori/test-env-setup) 执行（`.github/workflows/readori-voice-packs.yml`）。
 - `catalog/v1/index.json`：供 App 读取的已发布语音包清单。
 
 ## 许可证政策
@@ -104,8 +104,9 @@ python -m readori_voicepack ba-manifest <目录>
    证据、`commercialUse`、`redistribution`）以及数据集许可证。可参照已批准的条目书写；`tests/test_registry.py` 与 `tests/test_gpl_components.py` 记录了可接受的字段。
 2. 运行一次 `python -m readori_voicepack fetch <id> --allow-unpinned`，把打印出的 sha256 和字节数写回登记。
 3. 核对许可证证据后把状态改为 `approved`；如果无法发布，改为 `status: excluded` 并写明 `excludedReason`。
-4. 提交 Pull Request。CI 会运行代码检查、单元测试和 `registry-check`（不下载模型）。
-5. 合并后在 Actions 页面手动运行 **build-pack**，填入语音包 id。勾选 `publish` 时会创建
+4. 提交 Pull Request。维护者在 [readori/test-env-setup](https://github.com/readori/test-env-setup) 运行 **Readori Voice Packs**，`mode=check`、`source_ref` 填 PR 分支：
+   代码检查、单元测试和 `registry-check`（不下载模型）。
+5. 合并后用同一个工作流选 `mode=build` 并填入语音包 id。勾选 `publish`（只允许 `main`）时会创建
    GitHub Release `pack/<id>/v<packVersion>` 并更新 `catalog/v1/index.json`。语音包内容有变化时请递增
    `packVersion`。
 
@@ -142,9 +143,7 @@ registry/license-texts/       上游压缩包缺少许可证文本时使用的�
 docs/LICENSE_EVIDENCE.md     每条登记背后的许可证调研
 tools/readori_voicepack/      命令行工具包
 tests/                        pytest，离线运行，使用极小的假模型
-catalog/v1/index.json         已发布语音包清单（由工作流更新）
-.github/workflows/ci.yml      代码检查 + 测试 + 登记表检查
-.github/workflows/build-pack.yml   手动制作 / 发布
+catalog/v1/index.json         已发布语音包清单（由 readori/test-env-setup 的 CI 更新）
 ```
 
 ## 安全说明

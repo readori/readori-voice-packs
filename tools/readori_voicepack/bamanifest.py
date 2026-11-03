@@ -2,9 +2,9 @@
 
 STATUS: DRAFT, NOT VERIFIED ON macOS. The JSON layout follows the structure printed by
 ``xcrun ba-package template`` as documented for Xcode 26 (assetPackID, downloadPolicy,
-fileSelectors, platforms). It was written without access to Xcode, so the macOS job in
-``.github/workflows/build-pack.yml`` dumps the real template and the maintainer must compare
-the two before uploading anything to App Store Connect.
+fileSelectors, platforms). It was written without access to Xcode, so the macOS job of the
+``readori-voice-packs.yml`` workflow in readori/test-env-setup dumps the real template and the
+maintainer must compare the two before uploading anything to App Store Connect.
 """
 from __future__ import annotations
 

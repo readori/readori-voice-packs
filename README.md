@@ -13,7 +13,8 @@ Connect credentials.
 - `registry/models.yaml` is the single source of truth: which upstream models exist, under which
   license, and how to turn them into a pack.
 - `tools/readori_voicepack/` is the Python tooling (`python -m readori_voicepack <command>`).
-- `.github/workflows/build-pack.yml` builds and (optionally) publishes packs.
+- CI does not run in this repository. Checks and builds run in the shared public CI repository
+  [readori/test-env-setup](https://github.com/readori/test-env-setup) (`.github/workflows/readori-voice-packs.yml`).
 - `catalog/v1/index.json` lists the published packs for the app.
 
 ## License policy
@@ -121,9 +122,10 @@ python -m readori_voicepack ba-manifest <dir>
    bytes into the entry.
 3. Review the license evidence, then change the status to `approved`. If the model cannot be
    published, set `status: excluded` and write `excludedReason`.
-4. Open a pull request. CI runs lint, the unit tests and `registry-check` (no downloads).
-5. After merge, run the **build-pack** workflow (Actions tab, "Run workflow") with the pack id.
-   With `publish` enabled it creates the GitHub Release `pack/<id>/v<packVersion>` and updates
+4. Open a pull request. A maintainer runs **Readori Voice Packs** in [readori/test-env-setup](https://github.com/readori/test-env-setup) with `mode=check` and
+   `source_ref` set to the PR branch: lint, the unit tests and `registry-check` (no downloads).
+5. After merge, run the same workflow with `mode=build` and the pack id.
+   With `publish` enabled (only from `main`) it creates the GitHub Release `pack/<id>/v<packVersion>` and updates
    `catalog/v1/index.json`. Bump `packVersion` when the content of a pack changes.
 
 ## Run locally
@@ -162,9 +164,7 @@ registry/license-texts/       license texts used when an upstream archive has no
 docs/LICENSE_EVIDENCE.md     license research behind every registry entry
 tools/readori_voicepack/      the CLI package
 tests/                        pytest, offline, tiny fake models
-catalog/v1/index.json         published packs (updated by the workflow)
-.github/workflows/ci.yml      lint + tests + registry check
-.github/workflows/build-pack.yml   manual build / publish
+catalog/v1/index.json         published packs (updated by the CI workflow in readori/test-env-setup)
 ```
 
 ## Safety notes
