@@ -77,9 +77,9 @@ models:
 - id: zh-aishell3-v1
   packVersion: 1
   displayName:
-    en: Mandarin - AISHELL-3 (174 voices)
-    zh-Hans: 普通话 · AISHELL-3 多音色（174）
-    zh-Hant: 國語 · AISHELL-3 多音色（174）
+    en: Mandarin - AISHELL-3 (174 voices, 8 kHz)
+    zh-Hans: 普通话 · AISHELL-3 多音色（174，8 kHz）
+    zh-Hant: 國語 · AISHELL-3 多音色（174，8 kHz）
   languages:
   - zh-CN
   type: vits
@@ -3882,7 +3882,8 @@ models:
   - zh-CN
   type: vits
   appSupported: true
-  status: approved
+  status: candidate
+  candidateNote: 'Not published (decision 2026-11-03): 8 kHz like zh-aishell3-v1, same voices, 147 MB vs 30 MB. Builds and passes CI; kept as a candidate.'
   priority: 2
   upstream:
     url: https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-zh-aishell3.tar.bz2
