@@ -1,4 +1,278 @@
 {
   "schemaVersion": 1,
-  "packs": []
+  "packs": [
+    {
+      "id": "en-coqui-ljspeech-vits-v1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "English - Coqui LJSpeech VITS (1 voice)",
+        "zh-Hans": "英语 · Coqui LJSpeech VITS（单音色）",
+        "zh-Hant": "英語 · Coqui LJSpeech VITS（單一音色）"
+      },
+      "languages": [
+        "en-US"
+      ],
+      "type": "vits",
+      "speakerCount": 1,
+      "bytes": 114481782,
+      "sha256": "dbf13dddf8fd0f5d85b459dcc11f79846a7d5c88166a95f8bf170207a3e5b488",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/en-coqui-ljspeech-vits-v1/v1/en-coqui-ljspeech-vits-v1-v1.zip",
+      "license": {
+        "spdx": "Apache-2.0",
+        "url": "https://github.com/coqui-ai/TTS/blob/dev/TTS/.models.json",
+        "attributionRequired": false
+      },
+      "minAppVersion": "1.1.2",
+      "appleAssetPackId": "readori.voice.en-coqui-ljspeech-vits-v1"
+    },
+    {
+      "id": "en-coqui-vctk-vits-v1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "English - Coqui VCTK VITS (109 voices)",
+        "zh-Hans": "英语 · Coqui VCTK VITS（109 音色）",
+        "zh-Hant": "英語 · Coqui VCTK VITS（109 音色）"
+      },
+      "languages": [
+        "en-GB"
+      ],
+      "type": "vits",
+      "speakerCount": 109,
+      "bytes": 121246214,
+      "sha256": "83db34cb8b3099c7d78e396f80fe330efbe9a24e97d62057fab43a1d75c7c1f8",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/en-coqui-vctk-vits-v1/v1/en-coqui-vctk-vits-v1-v1.zip",
+      "license": {
+        "spdx": "Apache-2.0",
+        "url": "https://github.com/coqui-ai/TTS/blob/dev/TTS/.models.json",
+        "attributionRequired": false
+      },
+      "minAppVersion": "1.1.2",
+      "appleAssetPackId": "readori.voice.en-coqui-vctk-vits-v1"
+    },
+    {
+      "id": "en-icefall-ljspeech-low-v1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "English - icefall LJSpeech low (1 voice)",
+        "zh-Hans": "英语 · icefall LJSpeech low（单音色）",
+        "zh-Hant": "英語 · icefall LJSpeech low（單一音色）"
+      },
+      "languages": [
+        "en-US"
+      ],
+      "type": "vits",
+      "speakerCount": 1,
+      "bytes": 32969802,
+      "sha256": "874d072fabac52cce161c83725ecd9c752b61a0add2882d0a4dcc863b3e78c34",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/en-icefall-ljspeech-low-v1/v1/en-icefall-ljspeech-low-v1-v1.zip",
+      "license": {
+        "spdx": "Apache-2.0",
+        "url": "https://github.com/k2-fsa/icefall/blob/master/LICENSE",
+        "attributionRequired": false
+      },
+      "minAppVersion": "1.1.2",
+      "appleAssetPackId": "readori.voice.en-icefall-ljspeech-low-v1"
+    },
+    {
+      "id": "en-icefall-ljspeech-medium-v1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "English - icefall LJSpeech medium (1 voice)",
+        "zh-Hans": "英语 · icefall LJSpeech medium（单音色）",
+        "zh-Hant": "英語 · icefall LJSpeech medium（單一音色）"
+      },
+      "languages": [
+        "en-US"
+      ],
+      "type": "vits",
+      "speakerCount": 1,
+      "bytes": 73869286,
+      "sha256": "b7a4d12f4f1634fd2a31a880c0ba9b2bf8e54b90916235f304734d932d9325df",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/en-icefall-ljspeech-medium-v1/v1/en-icefall-ljspeech-medium-v1-v1.zip",
+      "license": {
+        "spdx": "Apache-2.0",
+        "url": "https://github.com/k2-fsa/icefall/blob/master/LICENSE",
+        "attributionRequired": false
+      },
+      "minAppVersion": "1.1.2",
+      "appleAssetPackId": "readori.voice.en-icefall-ljspeech-medium-v1"
+    },
+    {
+      "id": "en-kokoro-v0-19-int8-v1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "English - Kokoro v0.19 int8 (11 voices)",
+        "zh-Hans": "英语 · Kokoro v0.19 int8（11 音色）",
+        "zh-Hant": "英語 · Kokoro v0.19 int8（11 音色）"
+      },
+      "languages": [
+        "en-US",
+        "en-GB"
+      ],
+      "type": "kokoro",
+      "speakerCount": 11,
+      "bytes": 102658926,
+      "sha256": "c5ca5ea304f3b72651b9fd6f46416f2358217dd63b2932334c14fbe01168279c",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/en-kokoro-v0-19-int8-v1/v1/en-kokoro-v0-19-int8-v1-v1.zip",
+      "license": {
+        "spdx": "Apache-2.0",
+        "url": "https://huggingface.co/hexgrad/kLegacy",
+        "attributionRequired": false
+      },
+      "minAppVersion": "1.1.2",
+      "appleAssetPackId": "readori.voice.en-kokoro-v0-19-int8-v1"
+    },
+    {
+      "id": "en-kokoro-v1-0-int8-v1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "English / Mandarin - Kokoro v1.0 int8 (53 voices)",
+        "zh-Hans": "英语 / 普通话 · Kokoro v1.0 int8（53 音色）",
+        "zh-Hant": "英語 / 國語 · Kokoro v1.0 int8（53 音色）"
+      },
+      "languages": [
+        "en-US",
+        "en-GB",
+        "zh-CN"
+      ],
+      "type": "kokoro",
+      "speakerCount": 53,
+      "bytes": 132968945,
+      "sha256": "a4d55bc4db737e5100b82bbd18b61c285fc1cb1e123549997c18b7c323809af0",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/en-kokoro-v1-0-int8-v1/v1/en-kokoro-v1-0-int8-v1-v1.zip",
+      "license": {
+        "spdx": "Apache-2.0",
+        "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+        "attributionRequired": false
+      },
+      "minAppVersion": "1.1.2",
+      "appleAssetPackId": "readori.voice.en-kokoro-v1-0-int8-v1"
+    },
+    {
+      "id": "en-melo-v1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "English - MeloTTS (5 accents)",
+        "zh-Hans": "英语 · MeloTTS（5 种口音）",
+        "zh-Hant": "英語 · MeloTTS（5 種口音）"
+      },
+      "languages": [
+        "en-US",
+        "en-GB",
+        "en-AU",
+        "en-IN"
+      ],
+      "type": "vits",
+      "speakerCount": 5,
+      "bytes": 159038423,
+      "sha256": "7d9d2f89e7cdefe908a0022be83cb2f018255123d6a3ed05354cff68bf0eb8fa",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/en-melo-v1/v1/en-melo-v1-v1.zip",
+      "license": {
+        "spdx": "MIT",
+        "url": "https://huggingface.co/myshell-ai/MeloTTS-English",
+        "attributionRequired": false
+      },
+      "minAppVersion": "1.1.2",
+      "appleAssetPackId": "readori.voice.en-melo-v1"
+    },
+    {
+      "id": "en-piper-en-us-libritts-high-v1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "English (US) - Piper libritts (904 voices)",
+        "zh-Hans": "英语（美国） · Piper libritts（904 音色）",
+        "zh-Hant": "英語（美國） · Piper libritts（904 音色）"
+      },
+      "languages": [
+        "en-US"
+      ],
+      "type": "vits",
+      "speakerCount": 512,
+      "bytes": 129597261,
+      "sha256": "771a124f64266f910b887e92d3fb4e27ff43d5d062992d31f3c1c3cce060dc52",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/en-piper-en-us-libritts-high-v1/v1/en-piper-en-us-libritts-high-v1-v1.zip",
+      "license": {
+        "spdx": "CC-BY-4.0",
+        "url": "https://huggingface.co/rhasspy/piper-voices",
+        "attributionRequired": true
+      },
+      "minAppVersion": "1.1.2",
+      "appleAssetPackId": "readori.voice.en-piper-en-us-libritts-high-v1"
+    },
+    {
+      "id": "zh-aishell3-v1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "Mandarin - AISHELL-3 (174 voices, 8 kHz)",
+        "zh-Hans": "普通话 · AISHELL-3 多音色（174，8 kHz）",
+        "zh-Hant": "國語 · AISHELL-3 多音色（174，8 kHz）"
+      },
+      "languages": [
+        "zh-CN"
+      ],
+      "type": "vits",
+      "speakerCount": 174,
+      "bytes": 33250565,
+      "sha256": "cbfe19280525408476c4397a701d5dbd261165181a98e55b7859b1050a0f080c",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/zh-aishell3-v1/v1/zh-aishell3-v1-v1.zip",
+      "license": {
+        "spdx": "Apache-2.0",
+        "url": "https://github.com/k2-fsa/icefall/blob/master/LICENSE",
+        "attributionRequired": false
+      },
+      "minAppVersion": "1.1.2",
+      "appleAssetPackId": "readori.voice.zh-aishell3-v1"
+    },
+    {
+      "id": "zh-en-kokoro-int8-v1-1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "Mandarin / English - Kokoro v1.1 int8 (103 voices)",
+        "zh-Hans": "中文 / English · Kokoro v1.1 int8（103 音色）",
+        "zh-Hant": "中文 / English · Kokoro v1.1 int8（103 音色）"
+      },
+      "languages": [
+        "zh-CN",
+        "en-US",
+        "en-GB"
+      ],
+      "type": "kokoro",
+      "speakerCount": 103,
+      "bytes": 146800244,
+      "sha256": "1e0fc98534d308ac1de38475a16d87f6169e8cde43c95895ff0b16e0187ccc98",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/zh-en-kokoro-int8-v1-1/v1/zh-en-kokoro-int8-v1-1-v1.zip",
+      "license": {
+        "spdx": "Apache-2.0",
+        "url": "https://huggingface.co/hexgrad/Kokoro-82M-v1.1-zh",
+        "attributionRequired": false
+      },
+      "minAppVersion": "1.1.2",
+      "appleAssetPackId": "readori.voice.zh-en-kokoro-int8-v1-1"
+    },
+    {
+      "id": "zh-en-melo-v1",
+      "packVersion": 1,
+      "displayName": {
+        "en": "Mandarin / English - MeloTTS (1 voice)",
+        "zh-Hans": "普通话 / English · MeloTTS（单音色）",
+        "zh-Hant": "國語 / English · MeloTTS（單一音色）"
+      },
+      "languages": [
+        "zh-CN",
+        "en-US"
+      ],
+      "type": "vits",
+      "speakerCount": 1,
+      "bytes": 164485601,
+      "sha256": "3594fc1ca19693956f0f6bbb1b285a0630440de388e0ac5ef54a9f40ff6f74e1",
+      "url": "https://github.com/readori/readori-voice-packs/releases/download/pack/zh-en-melo-v1/v1/zh-en-melo-v1-v1.zip",
+      "license": {
+        "spdx": "MIT",
+        "url": "https://huggingface.co/myshell-ai/MeloTTS-Chinese",
+        "attributionRequired": false
+      },
+      "minAppVersion": "1.1.2",
+      "appleAssetPackId": "readori.voice.zh-en-melo-v1"
+    }
+  ]
 }
