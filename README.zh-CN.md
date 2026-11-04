@@ -192,6 +192,7 @@ registry/models.yaml          上游模型登记表（许可证闸门的输入�
 registry/voice-catalogs/      登记表引用的、经过整理的音色目录
 registry/license-texts/       上游压缩包缺少许可证文本时使用的文本（含 espeak-ng-data 用的 GPL-3.0）
 docs/LICENSE_EVIDENCE.md     每条登记背后的许可证调研
+docs/NC_REFERENCE.md         非商用参考档：只列出、不构建不托管（由 `nc-reference` 生成）
 tools/readori_voicepack/      命令行工具包
 tests/                        pytest，离线运行，使用极小的假模型
 catalog/v1/index.json         已发布语音包清单（由 readori/test-env-setup 的 CI 更新）

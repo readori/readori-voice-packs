@@ -226,6 +226,7 @@ registry/models.yaml          upstream model registry (license gate input)
 registry/voice-catalogs/      curated voice catalogs referenced by registry entries
 registry/license-texts/       license texts used when an upstream archive has none (GPL-3.0 for espeak-ng-data)
 docs/LICENSE_EVIDENCE.md     license research behind every registry entry
+docs/NC_REFERENCE.md         non-commercial models: reference list only, never built or hosted (generated: `nc-reference`)
 tools/readori_voicepack/      the CLI package
 tests/                        pytest, offline, tiny fake models
 catalog/v1/index.json         published packs (updated by the CI workflow in readori/test-env-setup)

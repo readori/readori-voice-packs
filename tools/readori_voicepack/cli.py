@@ -17,6 +17,7 @@ from .common import MANIFEST_NAME, VoicePackError, loads_strict, sha256_file, wr
 from .fetch import cache_path, fetch_model, verify_archive
 from .index import DEFAULT_INDEX, find_sidecars, update_index
 from .local import DEFAULT_LOCAL_OUT, LocalOptions, build_local
+from .ncref import DEFAULT_NC_REFERENCE, check_nc_reference, write_nc_reference
 from .pack import pack_directory
 from .smoke import run_smoke
 from .validate import validate_target
@@ -307,6 +308,18 @@ def cmd_ba_manifest(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_nc_reference(args: argparse.Namespace) -> int:
+    if args.check:
+        if not check_nc_reference(args.registry, args.out):
+            _out(f"{args.out} is out of date; run `python -m readori_voicepack nc-reference`", err=True)
+            return 1
+        _out(f"{args.out} is up to date")
+        return 0
+    count = write_nc_reference(args.registry, args.out)
+    _out(f"wrote {args.out}: {count} non-commercial models (reference only, never built)")
+    return 0
+
+
 # --------------------------------------------------------------------------- parser
 
 
@@ -423,6 +436,11 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--sidecars", type=Path, default=DEFAULT_DIST)
     p.add_argument("--repo", required=True, help="owner/name of the GitHub repository")
     p.add_argument("--index", type=Path, default=DEFAULT_INDEX)
+
+    p = add("nc-reference", cmd_nc_reference, "write docs/NC_REFERENCE.md (non-commercial models, reference only)")
+    registry_arg(p)
+    p.add_argument("--out", type=Path, default=DEFAULT_NC_REFERENCE)
+    p.add_argument("--check", action="store_true", help="fail if the committed file is out of date")
 
     p = add("ba-manifest", cmd_ba_manifest, "draft an Apple Background Assets manifest (unverified)")
     p.add_argument("dir", type=Path)
