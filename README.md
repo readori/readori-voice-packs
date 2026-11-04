@@ -212,6 +212,38 @@ the `fileSelectors` form and the allowed characters of `assetPackID` with
 `readori_voicepack/bamanifest.py`. The workflow dumps that template as an artifact for the
 comparison.
 
+## Apple-hosted asset packs
+
+On iOS 26 and later the app can fetch a voice pack from Apple instead of GitHub. Each official
+pack in `catalog/v1/index.json` with an `appleAssetPackId` becomes one asset pack that contains the
+byte-identical Release ZIP at `<packId>/<packId>.zip` (all asset packs of an app share one file
+namespace, hence the prefix). The app imports and verifies it with the same code as the GitHub
+download and falls back to GitHub if Apple cannot serve it. Community packs are never packaged.
+This repository holds no workflow and no Apple credentials; packaging runs in
+[readori/test-env-setup](https://github.com/readori/test-env-setup).
+
+1. Publish the pack to GitHub Releases as usual (the index then carries url, sha256 and bytes).
+2. Run `.github/workflows/readori-voice-packs.yml` in readori/test-env-setup with
+   `mode=asset-packs` (input `asset_pack_ids`; empty = every pack with an `appleAssetPackId`). A
+   publish run (`mode=build`, `publish=true`) runs the same job for the packs it just built. The
+   job `apple-asset-pack` runs on a macOS runner with Xcode 26: it downloads the Release ZIPs from
+   `https://github.com/readori/readori-voice-packs/releases/download/` only, checks sha256 and size
+   against the index, prints `xcrun ba-package template`, fills our values into that template
+   (`ba-layout --template`; unknown template keys are kept), runs `xcrun ba-package` and uploads
+   the `.aar` files, manifests and the real template as the artifact `apple-asset-packs`. The job
+   never fails the workflow.
+3. Upload the `.aar` files to App Store Connect **by hand**. The job has no secrets and never
+   uploads anything.
+4. The **first** asset pack must ship together with an app version that is submitted for review;
+   later packs and updates follow Apple's asset pack delivery rules.
+
+`ba-layout` can also be run locally (no Xcode needed) to check the layout:
+`python -m readori_voicepack ba-layout --zips <dir with Release ZIPs> --out build/ba`
+(`--plan` prints the selected packs as JSON). The result is `<out>/<assetPackId>/<packId>/<packId>.zip`
+plus `<out>/<assetPackId>.manifest.json`; run `ba-package` from inside `<out>/<assetPackId>`.
+Without `--template` a built-in copy of Apple's documented template shape is used; the macOS
+job always uses the real one. The older `ba-manifest` command is an unverified draft.
+
 ## Integrations
 
 Guides and engine templates for using other voices from Readori's custom TTS engines (Readori Pro). None of these are bundled or hosted by Readori.

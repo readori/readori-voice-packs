@@ -11,11 +11,12 @@ from . import __version__
 from . import catalog as catalog_mod
 from . import registry as reg
 from .audit import run_audit
+from .balayout import build_layout, load_template, plan_entries
 from .bamanifest import NOTES, build_ba_manifest
 from .build import build_pack
 from .common import MANIFEST_NAME, VoicePackError, loads_strict, sha256_file, write_json
 from .fetch import cache_path, fetch_model, verify_archive
-from .index import DEFAULT_INDEX, find_sidecars, update_index
+from .index import DEFAULT_INDEX, find_sidecars, load_index, update_index
 from .local import DEFAULT_LOCAL_OUT, LocalOptions, build_local
 from .ncref import DEFAULT_NC_REFERENCE, check_nc_reference, write_nc_reference
 from .pack import pack_directory
@@ -308,6 +309,33 @@ def cmd_ba_manifest(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_ba_layout(args: argparse.Namespace) -> int:
+    if not args.index.is_file():
+        raise VoicePackError(f"index not found: {args.index}")
+    index_doc = load_index(args.index)
+    pack_ids = [i.strip() for i in args.pack_ids.split(",") if i.strip()] if args.pack_ids else None
+    if args.plan:
+        plans = plan_entries(index_doc, pack_ids)
+        print(json.dumps([p.as_json() for p in plans], ensure_ascii=False, indent=2))
+        return 0
+    if args.zips is None or args.out is None:
+        raise VoicePackError("--zips and --out are required unless --plan is given")
+    results = build_layout(
+        index_doc,
+        args.zips,
+        args.out,
+        template=load_template(args.template),
+        pack_ids=pack_ids,
+        hardlink=args.hardlink,
+    )
+    for r in results:
+        _out(f"{r.plan.pack_id}: {r.zip_path}")
+        _out(f"  manifest: {r.manifest_path}")
+        _out(f"  package from: {r.pack_root}")
+    _out(f"laid out {len(results)} Apple asset pack(s) under {args.out}")
+    return 0
+
+
 def cmd_nc_reference(args: argparse.Namespace) -> int:
     if args.check:
         if not check_nc_reference(args.registry, args.out):
@@ -447,6 +475,18 @@ def build_parser() -> argparse.ArgumentParser:
     registry_arg(p)
     p.add_argument("--sidecar", type=Path, help="release sidecar (*.zip.json); a community tier is refused")
     p.add_argument("--out", type=Path, default=Path("build/ba"))
+    p = add(
+        "ba-layout",
+        cmd_ba_layout,
+        "lay out Release ZIPs as Apple asset packs for `xcrun ba-package` (never uploads anything)",
+    )
+    p.add_argument("--index", type=Path, default=DEFAULT_INDEX)
+    p.add_argument("--zips", type=Path, help="directory holding the Release ZIPs (searched recursively)")
+    p.add_argument("--out", type=Path, help="output directory (one folder + manifest per asset pack)")
+    p.add_argument("--template", type=Path, help="JSON printed by `xcrun ba-package template` (unknown keys are kept)")
+    p.add_argument("--pack-ids", help="comma-separated pack ids; default: every entry with an appleAssetPackId")
+    p.add_argument("--hardlink", action="store_true", help="hard-link instead of copying (falls back to copy)")
+    p.add_argument("--plan", action="store_true", help="print the selected packs (id, url, sha256, bytes) as JSON and exit")
     return parser
 
 

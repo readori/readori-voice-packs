@@ -178,6 +178,31 @@ Background Assets 清单生成器是**未经 Xcode 验证的草稿**。使用前
 `xcrun ba-package template`，把键名、`downloadPolicy` 结构、`fileSelectors` 写法以及 `assetPackID` 允许的字符
 与 `readori_voicepack/bamanifest.py` 对照。工作流会把该模板作为 artifact 输出，便于比对。
 
+## Apple 托管资产包
+
+iOS 26 及以上，App 可以从 Apple 而不是 GitHub 获取语音包。`catalog/v1/index.json` 中带 `appleAssetPackId` 的官方
+包各自对应一个资产包，内容就是与 Release 字节相同的 ZIP，路径为 `<packId>/<packId>.zip`（同一 App 的所有资产包
+共用一个文件命名空间，所以必须带前缀）。App 用与 GitHub 下载相同的代码导入并校验，Apple 无法提供时回落到
+GitHub。社区包永远不会被打包。本仓库没有工作流，也没有任何 Apple 凭据；打包在
+[readori/test-env-setup](https://github.com/readori/test-env-setup) 中进行。
+
+1. 照常把语音包发布到 GitHub Releases（索引随之带上 url、sha256、bytes）。
+2. 在 readori/test-env-setup 运行 `.github/workflows/readori-voice-packs.yml`，选 `mode=asset-packs`（输入
+   `asset_pack_ids`，留空 = 所有带 `appleAssetPackId` 的包）。发布运行（`mode=build`、`publish=true`）也会对本次
+   构建的包运行同一个 job。job `apple-asset-pack` 在装有 Xcode 26 的 macOS 运行器上只从
+   `https://github.com/readori/readori-voice-packs/releases/download/` 下载 Release ZIP，按索引校验 sha256 与大小，
+   打印 `xcrun ba-package template`，把我们的值填进该模板（`ba-layout --template`，模板中的未知键原样保留），
+   运行 `xcrun ba-package`，并把 `.aar`、清单和真实模板作为 artifact `apple-asset-packs` 上传。该 job 不会让
+   整个工作流失败。
+3. 把 `.aar` **手动**上传到 App Store Connect。该 job 没有密钥，也从不上传任何东西。
+4. **第一个**资产包必须随一个提交审核的 App 版本一起发布；之后的新增与更新按 Apple 的资产包交付规则进行。
+
+`ba-layout` 也可在本机运行（不需要 Xcode）来检查目录布局：
+`python -m readori_voicepack ba-layout --zips <Release ZIP 目录> --out build/ba`（`--plan` 以 JSON 输出所选包）。
+结果为 `<out>/<assetPackId>/<packId>/<packId>.zip` 加 `<out>/<assetPackId>.manifest.json`；`ba-package` 需在
+`<out>/<assetPackId>` 内运行。不带 `--template` 时使用内置的、按 Apple 文档形状写的模板；macOS job 始终使用真实模板。
+旧的 `ba-manifest` 命令是未经验证的草稿。
+
 ## 接入
 
 在 Readori 自定义朗读引擎（需要 Readori Pro）中使用其他声音的指南与引擎模板。以下内容均不由 Readori 内置或托管。
